@@ -1,13 +1,15 @@
 {
-  "title": "counter",
+  "title": "Counter",
   "languages": [
     "js"
   ],
   "difficulty": "easy",
   "tags": [
-    ""
+    "closure",
+    "functions",
+    "counter"
   ],
-  "timeComplexity": "O(n)",
+  "timeComplexity": "O(1) per operation",
   "spaceComplexity": "O(1)",
   "platform": "LeetCode",
   "solvedOn": "2025-11-14"

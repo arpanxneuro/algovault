@@ -1,15 +1,15 @@
 {
-  "title": "longest-common-prefix",
+  "title": "Longest Common Prefix",
   "languages": [
     "py"
   ],
   "difficulty": "easy",
   "tags": [
-    "array",
     "string",
+    "array",
     "trie"
   ],
-  "timeComplexity": "O(n)",
+  "timeComplexity": "O(S)",
   "spaceComplexity": "O(1)",
   "platform": "LeetCode",
   "solvedOn": "2025-11-14"

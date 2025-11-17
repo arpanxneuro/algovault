@@ -6,8 +6,6 @@ This module outlines a deterministic grouping mechanism that partitions an input
 
 ## 📌 Problem Statement
 
-Given:
-
 - A lowercase string `s`
 - A group size `k`
 - A fill character `fill`

@@ -1,62 +1,69 @@
-# Sum of Diagonals 1587115621
+# Sum of Diagonals
 
-> **Difficulty**: Basic  
-> **Accuracy**:   
-> **Submissions**:   
-> **Points**: 
+Compute the sum of the **principal diagonal** elements of a square matrix `M` of size `N × N`.
 
 ---
 
 ## 📝 Problem Statement
 
-Given a square matrix `M` of size `N x N`, your task is to compute and return the sum of the **principal diagonal** elements of the matrix.  
-The **principal diagonal** of a matrix consists of elements where the row index and column index are the same.
-
-You have to complete the function **`diagonalSum()`** which accepts:
-- `N` (size of the matrix, `N x N`)
-- `M` (the matrix itself as a 2D list)
-
----
-
----
+Given `N` and an `N × N` matrix `M`, calculate the sum of all elements `M[i][i]` where the row and column indices are equal. You only need to consider the main diagonal (top-left to bottom-right).
 
 ---
 
 ## 📥 Input
 
-1
-3
-1 2 3 4 5 6 7 8 9
-
----
+- First line: integer `T` representing the number of test cases (optional based on platform wrapper).
+- For each test case:
+  - Integer `N` – the dimension of the matrix.
+  - `N` lines follow, each containing `N` integers describing the matrix row.
 
 ---
 
 ## 📤 Output
 
+- For each test case, output the sum of the principal diagonal elements.
+
+---
+
+## ✔️ Constraints
+
+- `1 ≤ N ≤ 500`
+- `-10^3 ≤ M[i][j] ≤ 10^3`
+
+---
+
+## ✅ Example
+
+**Input**
+
+```
+1
+3
+1 2 3
+4 5 6
+7 8 9
+```
+
+**Output**
+
+```
 15
+```
 
----
-
----
-
-## ✅ Examples
-
-_No examples provided in original README._
-
----
+**Explanation:** The diagonal elements are `1, 5, 9`. Their sum is `15`.
 
 ---
 
 ## 🧪 Test Cases
 
-| Input | Output |
-|---|---|
-| `3 3
-1 2 3
-4 5 6
-7 8 9` | `1 2 3 6 9 8 7 4 5` |
+| # | Input | Output |
+|---|---|---|
+| 1 | `3\n1 2 3\n4 5 6\n7 8 9` | `15` |
+| 2 | `2\n5 7\n3 4` | `9` |
 
-**Time Complexity:** O(n)
+---
 
-**Space Complexity:** O(1)
+## ⏱️ Complexity
+
+- **Time:** `O(N)` – only `N` diagonal entries are summed.
+- **Space:** `O(1)` – constant auxiliary space.

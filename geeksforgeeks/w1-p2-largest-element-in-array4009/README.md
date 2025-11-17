@@ -1,4 +1,4 @@
-# Largest Element in Array4009
+# Largest Element in Array
 
 > **Difficulty**: Basic  
 > **Accuracy**:   

@@ -1,64 +1,68 @@
 # Count Zeros in a Sorted Matrix
 
-> **Difficulty**: Basic  
-> **Accuracy**:   
-> **Submissions**:   
-> **Points**: 
+Count the total number of zeros in an `n × m` binary matrix where each row is sorted (all 0s precede 1s).
 
 ---
 
 ## 📝 Problem Statement
 
-This exercise focuses on counting the number of zeros in a **sorted binary matrix**. You are given an `n x m` matrix where each row is sorted in non-decreasing order (0s followed by 1s). The task is to count all zeros in the matrix efficiently.  
-
----
-
----
+Given a matrix `mat` of size `n × m` such that each row is sorted in non-decreasing order, determine how many entries are equal to zero. The typical solution uses a staircase traversal from the top-right corner to achieve linear time.
 
 ---
 
 ## 📥 Input
 
-- First line: two integers `n` and `m`, the number of rows and columns  
-- Next `n` lines: `m` space-separated integers (0 or 1) representing each row of the matrix
+- `n` and `m`: number of rows and columns.
+- Followed by `n` rows, each containing `m` binary values (`0` or `1`).
 
-**Note:**  
-Do not read input from `stdin` or console. The function will receive the matrix as input.
-
----
-
----
+On GeeksforGeeks, the matrix is passed directly to the helper function.
 
 ---
 
 ## 📤 Output
 
-_Output format not specified in original README._
+Return an integer indicating how many cells contain zero.
 
 ---
 
+## ✔️ Constraints
+
+- `1 ≤ n, m ≤ 10^3`
+- Matrix rows are individually sorted.
+
 ---
 
-## ✅ Examples
+## ✅ Example
 
+**Input**
+
+```
 3 4
 0 0 1 1
 0 0 0 1
 0 1 1 1
+```
 
----
+**Output**
+
+```
+7
+```
+
+**Explanation:** There are seven zeros across the three rows.
 
 ---
 
 ## 🧪 Test Cases
 
-| Input | Output |
-|---|---|
-| `3 3
-1 2 3
-4 5 6
-7 8 9` | `1 2 3 6 9 8 7 4 5` |
+| # | Matrix | Zero Count |
+|---|---|---|
+| 1 | `[[0,0,1],[0,1,1]]` | `3` |
+| 2 | `[[0,0,0],[0,0,0]]` | `6` |
 
-**Time Complexity:** O(n)
+---
 
-**Space Complexity:** O(1)
+## ⏱️ Complexity
+
+- **Time:** `O(n + m)` using top-right traversal (or `O(n·m)` for brute force).
+- **Space:** `O(1)` extra.

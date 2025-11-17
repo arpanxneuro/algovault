@@ -1,9 +1,14 @@
 {
   "title": "Palindrome Number",
+  "languages": ["py", "ts", "c"],
   "difficulty": "easy",
-  "tags": ["string", "loop"],
-  "timeComplexity": "O(n)",
-  "spaceComplexity": "O(n)",
-  "platform": "leetcode",
+  "tags": [
+    "math",
+    "two-pointers",
+    "number-theory"
+  ],
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "platform": "LeetCode",
   "solvedOn": "2025-07-07"
 }

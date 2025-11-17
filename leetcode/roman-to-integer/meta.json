@@ -1,14 +1,12 @@
 {
-  "title": "18-roman-to-integer",
-  "languages": [
-    "py",
-    "ts"
-  ],
+  "title": "Roman to Integer",
+  "languages": ["py", "ts"],
   "difficulty": "easy",
   "tags": [
-    "hash table",
+    "hash-table",
     "math",
-    "string"
+    "string",
+    "parsing"
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",

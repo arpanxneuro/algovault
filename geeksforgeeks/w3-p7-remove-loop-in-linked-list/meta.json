@@ -1,17 +1,19 @@
 {
-  "title": "w3-p7-remove-loop-in-linked-list",
+  "title": "remove-loop-in-linked-list",
   "languages": [
-    "py"
+    "c",
+    "py",
+    "java"
   ],
   "difficulty": "medium",
   "tags": [
-    "liked list",
-    "two-pointer-algorithm",
-    "data structure",
-    "algorithm"
+    "linked-list",
+    "two-pointers",
+    "cycle-detection",
+    "data-structure"
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-02"
 }

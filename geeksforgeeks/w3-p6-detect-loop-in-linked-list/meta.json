@@ -1,15 +1,10 @@
 {
-  "title": "w3-p6-detect-loop-in-linked-list",
-  "languages": [],
+  "title": "detect-loop-in-linked-list",
+  "languages": ["c", "py", "java"],
   "difficulty": "medium",
-  "tags": [
-    "two-pointer-algorithm",
-    "linked list",
-    "data structure",
-    "algorithm"
-  ],
+  "tags": ["linked-list", "two-pointers", "cycle-detection", "data-structure"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-02"
 }

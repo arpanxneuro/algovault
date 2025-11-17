@@ -1,5 +1,5 @@
 {
-  "title": "w7-p4-fibonacci-series-up-to-nth-term",
+  "title": "fibonacci-series-up-to-nth-term",
   "languages": [
     "py"
   ],
@@ -11,7 +11,7 @@
     "dynamic programming"
   ],
   "timeComplexity": "O(n)",
-  "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "spaceComplexity": "O(n)",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

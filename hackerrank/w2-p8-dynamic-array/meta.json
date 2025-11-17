@@ -1,5 +1,5 @@
 {
-  "title": "w2-p8-dynamic-array",
+  "title": "dynamic-array",
   "languages": [
     "c",
     "py",
@@ -11,6 +11,6 @@
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "HackerRank",
+  "platform": "hackerrank",
   "solvedOn": "2025-09-10"
 }

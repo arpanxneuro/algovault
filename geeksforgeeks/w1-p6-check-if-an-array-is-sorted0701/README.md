@@ -1,4 +1,4 @@
-# Check If an Array is Sorted0701
+# Check If an Array is Sorted
 
 > **Difficulty**: Basic  
 > **Accuracy**:   

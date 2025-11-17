@@ -1,5 +1,5 @@
 {
-  "title": "w7-p8-power-of-numbers-1587115620",
+  "title": "power-of-numbers",
   "languages": [
     "c",
     "py"
@@ -13,6 +13,6 @@
   ],
   "timeComplexity": "O(log n)",
   "spaceComplexity": "O(log n)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

@@ -1,6 +1,6 @@
-# 🏆 CodeVault
+# 🏆 AlgoVault
 
-Centralized repository of coding problems and algorithmic solutions from LeetCode, GeeksforGeeks, HackerRank, and more, organized to track problem-solving progress and build a structured coding portfolio.
+AlgoVault is a centralized platform that aggregates algorithm and data-structure problems from LeetCode, GeeksforGeeks, HackerRank, and more — helping you track your competitive programming progress, master problem-solving skills, and build a structured, high-quality coding portfolio.
 
 ## 📚 Platforms
 

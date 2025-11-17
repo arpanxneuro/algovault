@@ -1,5 +1,5 @@
 {
-  "title": "w7-p9-count-number-of-substrings4528",
+  "title": "count-number-of-substrings",
   "languages": [
     "py"
   ],
@@ -13,6 +13,6 @@
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

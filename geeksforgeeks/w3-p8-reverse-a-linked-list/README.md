@@ -1,8 +1,12 @@
 # Reverse a Linked List
 
-**Difficulty**: Basic
+> **Difficulty**: Basic  
+> **Companies**: Amazon, Microsoft, Google
 
-## Problem Statement
+---
+
+## 📝 Problem Statement
+
 Reverse a singly linked list and return the new head.
 
 ## Input
@@ -12,15 +16,55 @@ Reverse a singly linked list and return the new head.
 The head of the reversed linked list.
 
 ## Example
-Input: [1,2,3,4]
 
-Output: [4,3,2,1]
+**Input**
+```
+[1,2,3,4]
+```
 
-## Approach
+**Output**
+```
+[4,3,2,1]
+```
+
+**Explanation**
+```
+1 -> 2 -> 3 -> 4
+
+4 -> 3 -> 2 -> 1
+```
+
+---
+
+## 🧪 Test Cases
+
+| # | Input | Output |
+|---|-------|--------|
+| 1 | `[1,2,3,4]` | `[4,3,2,1]` |
+| 2 | `[1,2,3,4]` | `[4,3,2,1]` |
+| 3 | `[1,2,3,4]` | `[4,3,2,1]` |
+| 4 | `[1,2,3,4]` | `[4,3,2,1]` |
+| 5 | `[1,2,3,4]` | `[4,3,2,1]` |
+
+---
+
+## 🛠️ Approach
+
 Iteratively reverse the `next` pointers by keeping track of previous, current and next nodes. A recursive solution is also possible.
 
-## Time Complexity
+### Key Insights
+
+- The solution handles edge cases like empty lists and ensures the result is in the correct order.
+- The dummy node is used to simplify edge cases and return the correct head of the list.
+
+---
+
+## ⏱️ Time Complexity
+
 O(n)
 
-## Space Complexity
+---
+
+## 📊 Space Complexity
+
 O(1) iterative, O(n) recursive stack

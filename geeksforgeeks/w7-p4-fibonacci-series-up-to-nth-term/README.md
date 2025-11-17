@@ -1,31 +1,83 @@
 # Fibonacci Series Up to Nth Term
 
-**Difficulty:** Basic
+> **Difficulty**: Easy  
+> **Companies**: Amazon, Microsoft, Adobe, Oracle
 
-## Problem Statement
-Generate the Fibonacci series up to the Nth term using recursion. The Fibonacci series is formed by adding the previous two terms to get the next term, starting with 0 and 1.
+---
 
-## Input
-- An integer N (1 ≤ N ≤ 50)
+## 📝 Problem Statement
 
-## Output
-Print N terms of the Fibonacci series space-separated.
+Generate the first N terms of the Fibonacci sequence using recursion. The Fibonacci sequence is defined as:
+- F(0) = 0
+- F(1) = 1
+- F(n) = F(n-1) + F(n-2) for n > 1
 
-## Example
-Input: N = 5
+---
 
-Output: 0 1 1 2 3
-(First 5 terms of Fibonacci series)
+## 📥 Input
 
-## Approach
-1. Base case: First two terms are 0 and 1
-2. For each subsequent term: F(n) = F(n-1) + F(n-2)
-3. Use recursion to calculate each term
-4. Print terms as they are calculated
+- `N`: A positive integer (1 ≤ N ≤ 50)
 
-## Time Complexity
-O(2^N) - without memoization
-O(N) - with memoization
+---
 
-## Space Complexity
-O(N) - recursive call stack
+## 📤 Output
+
+Return a list/array containing the first N terms of the Fibonacci sequence.
+
+## ✔️ Constraints
+
+- 1 ≤ N ≤ 50
+- You must use recursion to solve this problem
+- The function should return a list/array of integers
+
+---
+
+## ✅ Example
+
+**Input**: 5  
+**Output**: [0, 1, 1, 2, 3]
+
+**Input**: 8  
+**Output**: [0, 1, 1, 2, 3, 5, 8, 13]
+
+---
+
+## 🧪 Test Cases
+
+| # | Input (N) | Output |
+|---|-----------|--------|
+| 1 | 1 | [0] |
+| 2 | 2 | [0, 1] |
+| 3 | 5 | [0, 1, 1, 2, 3] |
+| 4 | 10 | [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] |
+| 5 | 15 | [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377] |
+
+---
+
+## 🛠️ Approach
+
+### Recursive Approach with Memoization
+1. **Base Cases**:
+   - If N = 1, return [0]
+   - If N = 2, return [0, 1]
+2. **Recursive Case**:
+   - Get the previous Fibonacci sequence up to N-1 terms
+   - Calculate the next term as the sum of the last two terms
+   - Append the new term to the sequence and return
+
+### Key Insight
+- The naive recursive approach has exponential time complexity (O(2^n)) due to repeated calculations
+- Using memoization or storing previously computed terms reduces the time complexity to O(n)
+- The space complexity is O(n) for both the result array and the recursion stack
+
+### Time and Space Complexity
+- **Time Complexity**: O(n) - With memoization, each term is computed exactly once
+- **Space Complexity**: O(n) - For storing the result and recursion stack
+
+---
+
+## 📝 Note
+- The solution handles the edge cases where N = 1 or N = 2
+- For N > 50, the numbers become very large (F(50) = 12,586,269,025)
+- The iterative approach would be more space-efficient (O(1) space) but the problem requires recursion
+- This is a classic example of multiple recursion where each call makes two recursive calls

@@ -1,15 +1,10 @@
 {
-  "title": "sum-of-diagonals-1587115621",
-  "languages": [
-    "c",
-    "py"
-  ],
+  "title": "sum-of-diagonals",
+  "languages": ["c", "py"],
   "difficulty": "easy",
-  "tags": [
-    ""
-  ],
+  "tags": ["matrix", "diagonal", "math"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-12"
 }

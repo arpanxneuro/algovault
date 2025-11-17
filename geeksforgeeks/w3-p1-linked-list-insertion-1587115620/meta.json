@@ -1,19 +1,10 @@
 {
-  "title": "w3-p1-linked-list-insertion-1587115620",
-  "languages": [
-    "c",
-    "py"
-  ],
+  "title": "linked-list-insertion",
+  "languages": ["c", "py"],
   "difficulty": "easy",
-  "tags": [
-    "linked list",
-    "data structure",
-    "tcs",
-    "wipro",
-    "hike"
-  ],
+  "tags": ["linked-list", "insertion", "singly-linked-list", "data-structure"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-09-21"
 }

@@ -1,9 +1,18 @@
 {
-  "title": "Largest Element in Array",
+  "title": "largest-element-in-array4009",
+  "languages": [
+    "py",
+    "c"
+  ],
   "difficulty": "easy",
-  "tags": ["array", "loop", "comparison", "condition"],
+  "tags": [
+    "array",
+    "loop",
+    "comparison",
+    "condition"
+  ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "gfg",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-07-28"
 }

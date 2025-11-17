@@ -1,5 +1,5 @@
 {
-  "title": "circular-linked-list",
+  "title": "circular-linked-list-operations",
   "languages": [
     "c",
     "py"
@@ -7,12 +7,11 @@
   "difficulty": "easy",
   "tags": [
     "circular-linked-list",
-    "linked list",
-    "data structures",
-    "algorithms"
+    "data-structure",
+    "linked-list"
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-11-13"
 }

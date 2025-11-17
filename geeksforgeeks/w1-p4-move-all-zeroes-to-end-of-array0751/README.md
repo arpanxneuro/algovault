@@ -1,4 +1,4 @@
-# Move All Zeroes to End of Array0751
+# Move All Zeroes to End of Array
 
 > **Difficulty**: Basic  
 > **Accuracy**:   

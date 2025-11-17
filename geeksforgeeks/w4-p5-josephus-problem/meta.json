@@ -1,17 +1,19 @@
 {
-  "title": "w4-p5-josephus-problem",
+  "title": "josephus-problem",
   "languages": [
     "c",
-    "py"
+    "py",
+    "java"
   ],
-  "difficulty": "easy",
+  "difficulty": "medium",
   "tags": [
     "recursion",
-    "data structures",
-    "algorithms"
+    "mathematics",
+    "data-structure",
+    "simulation"
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(n)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-11-02"
 }

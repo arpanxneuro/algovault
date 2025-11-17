@@ -1,5 +1,5 @@
 {
-  "title": "w7-p2-sum-of-digits1742",
+  "title": "sum-of-digits",
   "languages": [
     "c",
     "py"
@@ -9,7 +9,7 @@
     "number-theory"
   ],
   "timeComplexity": "O(log n)",
-  "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "spaceComplexity": "O(log n)",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

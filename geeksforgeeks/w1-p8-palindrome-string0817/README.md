@@ -1,4 +1,4 @@
-# Palindrome String0817
+# Palindrome String
 
 > **Difficulty**: Basic  
 > **Accuracy**:   
@@ -9,7 +9,9 @@
 
 ## 📝 Problem Statement
 
-_No explicit problem statement found; see Original README below._
+Given a string `str`, determine whether it is a **palindrome**.
+
+Return `true` if it is a palindrome, otherwise return `false`.
 
 ---
 
@@ -17,7 +19,7 @@ _No explicit problem statement found; see Original README below._
 
 ## 📥 Input
 
-_Input format not specified in original README._
+- A string `str`.
 
 ---
 
@@ -25,7 +27,9 @@ _Input format not specified in original README._
 
 ## 📤 Output
 
-_Output format not specified in original README._
+- Return a boolean value:
+  - `true` if the string is a palindrome.
+  - `false` otherwise.
 
 ---
 
@@ -33,7 +37,10 @@ _Output format not specified in original README._
 
 ## ✅ Examples
 
-_No examples provided in original README._
+Input:
+radar
+Output:
+true
 
 ---
 
@@ -41,7 +48,9 @@ _No examples provided in original README._
 
 ## 🧪 Test Cases
 
-| No test cases | - | - |
+| Input | Output |
+|---|---|
+| `radar` | `true` |
 
 **Time Complexity:** O(n)
 

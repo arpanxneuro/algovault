@@ -1,5 +1,5 @@
 {
-  "title": "w7-p3-factorial5739",
+  "title": "factorial",
   "languages": [
     "c",
     "py"
@@ -10,7 +10,7 @@
     "algorithms"
   ],
   "timeComplexity": "O(n)",
-  "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "spaceComplexity": "O(n)",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

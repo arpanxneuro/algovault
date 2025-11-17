@@ -1,5 +1,5 @@
 {
-  "title": "w3-p10-print-the-elements-of-a-linked-list",
+  "title": "print-the-elements-of-a-linked-list",
   "languages": [
     "c",
     "py",
@@ -7,10 +7,10 @@
   ],
   "difficulty": "easy",
   "tags": [
-    ""
+    "linked-list"
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "HackerRank",
+  "platform": "hackerrank",
   "solvedOn": "2025-10-02"
 }

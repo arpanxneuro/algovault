@@ -1,4 +1,4 @@
-# Frequency of Array Elements 1587115620
+# Frequency of Array Elements
 
 > **Difficulty**: Basic  
 > **Accuracy**:   
@@ -22,7 +22,7 @@ Explanation: Frequencies are:
 
 ## 📥 Input
 
-_Input format not specified in original README._
+- An array `arr[]` of size `n`.
 
 ---
 
@@ -30,7 +30,7 @@ _Input format not specified in original README._
 
 ## 📤 Output
 
-_Output format not specified in original README._
+- Return or print the resulting array or required value.
 
 ---
 
@@ -38,7 +38,11 @@ _Output format not specified in original README._
 
 ## ✅ Examples
 
-_No examples provided in original README._
+Input:
+5
+1 2 3 4 5
+Output:
+1 2 3 4 5
 
 ---
 

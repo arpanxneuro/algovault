@@ -1,5 +1,5 @@
 {
-  "title": "w7-p7-gcd-of-two-numbers3459",
+  "title": "gcd-of-two-numbers3459",
   "languages": [
     "py"
   ],
@@ -10,6 +10,6 @@
   ],
   "timeComplexity": "O(log(min(a, b)))",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

@@ -1,14 +1,16 @@
 {
-  "title": "counter-ii",
+  "title": "Counter II",
   "languages": [
     "js",
     "ts"
   ],
   "difficulty": "easy",
   "tags": [
-    ""
+    "closure",
+    "object",
+    "design"
   ],
-  "timeComplexity": "O(n)",
+  "timeComplexity": "O(1) per operation",
   "spaceComplexity": "O(1)",
   "platform": "LeetCode",
   "solvedOn": "2025-11-14"

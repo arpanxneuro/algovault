@@ -1,17 +1,10 @@
 {
-  "title": "Plynomial addition",
-  "languages": [
-    "py c js"
-  ],
+  "title": "plynomial-addition",
+  "languages": ["py", "c", "js"],
   "difficulty": "medium",
-  "tags": [
-    "linked list",
-    "mathematical",
-    "data stucture",
-    "algorithm"
-  ],
+  "tags": ["linked-list", "mathematics", "polynomial", "data-structure"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-27"
 }

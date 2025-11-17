@@ -1,13 +1,13 @@
 {
-  "title": "sleep",
-  "languages": [
-    "js"
-  ],
+  "title": "Sleep",
+  "languages": ["js"],
   "difficulty": "easy",
   "tags": [
-    ""
+    "promise",
+    "async-programming",
+    "concurrency"
   ],
-  "timeComplexity": "O(n)",
+  "timeComplexity": "O(1)",
   "spaceComplexity": "O(1)",
   "platform": "LeetCode",
   "solvedOn": "2025-11-14"

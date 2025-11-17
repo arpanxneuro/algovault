@@ -1,6 +1,6 @@
 {
-  "title": "w2-p7-multiply-two-polynomals0721",
-  "languages": [],
+  "title": "multiply-two-polynomals",
+  "languages": ["py"],
   "difficulty": "easy",
   "tags": [
     "mathematical",
@@ -9,6 +9,6 @@
   ],
   "timeComplexity": "O(n*m)",
   "spaceComplexity": "O(n+m)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-09-10"
 }

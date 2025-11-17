@@ -1,4 +1,4 @@
-# Spirally Traversing a Matrix 1587115621
+# Spirally Traversing a Matrix
 
 > **Difficulty**: Basic  
 > **Accuracy**:   
@@ -25,28 +25,22 @@ This exercise focuses on traversing a 2D matrix in **spiral order**. You are giv
 **Note:**  
 Do not read input from `stdin` or console. The function will receive the matrix as input.
 
----
-
----
-
----
 
 ## 📤 Output
 
-_Output format not specified in original README._
-
----
+- Return or print the resulting array or required value.
 
 ---
 
 ## ✅ Examples
 
+Input:
 3 3
 1 2 3
 4 5 6
 7 8 9
-
----
+Output:
+1 2 3 6 9 8 7 4 5
 
 ---
 

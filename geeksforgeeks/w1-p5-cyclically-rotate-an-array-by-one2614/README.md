@@ -1,4 +1,4 @@
-# Cyclically Rotate an Array by One2614
+# Cyclically Rotate an Array by One
 
 > **Difficulty**: Basic  
 > **Accuracy**:   

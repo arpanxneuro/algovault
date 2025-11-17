@@ -1,14 +1,10 @@
 {
-  "title": "rotate-by-90-degree-1587115621",
-  "languages": [],
-  "difficulty": "medium",
-  "tags": [
-    "matrix",
-    "data structure",
-    "algorithm"
-  ],
+  "title": "rotate-by-90-degree",
+  "languages": ["py"],
+  "difficulty": "easy",
+  "tags": ["matrix", "rotation", "in-place"],
   "timeComplexity": "O(n^2)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-12"
 }

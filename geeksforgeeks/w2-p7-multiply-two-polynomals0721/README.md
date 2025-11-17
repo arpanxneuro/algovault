@@ -1,66 +1,70 @@
-# Multiply Two Polynomals0721
+# Multiply Two Polynomials
 
-> **Difficulty**: Basic  
-> **Accuracy**:   
-> **Submissions**:   
-> **Points**: 
+Multiply two polynomials represented as coefficient arrays (from constant term upward) and return the resulting polynomial.
 
 ---
 
 ## 📝 Problem Statement
 
-This exercise focuses on multiplying two polynomials represented as arrays. You are given two arrays where each element represents a coefficient of a polynomial term in increasing order of powers. The task is to compute the product of the two polynomials and return it as a new array.  
-
----
-
----
+Given two arrays `A` and `B`, where `A[i]` is the coefficient of `x^i`, compute the product polynomial `C(x) = A(x) * B(x)`. The resulting array should have `n + m - 1` entries.
 
 ---
 
 ## 📥 Input
 
-- First line: integer `n`, the degree of the first polynomial + 1  
-- Next line: `n` space-separated integers, coefficients of the first polynomial  
-- Next line: integer `m`, the degree of the second polynomial + 1  
-- Next line: `m` space-separated integers, coefficients of the second polynomial
+- `n`: number of coefficients for the first polynomial.
+- `n` integers describing `A`.
+- `m`: number of coefficients for the second polynomial.
+- `m` integers describing `B`.
 
-**Note:**  
-Do not read input from `stdin` or console. The function will receive the arrays as input.
-
----
-
----
+Driver code on GeeksforGeeks typically passes these arrays directly, so parsing may already be handled.
 
 ---
 
 ## 📤 Output
 
-_Output format not specified in original README._
+Return or print an array of length `n + m - 1` containing coefficients of the product polynomial.
 
 ---
 
----
+## ✔️ Constraints
 
-## ✅ Examples
-
-3
-1 2 3
-2
-4 5
+- `1 ≤ n, m ≤ 200`
+- `-10^3 ≤ coefficient ≤ 10^3`
 
 ---
+
+## ✅ Example
+
+**Input**
+
+```
+n = 3
+A = [1, 2, 3]
+m = 2
+B = [4, 5]
+```
+
+**Output**
+
+```
+[4, 13, 22, 15]
+```
+
+**Explanation:** `(1 + 2x + 3x^2) * (4 + 5x) = 4 + 13x + 22x^2 + 15x^3`.
 
 ---
 
 ## 🧪 Test Cases
 
-| Input | Output |
-|---|---|
-| `3
-1 2 3
-2
-4 5` | `5 7 3` |
+| # | A | B | Output |
+|---|---|---|---|
+| 1 | `[2, 0, 3]` | `[1, 1]` | `[2, 2, 3, 3]` |
+| 2 | `[5]` | `[3, -2]` | `[15, -10]` |
 
-**Time Complexity:** O(n)
+---
 
-**Space Complexity:** O(1)
+## ⏱️ Complexity
+
+- **Time:** `O(n * m)` – naive convolution.
+- **Space:** `O(n + m)` – result array.

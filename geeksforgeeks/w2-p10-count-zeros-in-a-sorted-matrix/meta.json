@@ -1,5 +1,5 @@
 {
-  "title": "w2-p10-count-zeros-in-a-sorted-matrix",
+  "title": "count-zeros-in-a-sorted-matrix",
   "languages": [
     "py",
     "js"
@@ -13,6 +13,6 @@
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-09-19"
 }

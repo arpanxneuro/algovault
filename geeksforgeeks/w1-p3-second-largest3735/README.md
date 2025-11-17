@@ -1,4 +1,4 @@
-# Second Largest3735
+# Second Largest
 
 > **Difficulty**: Basic  
 > **Accuracy**:   

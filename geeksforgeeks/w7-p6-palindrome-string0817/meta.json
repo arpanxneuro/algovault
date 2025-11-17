@@ -1,5 +1,5 @@
 {
-  "title": "w7-p6-palindrome-string0817",
+  "title": "palindrome-string0817",
   "languages": [
     "c",
     "py"
@@ -12,6 +12,6 @@
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

@@ -1,11 +1,13 @@
 {
-  "title": "function-composition",
+  "title": "Function Composition",
   "languages": [
     "js"
   ],
   "difficulty": "easy",
   "tags": [
-    "array"
+    "functional-programming",
+    "higher-order-functions",
+    "function-composition"
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",

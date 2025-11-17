@@ -1,16 +1,10 @@
 {
-  "title": "w3-p2-insert-in-middle-of-linked-list",
-  "languages": [
-    "c",
-    "py"
-  ],
+  "title": "insert-in-middle-of-linked-list",
+  "languages": ["c", "py"],
   "difficulty": "easy",
-  "tags": [
-    "linked list",
-    "data structure"
-  ],
+  "tags": ["linked-list", "insertion", "two-pointers", "data-structure"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-09-21"
 }

@@ -1,13 +1,10 @@
 {
-  "title": "w3-p8-reverse-a-linked-list",
-  "languages": [],
+  "title": "reverse-a-linked-list",
+  "languages": ["c", "py", "java", "js"],
   "difficulty": "easy",
-  "tags": [
-    "linked list",
-    "data structure"
-  ],
+  "tags": ["linked-list", "reversal", "data-structure"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-02"
 }

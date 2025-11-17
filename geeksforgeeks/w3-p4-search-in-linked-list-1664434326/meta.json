@@ -1,15 +1,10 @@
 {
-  "title": "w3-p4-search-in-linked-list-1664434326",
-  "languages": [
-    "py"
-  ],
+  "title": "search-in-linked-list",
+  "languages": ["py"],
   "difficulty": "easy",
-  "tags": [
-    "linked list",
-    "data structures"
-  ],
+  "tags": ["linked-list", "search", "data-structure"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-02"
 }

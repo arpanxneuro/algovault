@@ -1,5 +1,5 @@
 {
-  "title": "w4-p8-pairwise-swap-elements-of-a-linked-list-by-swapping-data",
+  "title": "pairwise-swap-elements-of-a-linked-list-by-swapping-data",
   "languages": [
     "py"
   ],
@@ -10,6 +10,6 @@
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-11-13"
 }

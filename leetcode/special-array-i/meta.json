@@ -1,11 +1,10 @@
 {
-  "title": "special-array-i",
-  "languages": [
-    "js"
-  ],
+  "title": "Special Array I",
+  "languages": ["js"],
   "difficulty": "easy",
   "tags": [
-    "array"
+    "array",
+    "simulation"
   ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",

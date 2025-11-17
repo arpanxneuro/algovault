@@ -1,16 +1,10 @@
 {
-  "title": "w3-p9-add-two-numbers-represented-by-linked-lists",
-  "languages": [
-    "py"
-  ],
+  "title": "add-two-numbers-represented-by-linked-lists",
+  "languages": ["c", "py", "java", "js"],
   "difficulty": "medium",
-  "tags": [
-    "linked list",
-    "two-pointer-algorithm",
-    "data structure"
-  ],
+  "tags": ["linked-list", "math", "two-pointers", "data-structure"],
   "timeComplexity": "O(n + m)",
   "spaceComplexity": "O(1)",
-  "platform": "GeeksforGeeks",
+  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-02"
 }

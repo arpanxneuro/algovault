@@ -1,16 +1,11 @@
 {
   "title": "frequency-of-array-elements-1587115620",
-  "languages": [
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array",
-    "hash",
-    "data structure"
-  ],
+  "tags": ["array", "hash", "data structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/counting-frequencies-of-array-elements/",
+  "languages": ["py"],
   "timeComplexity": "O(n)",
-  "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
+  "spaceComplexity": "",
   "solvedOn": "2025-08-05"
 }

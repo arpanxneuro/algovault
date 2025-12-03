@@ -1,25 +1,20 @@
 # Check If an Array is Sorted
 
-> **Difficulty**: Basic  
-> **Accuracy**:   
-> **Submissions**:   
-> **Points**: 
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: array, loop, conditions
 
 ---
 
 ## 📝 Problem Statement
 
-Given an integer array `arr[]`, determine whether the array is **sorted in non-decreasing order**.
-
-Return `true` if it is sorted, otherwise return `false`.
-
----
+Given an integer array `arr[]`, determine whether the array is sorted in non-decreasing (ascending) order. Return `true` if it is sorted (i.e. every element is ≤ the next), otherwise return `false`. :contentReference[oaicite:2]{index=2}
 
 ---
 
 ## 📥 Input
 
-- An integer array `arr[]` of size `n`.
+- `arr[]`: an array of integers of size `n`
 
 ---
 
@@ -31,26 +26,37 @@ Return `true` if it is sorted, otherwise return `false`.
 
 ---
 
----
-
 ## ✅ Examples
 
-Input:
-5
-1 2 3 4 5
-90
-Output:
-1 2 3 4 5 90
+**Example 1**  
+arr = [10, 20, 30, 40, 50]
+**Output:**  
+true
+
+**Example 2**  
+arr = [90, 80, 100, 70, 40, 30]
+**Output:**  
+false
 
 ---
 
-## 🧪 Test Cases
+## 🛠️ Approach
 
-| Input | Value | Output |
-|---|---|---|
-| `5
-1 2 3 4 5` | `90` | `1 2 3 4 5 90` |
+Use a single-pass linear scan (O(n) time, O(1) space):
 
-**Time Complexity:** O(n)
+- Iterate through the array from index 1 to n-1.
+- For each index `i`, check if `arr[i-1] > arr[i]`.
+  - If yes — return `false`.
+- If the loop completes without finding such a violation — return `true`.
 
-**Space Complexity:** O(1)
+### Complexity
+
+- **Time Complexity:** O(n)
+- **Space Complexity:** O(1)
+
+---
+
+## 📌 Notes
+
+- Works for any integer array (positive, negative, zero).
+- Handles arrays with equal consecutive elements (non-decreasing, not strictly increasing).

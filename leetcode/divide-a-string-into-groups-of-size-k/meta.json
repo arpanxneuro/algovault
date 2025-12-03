@@ -1,15 +1,11 @@
 {
   "title": "divide-a-string-into-groups-of-size-k",
-  "languages": [
-    "js"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "string",
-    "simulation"
-  ],
+  "tags": ["string", "simulation"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/",
+  "languages": ["js"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "LeetCode",
   "solvedOn": "2025-11-14"
 }

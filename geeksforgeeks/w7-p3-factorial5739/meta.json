@@ -1,16 +1,11 @@
 {
   "title": "factorial",
-  "languages": [
-    "c",
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "mathematical",
-    "algorithms"
-  ],
+  "tags": ["mathematical", "algorithms"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/program-for-factorial-of-a-number/",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(n)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

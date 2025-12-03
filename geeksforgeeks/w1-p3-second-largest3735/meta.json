@@ -1,19 +1,11 @@
 {
   "title": "second-largest3735",
-  "languages": [
-    "c",
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array",
-    "loop",
-    "condition",
-    "searching",
-    "dsa"
-  ],
+  "tags": ["array", "loop", "condition", "searching", "dsa"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/problems/second-largest3735/1",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-05"
 }

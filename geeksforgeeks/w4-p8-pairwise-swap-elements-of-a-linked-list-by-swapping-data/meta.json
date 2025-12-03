@@ -1,15 +1,11 @@
 {
   "title": "pairwise-swap-elements-of-a-linked-list-by-swapping-data",
-  "languages": [
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "linked list",
-    "data structures"
-  ],
+  "tags": ["linked list", "data structures"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/",
+  "languages": ["py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-11-13"
 }

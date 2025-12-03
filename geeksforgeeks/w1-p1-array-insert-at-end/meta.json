@@ -1,14 +1,11 @@
 {
   "title": "array-insert-at-end",
-  "languages": [
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array", "insertion", "list"
-  ],
+  "tags": ["array", "insertion", "list"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://practice.geeksforgeeks.org/problems/array-insert-at-end/1",
+  "languages": ["py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-07-31"
 }

@@ -1,68 +1,82 @@
 # Linked List Insertion
 
-> **Difficulty**: Basic  
-> **Companies**: TCS, Wipro, Hike
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: linked-list, insertion, singly‑linked‑list, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Insert a new node with a given value at a specified position in a singly linked list. The position is 0-based, meaning position 0 refers to the head of the list.
+Given the head of a singly linked list (which may be empty), a position `pos` (0-based), and a value `val`, insert a new node with value `val` into the list at the given position. Position `0` refers to inserting at the head. Return the head of the modified list. :contentReference[oaicite:3]{index=3}
 
 ---
 
 ## 📥 Input
 
-- `head`: The head node of the linked list (can be `None` for empty list).
-- `pos`: An integer (0 ≤ pos ≤ length of list) indicating where to insert.
-- `val`: The integer value to insert.
+- `head`: the head node of the singly linked list (can be `null` / `None` when list is empty).
+- `pos`: integer satisfying `0 ≤ pos ≤ length_of_list` — indicates index (0-based) where the new node should be inserted.
+- `val`: integer value to store in the new node.
 
 ---
 
 ## 📤 Output
 
-Return the head of the modified linked list after insertion.
+- Return the head of the updated linked list after insertion.
 
 ---
 
 ## ✔️ Constraints
 
-- `0 ≤ pos ≤ n` where n is the length of the list
-- `-10^4 ≤ val ≤ 10^4`
-- List can be empty
+- Position `pos` is valid: `0 ≤ pos ≤ length of existing list`.
+- The list may initially be empty.
+- Coefficient / value constraints depend on problem variant (e.g., can be negative or positive ints).
 
 ---
 
-## ✅ Example
+## ✅ Examples
 
-**Input**
-```
+**Example 1**
+Input:
 head = [1, 2, 3]
 pos = 1
 val = 9
-```
 
-**Output**
-```
+Output:
 [1, 9, 2, 3]
-```
 
-**Explanation**: The value 9 is inserted at position 1 (0-based), between 1 and 2.
+**Example 2**  
+Input:
+head = []
+pos = 0
+val = 5
+
+Output:
+[5]
+
+**Example 3**  
+Input:
+head = [10, 20]
+pos = 0
+val = 5
+
+Output:
+[5, 10, 20]
 
 ---
 
-## 🧪 Test Cases
+## 🛠️ Approach
 
-| # | Linked List | Position | Value | Output |
-|---|-------------|----------|-------|--------|
-| 1 | `[1,2,3]`   | 1        | 9     | `[1,9,2,3]` |
-| 2 | `[10,20]`   | 0        | 5     | `[5,10,20]` |
-| 3 | `[7]`       | 1        | 8     | `[7,8]` |
-| 4 | `[]`        | 0        | 1     | `[1]` |
+Iterative insertion — O(n) time, O(1) extra space. Basic idea:
+
+- If `pos == 0`, create new node and link its `next` to current `head`; return new node as new head.
+- Else, traverse the list until reaching the node at index `pos - 1`.
+- Adjust pointers: let `newNode.next = current.next`, and `current.next = newNode`.  
+  Return the (possibly unchanged) head. :contentReference[oaicite:4]{index=4}
 
 ---
 
 ## ⏱️ Complexity
 
-- **Time:** `O(n)` - In worst case, we may need to traverse the entire list.
-- **Space:** `O(1)` - Constant extra space is used.
+- **Time Complexity:** O(n) — in worst case, must traverse up to list length.
+- **Space Complexity:** O(1) — only constant extra space for the new node and pointer manipulation.

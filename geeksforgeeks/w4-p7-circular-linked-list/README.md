@@ -1,104 +1,51 @@
-# Circular Linked List
+# Insert into Sorted Circular Linked List
 
-> **Difficulty**: Easy  
-> **Companies**: Amazon, Microsoft, Google, Adobe
+> **Difficulty**: easy  
+> **Source**: GeeksforGeeks  
+> **Tags**: circular‑linked‑list, data‑structure, linked‑list
 
 ---
 
 ## 📝 Problem Statement
 
-Given a node from a Circular Linked List which is sorted in ascending order, write a function to insert a value `x` into the list such that it remains a sorted circular list. The function should return the newly inserted node.
+Given a sorted circular singly linked list (ascending order), and a value `x`, insert a node with value `x` into the list so that the list remains sorted. The function should return a reference (head or a node) in the modified circular list. ([GfG – Sorted insert for circular linked list](https://www.geeksforgeeks.org/sorted-insert-for-circular-linked-list/))
 
 ---
 
-## 📤 Input
+## 📥 Input Format
 
-- `head`: A reference to any node in a sorted circular linked list (can be `None` for empty list).
-- `x`: The integer value to be inserted.
-
----
-
-## 📤 Output
-
-Return a reference to any node in the modified circular linked list (typically the new node).
-
-
-
-## ✔️ Constraints
-
-- `0 ≤ number of nodes ≤ 10^4`
-- `-10^6 ≤ Node.val ≤ 10^6`
-- The list is guaranteed to be sorted in ascending order.
-- The list may contain duplicate values.
-
-## ✅ Example
-
-**Initial List**: `[1, 2, 3]` (circular)
-
-**Operations**:
-1. Insert 0 at beginning: `[0, 1, 2, 3]`
-2. Insert 4 at end: `[0, 1, 2, 3, 4]`
-3. Delete 2: `[0, 1, 3, 4]`
+- `head`: reference to any node in the circular linked list (or `None` / `NULL` if list is empty).
+- `x`: integer value to insert.
+- The list may contain duplicates and node values can be negative, positive or zero.
 
 ---
 
-## 🧪 Test Cases
+## 📤 Output Format
 
-| # | Operations | Output |
-|---|------------|--------|
-| 1 | Insert(1), Insert(2), Insert(3) | `[1, 2, 3]` |
-| 2 | Insert(1), Delete(1) | `[]` |
-| 3 | Insert(1), Insert(2), Delete(1) | `[2]` |
-| 4 | Insert(2), Insert(1), Insert(3) | `[1, 2, 3]` |
-| 5 | Insert(1), Insert(1) (duplicate) | `[1]` |
+- Return a reference to a node in the updated circular linked list (typically the inserted node or head). The list remains circular and sorted after insertion.
+
+---
+
+## 🧪 Example Cases
+
+- **Input:** Circular list `1 → 2 → 4 → (back to 1)`, `x = 2`  
+  **Output:** Sorted circular list becomes `1 → 2 → 2 → 4 → ...`
+
+- **Input:** Circular list `1 → 4 → 7 → 9 → (back to 1)`, `x = 5`  
+  **Output:** `1 → 4 → 5 → 7 → 9 → ...`
+
+- **Input:** Empty list (`head = None`), `x = 10`  
+  **Output:** A circular list with single node `10` pointing to itself.
 
 ---
 
 ## 🛠️ Approach
 
-### Insertion at Beginning
-1. Create a new node with the given value.
-2. If the list is empty, make the new node point to itself and return it.
-3. Otherwise, traverse to the last node and update its next pointer to the new node.
-4. Make the new node point to the old head.
-5. Update the head to the new node.
-
-### Insertion at End
-1. Create a new node with the given value.
-2. If the list is empty, make the new node point to itself and return it.
-3. Otherwise, traverse to the last node.
-4. Make the last node point to the new node.
-5. Make the new node point to the head.
-
-### Deletion
-1. If the list is empty, return.
-2. If the node to be deleted is the only node, set head to null.
-3. Otherwise, traverse the list to find the node to be deleted and its previous node.
-4. Update the previous node's next pointer to skip the node to be deleted.
-5. If the node to be deleted is the head, update the head.
-
-### Traversal
-1. If the list is empty, return.
-2. Start from the head and print each node's value.
-3. Stop when we reach the head again.
-
-### Key Insight
-- The circular nature of the list requires special handling to maintain the circular structure during operations.
-- The last node always points back to the head.
-
----
-
-## ⏱️ Complexity
-
-- **Time:**
-  - Insertion at beginning/end: `O(n)` (need to find the last node)
-  - Deletion: `O(n)` (in the worst case)
-  - Traversal: `O(n)`
-- **Space:** `O(1)` for all operations (not counting the space for the list itself)
-
----
-
-## 📝 Note
-- The solution handles all edge cases including empty list, single node list, and operations on non-existent elements.
-- All operations maintain the circular nature of the list.
-- The list remains sorted if insertions are done in order.
+1. Create a new node with the given value `x`.
+2. If list is empty (`head == None`):
+   - Point new node’s `next` to itself, return new node.
+3. Else: traverse the list to find correct position:
+   - If `x` should be inserted before head (i.e. `x <= head.data`), find the last node (whose `next` points to head), insert new node before head, and return new node as new head.
+   - Else, find the appropriate spot where `curr.data < x <= curr.next.data`. Insert new node there.
+   - If reached end without insertion, insert at end before head (i.e. for x largest).
+4. Return reference to resulting list (head or new node). :contentReference[oaicite:2]{index=2}

@@ -1,16 +1,11 @@
 {
   "title": "reverse-a-string",
-  "languages": [
-    "c",
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "string",
-    "loop"
-  ],
+  "tags": ["string", "loop"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/reverse-a-string/",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-04"
 }

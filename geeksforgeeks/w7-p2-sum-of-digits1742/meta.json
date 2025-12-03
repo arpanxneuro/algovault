@@ -1,15 +1,11 @@
 {
   "title": "sum-of-digits",
-  "languages": [
-    "c",
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "number-theory"
-  ],
+  "tags": ["number-theory"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/sum-digit-number-using-recursion/",
+  "languages": ["c", "py"],
   "timeComplexity": "O(log n)",
   "spaceComplexity": "O(log n)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

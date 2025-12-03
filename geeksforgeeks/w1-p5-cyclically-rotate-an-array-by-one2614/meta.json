@@ -1,16 +1,11 @@
 {
   "title": "cyclically-rotate-an-array-by-one2614",
-  "languages": [
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array",
-    "implementation",
-    "loop"
-  ],
+  "tags": ["array", "implementation", "loop"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/c-program-cyclically-rotate-array-one/",
+  "languages": ["py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-04"
 }

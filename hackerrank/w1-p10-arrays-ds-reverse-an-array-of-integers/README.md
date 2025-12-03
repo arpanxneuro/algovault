@@ -1,91 +1,59 @@
 # Reverse an Array of Integers
 
-> **Difficulty**: Easy  
+> **Difficulty**: easy  
 > **Platform**: HackerRank  
-> **Tags**: Array, Data Structure
+> **Tags**: array, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Given an array of integers, reverse the order of elements in the array and print the reversed array.
+Given an integer array, reverse the order of elements and output the reversed array. This is the exact task for the "Arrays - DS" challenge on HackerRank. :contentReference[oaicite:1]{index=1}
 
 ---
 
 ## 📥 Input
 
-- The first line contains an integer `N` (1 ≤ N ≤ 10^3), the number of elements in the array.
-- The second line contains `N` space-separated integers `arr[i]` (1 ≤ arr[i] ≤ 10^4), where 0 ≤ i < N.
+- First line: integer `N` — the number of elements in the array. :contentReference[oaicite:2]{index=2}
+- Second line: `N` space-separated integers `arr[0], arr[1], …, arr[N–1]`. :contentReference[oaicite:3]{index=3}
 
 ---
 
 ## 📤 Output
 
-Print the elements of the reversed array as a single line of space-separated integers.
+Print the elements of the reversed array in a single line, space-separated. :contentReference[oaicite:4]{index=4}
+
+---
 
 ## ✔️ Constraints
 
-- 1 ≤ N ≤ 10^3
-- 1 ≤ arr[i] ≤ 10^4
+- \(1 \le N \le 10^3\) :contentReference[oaicite:5]{index=5}
+- Elements values within valid integer range (as per contest constraints) :contentReference[oaicite:6]{index=6}
 
 ---
 
 ## ✅ Example
 
-**Input**:
-5 1 2 3 4 5
-
-**Output**:
+**Input**  
+5
+1 2 3 4 5
+**Output**  
 5 4 3 2 1
-
-
-**Explanation**: The array [1,2,3,4,5] when reversed becomes [5,4,3,2,1].
-
----
-
-## 🧪 Test Cases
-
-| # | Input | Output |
-|---|-------|--------|
-| 1 | `5`<br>`1 2 3 4 5` | `5 4 3 2 1` |
-| 2 | `3`<br>`10 20 30` | `30 20 10` |
-| 3 | `1`<br>`100` | `100` |
-| 4 | `6`<br>`1 4 3 2 5 6` | `6 5 2 3 4 1` |
 
 ---
 
 ## 🛠️ Approach
 
-### Two-Pointer Technique
-1. **Initialization**:
-   - Use two pointers: `start` (beginning of array) and `end` (end of array)
-   - Initialize `start` to 0 and `end` to N-1
+Use a two‑pointer technique to reverse the array **in place**:
 
-2. **Swapping**:
-   - While `start` is less than `end`:
-     - Swap elements at positions `start` and `end`
-     - Increment `start` and decrement `end`
+1. Initialize two pointers: `left = 0`, `right = N - 1`.
+2. While `left < right`, swap `arr[left]` and `arr[right]`, then increment `left`, decrement `right`.
 
-3. **Termination**:
-   - The loop terminates when `start` becomes greater than or equal to `end`
-   - The array is now reversed in-place
-
-### Time and Space Complexity
-- **Time Complexity**: O(N) - We traverse half of the array
-- **Space Complexity**: O(1) - Constant extra space is used (in-place reversal)
+This achieves reversal in **O(N)** time with **O(1)** extra space. :contentReference[oaicite:7]{index=7}
 
 ---
 
-## 📝 Note
-- The solution modifies the original array in-place
-- For very large arrays, this approach is memory efficient
-- The algorithm is stable and works for both even and odd array lengths
-- Edge cases handled:
-  - Single element array
-  - Already reversed array
-  - Array with duplicate elements
+## ⏱️ Complexity
 
-## 🔗 Related Problems
-- [Rotate Array](https://leetcode.com/problems/rotate-array/)
-- [Reverse String](https://leetcode.com/problems/reverse-string/)
-- [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)
+- **Time Complexity:** O(N) — each element is swapped at most once.
+- **Space Complexity:** O(1) — only constant extra space (pointers) is used.

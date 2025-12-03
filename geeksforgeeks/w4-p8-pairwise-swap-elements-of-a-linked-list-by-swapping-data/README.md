@@ -1,86 +1,49 @@
-# Pairwise Swap Elements of a Linked List
+# Pairwise Swap Elements of a Linked List (by Swapping Data)
 
-> **Difficulty**: Easy  
-> **Companies**: Amazon, Microsoft, Adobe, Intuit
+> **Difficulty**: easy  
+> **Source**: GeeksforGeeks  
+> **Tags**: linked-list, data‑structures  
 
 ---
 
 ## 📝 Problem Statement
 
-Given a singly linked list, write a function to swap elements pairwise by swapping data. For example, if the linked list is `1->2->3->4` then the function should change it to `2->1->4->3`.
+Given a singly linked list, swap the data of its nodes in pairs: i.e. swap the 1st and 2nd nodes, then the 3rd and 4th, and so on. If the list has an odd number of nodes, the last node remains unchanged. For example, `1 → 2 → 3 → 4` becomes `2 → 1 → 4 → 3` after the swap. ([GfG – Pairwise Swap Elements of a given Linked List](https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/))  
 
 ---
 
-## 📥 Input
+## 📥 Input Format
 
-- `head`: The head node of the linked list (can be `None` for empty list).
-
----
-
-## 📤 Output
-
-Return the head of the modified linked list after swapping elements pairwise.
-
-## ✔️ Constraints
-
-- `0 ≤ number of nodes ≤ 10^5`
-- `-10^5 ≤ Node.val ≤ 10^5`
+- `head`: reference to the head node of the singly linked list.  
+- The list may be empty (`head = None`) or contain up to \(10^5\) nodes.  
+- Node values may be any integer (e.g. \(-10^5\) ≤ val ≤ \(10^5\)).  
 
 ---
 
-## ✅ Example
+## 📤 Output Format
 
-**Input**: `1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8`  
-**Output**: `2 -> 1 -> 4 -> 3 -> 6 -> 5 -> 8 -> 7`
-
-**Input**: `1 -> 2 -> 3 -> 4 -> 5`  
-**Output**: `2 -> 1 -> 4 -> 3 -> 5`
+- Return the head of the modified linked list after performing the pairwise data swaps.  
 
 ---
 
-## 🧪 Test Cases
+## 🧪 Example Cases
 
-| # | Input | Output |
-|---|-------|--------|
-| 1 | `[1, 2, 3, 4]` | `[2, 1, 4, 3]` |
-| 2 | `[1, 2, 3, 4, 5]` | `[2, 1, 4, 3, 5]` |
-| 3 | `[]` | `[]` |
-| 4 | `[1]` | `[1]` |
-| 5 | `[1, 2]` | `[2, 1]` |
+- **Input:** `1 → 2 → 3 → 4 → 5 → 6 → None`  
+  **Output:** `2 → 1 → 4 → 3 → 6 → 5 → None`  
 
----
+- **Input:** `1 → 2 → 3 → 4 → 5 → None`  
+  **Output:** `2 → 1 → 4 → 3 → 5 → None`  
 
-## 🛠️ Approach
-
-### Iterative Approach
-1. Start from the head of the linked list.
-2. Traverse the list by jumping two nodes at a time.
-3. For each pair of nodes, swap their data.
-4. If the list has odd number of nodes, the last node remains as it is.
-
-### Recursive Approach
-1. If the list is empty or has only one node, return the head.
-2. Store the next node of the current head.
-3. Recursively call the function for the node after the next node.
-4. Swap the data of the current node and the next node.
-5. Return the new head (which was the second node).
-
-### Key Insight
-- We only need to swap the data of the nodes, not the actual node objects.
-- The time complexity is O(n) as we traverse the list once.
-- The space complexity is O(1) for iterative approach and O(n) for recursive approach due to the call stack.
+- **Input:** `[]` (empty list) → Output: `[]`  
 
 ---
 
-## ⏱️ Complexity
+## 🛠️ Approach  
 
-- **Time:** `O(n)`
-  - We traverse the linked list once.
-- **Space:** `O(1)` (iterative) or `O(n)` (recursive)
+Use a simple iterative (or recursive) traversal:  
 
----
+- Traverse the list two nodes at a time.  
+- For each adjacent pair \(`node`, `node.next`\), swap their `data` fields.  
+- Move forward by two nodes and repeat until end of list.  
 
-## 📝 Note
-- The solution handles all edge cases including empty list, single node list, and odd-length lists.
-- The original structure of the linked list is preserved; only the data is swapped.
-- For large lists, the iterative approach is preferred due to constant space usage.
+This ensures O(n) time and O(1) extra space (aside from the list itself).  

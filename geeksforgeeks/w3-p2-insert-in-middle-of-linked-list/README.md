@@ -1,85 +1,73 @@
 # Insert in Middle of Linked List
 
-> **Difficulty**: Basic  
-> **Companies**: Amazon, Microsoft, Adobe
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: linked‑list, insertion, two‑pointers, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Given the head of a singly linked list, insert a new node with a given value in the middle of the list. For an even-length list, insert after n/2 nodes (i.e., at index n/2).
+Given the head of a singly linked list (which may be empty) and an integer `val`, insert a new node with value `val` in the middle of the list.
+
+- If the list has `n` nodes, and `n` is even — insert after the `n/2`‑th node.
+- If `n` is odd — insert after the `(n+1)/2`‑th node.
+
+Return the head of the modified linked list. :contentReference[oaicite:3]{index=3}
 
 ---
 
 ## 📥 Input
 
-- `head`: The head node of the linked list (can be `None` for empty list).
-- `val`: The integer value to insert in the middle.
+- `head` — head node of the singly linked list (can be `null` / `None` if list is empty)
+- `val` — integer value to insert into a new node
 
 ---
 
 ## 📤 Output
 
-Return the head of the modified linked list after inserting the new value in the middle.
+- Return the head of the updated linked list after insertion.
 
 ---
 
-## ✔️ Constraints
+## ✅ Examples
 
-- `0 ≤ n ≤ 10^4` where n is the number of nodes in the list
-- `-10^4 ≤ val ≤ 10^4`
-- List can be empty
+**Example 1**  
+Input: head = [1, 2, 4, 5], val = 3
+Output: [1, 2, 3, 4, 5]
+**Example 2**  
+Input: head = [5, 10, 4, 32, 16], val = 41
+Output: [5, 10, 4, 41, 32, 16]
 
----
-
-## ✅ Example
-
-**Input**
-```
-head = [1, 2, 3, 4]
-val = 9
-```
-
-**Output**
-```
-[1, 2, 9, 3, 4]
-```
-
-**Explanation**: The value 9 is inserted in the middle of the list. For even-length lists, we insert after the first middle element.
-
----
-
-## 🧪 Test Cases
-
-| # | Linked List | Value | Output |
-|---|-------------|-------|--------|
-| 1 | `[1,2,3,4]` | 9 | `[1,2,9,3,4]` |
-| 2 | `[10,20,30,40,50]` | 25 | `[10,20,25,30,40,50]` |
-| 3 | `[7]` | 3 | `[7,3]` |
-| 4 | `[]` | 1 | `[1]` |
-| 5 | `[5,10]` | 7 | `[5,7,10]` |
+If the list is empty:  
+Input: head = [], val = 7
+Output: [7]
 
 ---
 
 ## 🛠️ Approach
 
-1. **Edge Cases**: Handle empty list and single-node list separately.
-2. **Two Pointers**: Use slow and fast pointers to find the middle node.
-3. **Insertion**: Insert the new node after the middle node found.
+Two standard methods — both O(n) time, O(1) space. :contentReference[oaicite:4]{index=4}
 
-### Key Insight
-- The slow pointer moves one step at a time while the fast pointer moves two steps at a time.
-- When fast reaches the end, slow will be at the middle node.
+### Method 1: Two‑pass (length + insert)
+
+1. Traverse the list to compute `len`, the number of nodes.
+2. Compute insertion index `mid = len/2` (if even), else `mid = (len + 1)/2`.
+3. Traverse again to the `mid`‑th node, then insert the new node after it.
+
+### Method 2: Single‑pass (Tortoise & Hare)
+
+- Use two pointers — `slow` and `fast`. Initialize `slow = head`, `fast = head->next`.
+- Move `slow` one step at a time; `fast` two steps at a time.
+- When `fast` reaches end (or `fast->next` is null), `slow` will point to the node **after** which insertion should happen.
+- Insert the new node after `slow`. :contentReference[oaicite:5]{index=5}
+
+Both approaches give **Time Complexity:** O(n), **Space Complexity:** O(1).
 
 ---
 
-## ⏱️ Complexity
+## 📌 Edge Cases & Notes
 
-- **Time:** `O(n)` - We traverse the list once to find the middle.
-- **Space:** `O(1)` - Constant extra space is used.
-
----
-
-## 📝 Note
-- For even-length lists, the middle is defined as the first middle element (n/2 - 1 for 0-based indexing).
-- The solution handles all edge cases including empty list and single-node list.
+- If the list is empty — the new node becomes the head.
+- Works for both even and odd‑length lists, per rule above.
+- Handles negative/positive values for `val` as typical.

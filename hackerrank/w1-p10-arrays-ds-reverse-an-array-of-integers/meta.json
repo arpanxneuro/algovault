@@ -1,16 +1,11 @@
 {
   "title": "arrays-ds-reverse-an-array-of-integers",
-  "languages": [
-    "c",
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array",
-    "data structure"
-  ],
+  "tags": ["array", "data structure"],
+  "platform": "HackerRank",
+  "problemSrc": "https://www.hackerrank.com/challenges/arrays-ds/problem",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "hackerrank",
   "solvedOn": "2025-08-05"
 }

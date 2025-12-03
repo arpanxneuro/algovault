@@ -1,15 +1,11 @@
 {
   "title": "gcd-of-two-numbers3459",
-  "languages": [
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "mathematical",
-    "algorithms"
-  ],
+  "tags": ["mathematical", "algorithms"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1",
+  "languages": ["py"],
   "timeComplexity": "O(log(min(a, b)))",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

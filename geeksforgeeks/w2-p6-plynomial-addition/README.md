@@ -1,70 +1,73 @@
 # Polynomial Addition
 
-Add two polynomials represented by arrays of coefficients (lowest power to highest). Return the resulting polynomial after adding matching powers.
+> **Difficulty**: medium  
+> **Platform**: GeeksforGeeks  
+> **Tags**: polynomial, math, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Given two arrays `A` and `B`, where `A[i]` and `B[i]` denote the coefficient of `x^i`, compute another array `C` such that `C[i] = A[i] + B[i]`. If one polynomial has fewer terms, treat the missing coefficients as zero.
+You are given two polynomials represented by arrays of coefficients:
+
+- `A[i]` denotes coefficient of \(x^i\) in the first polynomial.
+- `B[i]` denotes coefficient of \(x^i\) in the second polynomial.
+
+Compute the sum polynomial — i.e., return an array `C` where for each power \(i\),  
+C[i] = A[i] + B[i]
+If one polynomial has fewer coefficients (i.e. lower maximum degree), treat missing coefficients as 0.
 
 ---
 
 ## 📥 Input
 
-- `n`: number of coefficients in the first polynomial.
-- `n` integers: coefficients of the first polynomial.
-- `m`: number of coefficients in the second polynomial.
-- `m` integers: coefficients of the second polynomial.
+- `n` — number of coefficients in the first polynomial
+- `A[]` — array of `n` integers (coefficients of polynomial A)
+- `m` — number of coefficients in the second polynomial
+- `B[]` — array of `m` integers (coefficients of polynomial B)
 
-The driver code on GeeksforGeeks passes these arrays directly to the helper function, so manual input parsing is usually unnecessary.
+_Note: On GeeksforGeeks the driver may directly pass arrays — manual parsing may or may not be required depending on the language._
 
 ---
 
 ## 📤 Output
 
-Return an array (or print a list) of coefficients representing the sum polynomial. The length should be `max(n, m)`.
-
----
-
-## ✔️ Constraints
-
-- `1 ≤ n, m ≤ 10^3`
-- `-10^4 ≤ coefficient ≤ 10^4`
+- Return (or print) an array of length `max(n, m)` — coefficients of the sum polynomial.
 
 ---
 
 ## ✅ Example
 
-**Input**
-
-```
+**Input:**  
 n = 3
-A = [1, 2, 3]   // 1 + 2x + 3x^2
+A = [1, 2, 3] // represents 1 + 2x + 3x^2
 m = 2
-B = [4, 5]      // 4 + 5x
-```
+B = [4, 5] // represents 4 + 5x
 
-**Output**
+**Output:**  
+[5, 7, 3] // represents 5 + 7x + 3x^2
 
-```
-[5, 7, 3]
-```
+**Explanation:**
 
-**Explanation:** `C(x) = (1 + 4) + (2 + 5)x + 3x^2 = 5 + 7x + 3x^2`.
-
----
-
-## 🧪 Test Cases
-
-| # | A | B | Output |
-|---|---|---|---|
-| 1 | `[1, 0, 3]` | `[2, 5, 1]` | `[3, 5, 4]` |
-| 2 | `[5, -2]` | `[3]` | `[8, -2]` |
+- Constant term: 1 + 4 = 5
+- x¹ term: 2 + 5 = 7
+- x² term: 3 + 0 = 3
 
 ---
 
-## ⏱️ Complexity
+## 🛠️ Approach
 
-- **Time:** `O(max(n, m))`
-- **Space:** `O(max(n, m))` for the result array (or `O(1)` extra if reusing one array)
+1. Determine `size = max(n, m)` — the degree (plus one) of resultant polynomial. :contentReference[oaicite:2]{index=2}
+2. Initialize result array `sum[]` of length `size`, initially copying coefficients from `A[]` (for indices < n). :contentReference[oaicite:3]{index=3}
+3. For each index `i < m`, add `B[i]` to `sum[i]`. :contentReference[oaicite:4]{index=4}
+4. Return `sum[]`.
+
+This runs in **O(max(n, m))** time and uses **O(max(n, m))** space for output (or O(1) extra space if allowed to modify one input).
+
+---
+
+## 📌 Notes
+
+- Works when polynomials have different degrees — missing higher-order coefficients are treated as zero.
+- Output length equals the higher degree polynomial’s length.
+- Negative coefficients allowed, if input has them.

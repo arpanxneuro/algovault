@@ -1,16 +1,15 @@
 {
   "title": "Function Composition",
-  "languages": [
-    "js"
-  ],
   "difficulty": "easy",
   "tags": [
     "functional-programming",
     "higher-order-functions",
     "function-composition"
   ],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/function-composition/",
+  "languages": ["js"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "LeetCode",
   "solvedOn": "2025-11-14"
 }

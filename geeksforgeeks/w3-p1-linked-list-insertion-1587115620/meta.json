@@ -1,10 +1,11 @@
 {
   "title": "linked-list-insertion",
-  "languages": ["c", "py"],
   "difficulty": "easy",
   "tags": ["linked-list", "insertion", "singly-linked-list", "data-structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/insert-a-node-at-a-specific-position-in-a-linked-list/",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-09-21"
 }

@@ -1,8 +1,5 @@
 {
   "title": "count-number-of-substrings",
-  "languages": [
-    "py"
-  ],
   "difficulty": "medium",
   "tags": [
     "sliding-window",
@@ -11,8 +8,10 @@
     "dynamic programming",
     "algorithms"
   ],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/count-number-of-substrings-with-exactly-k-distinct-characters/",
+  "languages": ["py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

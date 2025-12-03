@@ -1,122 +1,78 @@
 # Sleep
 
-**Platform:** [LeetCode](https://leetcode.com/problems/sleep/)  
-**Category:** Asynchronous Programming / Promises  
-**Difficulty:** Easy  
-**Problem Statement:** Given a positive integer `millis`, write an async function that sleeps for `millis` milliseconds. It can resolve with any value.
+> **Difficulty**: easy  
+> **Platform**: LeetCode  
+> **Tags**: promise, async-programming, concurrency
 
 ---
 
-## 📘 Problem Overview
-This problem requires implementing a sleep function that pauses execution for a specified number of milliseconds. The function should be asynchronous and return a Promise that resolves after the given delay.
+## 📝 Problem Statement
 
-### Key Points:
-- The function should return a Promise
-- The Promise should resolve after at least `millis` milliseconds
-- The function should work with both `async/await` and Promise chaining
-- The solution should be non-blocking and leverage JavaScript's event loop
-- The function can resolve with any value or no value
-- The actual delay may be slightly longer due to JavaScript's single-threaded nature
+Given a positive integer `millis`, write an async function that sleeps for `millis` milliseconds. It can resolve with any value.
 
 ---
 
-## 📥 Input Format
+## 📥 Input
+
 - `millis`: A positive integer (1 ≤ millis ≤ 1000)
   - Represents the number of milliseconds to sleep
 
-## 📤 Output Format
+---
+
+## 📤 Output
+
 - Returns a Promise that resolves after the specified delay
 - The resolved value can be anything (or undefined)
 
-## 🔍 Constraints
-- `1 <= millis <= 1000`
+## ✔️ Constraints
+
+- 1 ≤ millis ≤ 1000
 - The function must be asynchronous and return a Promise
 - The Promise should not resolve before the specified delay
 
 ---
 
-## 🧪 Sample Cases
+## ✅ Example
 
-### Example 1
 **Input:**  
-`100`  
-**Explanation:**  
-The function should sleep for 100 milliseconds
-
-### Example 2
+100
+**Output:**  
+Promise resolved after ~100ms
 **Input:**  
-`200`  
-**Explanation:**  
-The function should sleep for 200 milliseconds
-
-### Example 3
-**Input:**  
-`1000`  
-**Explanation:**  
-The function should sleep for 1000 milliseconds (1 second)
+200
+**Output:**  
+Promise resolved after ~200ms
 
 ---
 
-## 🧠 Approach
-1. **Create a Promise**: The function should return a Promise
-2. **Use setTimeout**: Inside the Promise executor, use `setTimeout` to delay the resolution
-3. **Resolve the Promise**: After the specified delay, resolve the Promise
-4. **Handle Edge Cases**: Ensure the function works with minimum and maximum allowed values
+## 🧪 Test Cases
 
-### Solution Code (JavaScript)
-```javascript
-/**
- * @param {number} millis
- * @return {Promise}
- */
-async function sleep(millis) {
-    return new Promise((resolve) => {
-        setTimeout(resolve, millis);
-    });
-}
-
-/** 
- * Example usage:
- * let t = Date.now();
- * sleep(100).then(() => {
- *   console.log(Date.now() - t); // ~100
- * });
- */
-```
-
-### Solution Code (TypeScript)
-```typescript
-async function sleep(millis: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, millis));
-}
-```
+| #   | Input  | Output                           |
+| --- | ------ | -------------------------------- |
+| 1   | `100`  | `Promise resolves after ~100ms`  |
+| 2   | `200`  | `Promise resolves after ~200ms`  |
+| 3   | `1000` | `Promise resolves after ~1000ms` |
 
 ---
 
-## 📊 Complexity Analysis
-- **Time Complexity**: `O(1)`  
-  - The function creates a single timer and resolves immediately after the delay
-  - The actual delay is handled by the browser/Node.js event loop
-  
-- **Space Complexity**: `O(1)`  
-  - We only use a constant amount of space
-  - The Promise and timer are managed by the JavaScript runtime
+## 🛠️ Approach
+
+1. Create a Promise.
+2. Use `setTimeout` inside the Promise executor to delay resolution.
+3. Resolve the Promise after the specified `millis`.
+4. The function works with both `async/await` and Promise chaining.
 
 ---
 
-## 📝 Notes
-- The sleep function is non-blocking and allows other code to run during the delay
-- The actual delay might be slightly longer than specified due to JavaScript's event loop
-- This is a fundamental building block for implementing timeouts, retries, and rate limiting
-- The function can be used with both async/await and Promise chaining
+### Time and Space Complexity
+
+- **Time Complexity:** O(1) — the timer is created and handled asynchronously
+- **Space Complexity:** O(1) — only a constant amount of space is used
+
+---
 
 ## 🔗 Related Problems
+
 - [Promise Time Limit](https://leetcode.com/problems/promise-time-limit/)
 - [Promise Pool](https://leetcode.com/problems/promise-pool/)
 - [Debounce](https://leetcode.com/problems/debounce/)
-
-## 📚 Additional Resources
-- [MDN: setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)
-- [JavaScript.info: Promises](https://javascript.info/promise-basics)
-- [You Don't Know JS: Async & Performance](https://github.com/getify/You-Dont-Know-JS/tree/1st-ed/async%20%26%20performance)
-- [JavaScript Event Loop Explained](https://www.youtube.com/watch?v=8aGhZQkoFbQ)

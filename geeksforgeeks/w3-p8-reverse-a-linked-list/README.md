@@ -1,70 +1,68 @@
 # Reverse a Linked List
 
-> **Difficulty**: Basic  
-> **Companies**: Amazon, Microsoft, Google
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: linked‑list, reversal, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Reverse a singly linked list and return the new head.
-
-## Input
-- A singly linked list represented by its head.
-
-## Output
-The head of the reversed linked list.
-
-## Example
-
-**Input**
-```
-[1,2,3,4]
-```
-
-**Output**
-```
-[4,3,2,1]
-```
-
-**Explanation**
-```
-1 -> 2 -> 3 -> 4
-
-4 -> 3 -> 2 -> 1
-```
+Given the head of a singly linked list, reverse the list — i.e., reverse the direction of `next` pointers so that the last node becomes the head, and return the new head of the reversed list. ([geeksforgeeks.org](https://www.geeksforgeeks.org/dsa/reverse-a-linked-list/))
 
 ---
 
-## 🧪 Test Cases
+## 📥 Input
 
-| # | Input | Output |
-|---|-------|--------|
-| 1 | `[1,2,3,4]` | `[4,3,2,1]` |
-| 2 | `[1,2,3,4]` | `[4,3,2,1]` |
-| 3 | `[1,2,3,4]` | `[4,3,2,1]` |
-| 4 | `[1,2,3,4]` | `[4,3,2,1]` |
-| 5 | `[1,2,3,4]` | `[4,3,2,1]` |
+- `head`: the head node of a singly linked list (may be `null` / `None` if the list is empty).
+
+---
+
+## 📤 Output
+
+- Return the head of the reversed linked list.
+
+---
+
+## ✅ Example
+
+**Input**  
+[1, 2, 3, 4](represents 1 → 2 → 3 → 4 → null)
+
+**Output**  
+[4, 3, 2, 1]Which corresponds to 4 → 3 → 2 → 1 → null. :contentReference[oaicite:2]{index=2}
 
 ---
 
 ## 🛠️ Approach
 
-Iteratively reverse the `next` pointers by keeping track of previous, current and next nodes. A recursive solution is also possible.
+One efficient in‑place method (iterative), with O(n) time and O(1) extra space: :contentReference[oaicite:3]{index=3}
 
-### Key Insights
+- Maintain three pointers:
+  - `prev = null`
+  - `curr = head`
+  - `next = null`
+- Iterate while `curr` is not null:
+  1. `next = curr.next` (store next node)
+  2. `curr.next = prev` (reverse pointer)
+  3. `prev = curr`
+  4. `curr = next`
+- At end, `prev` is new head of reversed list — return `prev`. :contentReference[oaicite:4]{index=4}
 
-- The solution handles edge cases like empty lists and ensures the result is in the correct order.
-- The dummy node is used to simplify edge cases and return the correct head of the list.
+Alternative approaches: recursion or using stack — but iterative is most efficient (constant extra space) as shown on GfG. :contentReference[oaicite:5]{index=5}
 
 ---
 
-## ⏱️ Time Complexity
+## ⏱️ Complexity
 
-O(n)
+- **Time Complexity:** O(n), where n is number of nodes — each node visited exactly once. :contentReference[oaicite:6]{index=6}
+- **Space Complexity:** O(1) (iterative approach) — uses only constant extra pointers.
 
 ---
 
-## 📊 Space Complexity
+## 📌 Edge Cases & Notes
 
-O(1) iterative, O(n) recursive stack
+- Empty list (`head = null`) → return `null`.
+- Single‑node list → return same node (now head).
+- Works for any integer values stored in nodes.
+- The reversed list should terminate at `null`, not cause loops — original next pointers are reversed carefully.

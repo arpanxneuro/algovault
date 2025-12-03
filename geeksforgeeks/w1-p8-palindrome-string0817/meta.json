@@ -1,16 +1,11 @@
 {
   "title": "palindrome-string0817",
-  "languages": [
-    "c",
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "string",
-    "dsa"
-  ],
+  "tags": ["string", "dsa"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/palindrome-string/",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-05"
 }

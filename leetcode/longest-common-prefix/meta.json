@@ -1,16 +1,11 @@
 {
   "title": "Longest Common Prefix",
-  "languages": [
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "string",
-    "array",
-    "trie"
-  ],
+  "tags": ["string", "array", "trie"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/longest-common-prefix/",
+  "languages": ["py"],
   "timeComplexity": "O(S)",
   "spaceComplexity": "O(1)",
-  "platform": "LeetCode",
   "solvedOn": "2025-11-14"
 }

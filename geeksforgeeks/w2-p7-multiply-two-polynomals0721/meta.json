@@ -1,14 +1,11 @@
 {
-  "title": "multiply-two-polynomals",
-  "languages": ["py"],
+  "title": "multiply-two-polynomials",
   "difficulty": "easy",
-  "tags": [
-    "mathematical",
-    "algorithms",
-    "samsung"
-  ],
+  "tags": ["polynomial", "math", "data‑structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/multiply-two-polynomials-2/",
+  "languages": ["py"],
   "timeComplexity": "O(n*m)",
   "spaceComplexity": "O(n+m)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-09-10"
 }

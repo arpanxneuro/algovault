@@ -1,13 +1,10 @@
 {
-  "title": "Two Sum",
-  "platform": "LeetCode",
+  "title": "two-sum",
   "difficulty": "easy",
+  "tags": ["array", "hash-table", "two-pointers"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/two-sum/",
   "languages": ["py", "ts"],
-  "tags": [
-    "array",
-    "hash-table",
-    "two-pointers"
-  ],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(n)",
   "solvedOn": "2025-07-07"

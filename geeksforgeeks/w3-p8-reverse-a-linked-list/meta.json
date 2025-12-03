@@ -1,10 +1,11 @@
 {
   "title": "reverse-a-linked-list",
-  "languages": ["c", "py", "java", "js"],
   "difficulty": "easy",
   "tags": ["linked-list", "reversal", "data-structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/reverse-a-linked-list/",
+  "languages": ["c", "py", "java", "js"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-02"
 }

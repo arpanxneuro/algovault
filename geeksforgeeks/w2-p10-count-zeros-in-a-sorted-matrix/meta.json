@@ -1,18 +1,11 @@
 {
   "title": "count-zeros-in-a-sorted-matrix",
-  "languages": [
-    "py",
-    "js"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "searching",
-    "matrix",
-    "data structures",
-    "algorithms"
-  ],
-  "timeComplexity": "O(n)",
+  "tags": ["searching", "matrix", "data structures", "algorithms"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/count-zeros-in-a-row-wise-and-column-wise-sorted-matrix/",
+  "languages": ["py", "js"],
+  "timeComplexity": "O(n + m)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-09-19"
 }

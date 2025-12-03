@@ -1,82 +1,57 @@
 # Counter Function
 
-**Platform:** [LeetCode](https://leetcode.com/problems/counter/)  
-**Category:** Closures / Functions  
-**Difficulty:** Easy  
-**Problem Statement:** Create a counter function that returns an incrementing sequence of numbers starting from `n` using closures. The function must maintain its internal state between calls without using global variables.
+> **Difficulty**: easy  
+> **Platform**: LeetCode  
+> **Tags**: closure, functions, counter
 
 ---
 
-## � Problem Overview
-The challenge is to implement a function that generates a counter starting from a given number `n`. Each call to the counter should return the next number in the sequence. The counter must use closures to maintain its state between function calls and should not rely on any global variables.
+## 📝 Problem Statement
+
+Given an integer `n`, create a counter function using closures. The returned counter function initially returns `n`, and every subsequent call returns the next integer (i.e., `n + 1`, `n + 2`, …). The counter must retain its internal state across calls without using global variables. ([LeetCode #2620 Counter](https://leetcode.com/problems/counter/))
 
 ---
 
 ## 📥 Input Format
-- `n`: Starting integer value (-1000 ≤ n ≤ 1000)
+
+- `n`: starting integer value (constraints: `-1000 <= n <= 1000`) :contentReference[oaicite:0]{index=0}
+- Calls: a sequence of `"call"` operations (at most 1000 calls). :contentReference[oaicite:1]{index=1}
+
+---
 
 ## 📤 Output Format
-- Returns a function that, when called, returns the next number in the sequence.
 
-## 🔍 Constraints
-- `-1000 <= n <= 1000`
-- `0 <= calls.length <= 1000`
-- Each entry in `calls` is `"call"`
-- Must use closure to maintain state (no global variables)
+- Returns a function — each time this function is called, it returns the next number in the sequence starting from `n`.
 
----
+## ✔️ Constraints
 
-## 🧪 Sample Cases
-
-### Example 1
-**Input:** `n = 10`  
-**Calls:** `["call","call","call"]`  
-**Output:** `[10, 11, 12]`  
-**Explanation:**  
-- First call returns the initial value 10
-- Second call returns 11 (10 + 1)
-- Third call returns 12 (11 + 1)
-
-### Example 2
-**Input:** `n = -2`  
-**Calls:** `["call","call","call","call","call"]`  
-**Output:** `[-2, -1, 0, 1, 2]`  
-**Explanation:**  
-- The sequence starts at -2 and increments by 1 for each subsequent call
-
-### Example 3
-**Input:** `n = 0`  
-**Calls:** `["call","call"]`  
-**Output:** `[0, 1]`  
-**Explanation:**  
-- First call returns 0
-- Second call returns 1 (0 + 1)
+- `-1000 <= n <= 1000` :contentReference[oaicite:2]{index=2}
+- At most 1000 calls to the returned counter function. :contentReference[oaicite:3]{index=3}
 
 ---
 
-## 🧠 Approach
-1. **Closure Implementation**: Create a function that captures the initial value `n` in its closure scope.
-2. **State Management**: The inner function maintains access to the captured variable even after the outer function has finished execution.
-3. **Incremental Logic**: Each call to the inner function returns the current value and then increments it for the next call.
+## ✅ Example
+
+**Input:**  
+n = 10
+calls = ["call", "call", "call"]
+**Output:**  
+[10, 11, 12]
+**Explanation:**
+
+- First call returns 10
+- Second call returns 11
+- Third call returns 12
+
+**Input:**  
+n = -2
+calls = ["call", "call", "call", "call", "call"]
+**Output:**  
+[-2, -1, 0, 1, 2]
+**Explanation:** The counter starts from –2 and increments by 1 on each call. :contentReference[oaicite:4]{index=4}
 
 ---
 
-## 📊 Complexity Analysis
-- **Time Complexity**: `O(1)` per operation  
-  Each counter call performs a constant-time operation (increment and return).
-  
-- **Space Complexity**: `O(1)`  
-  Only a single number is stored in the closure, regardless of the number of calls.
+## 🛠️ Approach
 
----
-
-## 📝 Notes
-- The counter can handle both positive and negative starting values
-- The counter will continue to increment indefinitely with each call
-- The implementation uses JavaScript's closure feature to maintain state between function calls
-- The solution is memory efficient as it only stores the current value in the closure
-
-## 🔗 Related Problems
-- [Counter II](https://leetcode.com/problems/counter-ii/)
-- [Create Hello World Function](https://leetcode.com/problems/create-hello-world-function/)
-- [Memoize](https://leetcode.com/problems/memoize/)
+Use a closure to capture the initial value `n`. Return an inner function which, when invoked, returns the current value and increments it. This way, the internal state persists across calls without using global variables. :contentReference[oaicite:5]{index=5}

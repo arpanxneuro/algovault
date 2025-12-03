@@ -1,60 +1,62 @@
 # Frequency of Array Elements
 
-> **Difficulty**: Basic  
-> **Accuracy**:   
-> **Submissions**:   
-> **Points**: 
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: array, hash, data structure
 
 ---
 
 ## 📝 Problem Statement
 
-```text
-Input:  arr = [2, 3, 2, 3, 5]
-Output: [0, 2, 2, 0, 1]
-Explanation: Frequencies are:
-1 → 0, 2 → 2, 3 → 2, 4 → 0, 5 → 1
-```
-
----
+Given an array `arr[]` of non‑negative integers (or integers), return the frequency of each distinct element present in the array — i.e., how many times each element appears. :contentReference[oaicite:2]{index=2}
 
 ---
 
 ## 📥 Input
 
-- An array `arr[]` of size `n`.
-
----
+- `arr[]`: an integer array of size `n`.
+- `n`: number of elements in the array.
 
 ---
 
 ## 📤 Output
 
-- Return or print the resulting array or required value.
-
----
+- For each distinct element in `arr[]`, output (or return) a pair: **element → frequency**, representing how many times that element occurs in the array. :contentReference[oaicite:3]{index=3}
 
 ---
 
 ## ✅ Examples
 
-Input:
-5
-1 2 3 4 5
-Output:
-1 2 3 4 5
+**Example 1**  
+**Input**: arr = [10, 20, 10, 5, 20]
+**Output**: [[5, 1], [10, 2], [20, 2]]
+
+Here 5 occurs once, 10 occurs 2 times, 20 occurs 2 times. :contentReference[oaicite:4]{index=4}
+
+**Example 2**  
+**Input**: arr = [4, 4, 4, 4]
+**Output**: [[4, 4]]
+
+All elements are the same — 4 occurs 4 times. :contentReference[oaicite:5]{index=5}
 
 ---
 
+## 🛠️ Approach
+
+A recommended efficient approach uses a hash‑map / dictionary to count frequencies in a single pass:
+
+- Initialize an empty map `freqMap`.
+- Iterate over each element `x` in `arr[]`: increment `freqMap[x]`.
+- After the pass, iterate over entries in `freqMap` to build the result pairs (element, count). :contentReference[oaicite:6]{index=6}
+
+This gives **Time Complexity** = O(n), and **Space Complexity** = O(n) (for the map) in the general case. :contentReference[oaicite:7]{index=7}
+
+If the array elements are in a restricted range (e.g., 1 to n) — as per a variant of the problem — there exists an in‑place O(n)‑time, O(1)-extra‑space method using the array itself as a frequency map. :contentReference[oaicite:8]{index=8}
+
 ---
 
-## 🧪 Test Cases
+## 📌 Notes
 
-| Input | Value | Output |
-|---|---|---|
-| `5
-1 2 3 4 5` | `90` | `1 2 3 4 5 90` |
-
-**Time Complexity:** O(n)
-
-**Space Complexity:** O(1)
+- Works with duplicate elements.
+- Works for arbitrary integer values (as long as map/dictionary supports them).
+- The order of output pairs can be sorted (e.g. ascending by element) or left in arbitrary order depending on implementation.

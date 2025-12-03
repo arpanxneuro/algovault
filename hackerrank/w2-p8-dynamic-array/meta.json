@@ -1,16 +1,11 @@
 {
   "title": "dynamic-array",
-  "languages": [
-    "c",
-    "py",
-    "ts"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array"
-  ],
+  "tags": ["array"],
+  "platform": "HackerRank",
+  "problemSrc": "https://www.hackerrank.com/challenges/three-month-preparation-kit-dynamic-array/problem",
+  "languages": ["c", "py", "ts"],
   "timeComplexity": "O(n)",
-  "spaceComplexity": "O(1)",
-  "platform": "hackerrank",
+  "spaceComplexity": "O(N + Q)",
   "solvedOn": "2025-09-10"
 }

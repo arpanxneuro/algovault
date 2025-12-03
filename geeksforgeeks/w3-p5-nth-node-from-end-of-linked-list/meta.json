@@ -1,10 +1,11 @@
 {
   "title": "nth-node-from-end-of-linked-list",
-  "languages": ["c", "py"],
   "difficulty": "easy",
   "tags": ["linked-list", "two-pointers", "data-structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-02"
 }

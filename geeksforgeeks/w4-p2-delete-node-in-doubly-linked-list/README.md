@@ -1,85 +1,50 @@
 # Delete Node in Doubly Linked List
 
-> **Difficulty**: Easy  
-> **Companies**: Amazon, Microsoft, Google, Adobe
+> **Difficulty**: easy  
+> **Source**: GeeksforGeeks  
+> **Tags**: doubly‑linked‑list, deletion, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Given a reference to the head of a doubly linked list and a key, delete all occurrences of the given key from the linked list. The list is maintained in sorted order.
+Given the head of a doubly linked list and a key value `x`, delete **all occurrences** of nodes whose `data == x`, and return the head of the modified list. If the list is empty or no node with value `x` exists, return the original head. The list is sorted in ascending order. ([GfG – Delete a node in a Doubly Linked List](https://www.geeksforgeeks.org/delete-a-node-in-a-doubly-linked-list/))
 
 ---
 
-## 📥 Input
+## 📥 Input Format
 
-- `head`: The head node of a sorted doubly linked list (can be `None` for empty list).
-- `x`: The value to be deleted from the list.
-
----
-
-## 📤 Output
-
-Return the head of the modified doubly linked list after deletion.
+- `head`: reference to the head node of the doubly linked list (or `null` / `None` if empty).
+- `x`: integer value to delete from the list.
+- The list may contain zero or more nodes; node values are arbitrary integers; duplicates are allowed.
 
 ---
 
-## ✔️ Constraints
+## 📤 Output Format
 
-- `0 ≤ number of nodes ≤ 10^4`
-- `-10^5 ≤ Node.val ≤ 10^5`
-- The list is guaranteed to be sorted in ascending order.
+- Return the head of the updated doubly linked list after all deletions.
 
 ---
 
-## ✅ Example
+## 🧪 Example Cases
 
-**Input**
-1 ⇄ 2 ⇄ 3 ⇄ 4 ⇄ 5 x = 3
-
-**Output**
-1 ⇄ 2 ⇄ 4 ⇄ 5
-
-
-**Explanation**: The node with value 2 is deleted from the list.
-
----
-
-## 🧪 Test Cases
-
-| # | Input List | x | Output List |
-|---|------------|---|-------------|
-| 1 | `[1,2,3,4]` | 2 | `[1,3,4]` |
-| 2 | `[1,1,1]` | 1 | `[]` |
-| 3 | `[2,5,7,9]` | 10 | `[2,5,7,9]` |
-| 4 | `[1,2,3,4,5]` | 1 | `[2,3,4,5]` |
-| 5 | `[1,2,3,4,5]` | 5 | `[1,2,3,4]` |
+| Input List                 | x                       | Output List       |
+| -------------------------- | ----------------------- | ----------------- |
+| `1 ⇄ 2 ⇄ 3 ⇄ 4`, x = 2     | Delete node with data 2 | `1 ⇄ 3 ⇄ 4`       |
+| `1 ⇄ 1 ⇄ 1`, x = 1         | Delete all nodes        | `[]` (empty list) |
+| `2 ⇄ 5 ⇄ 7 ⇄ 9`, x = 10    | No matching nodes       | `2 ⇄ 5 ⇄ 7 ⇄ 9`   |
+| `1 ⇄ 2 ⇄ 3 ⇄ 4 ⇄ 5`, x = 1 | Delete head node(s)     | `2 ⇄ 3 ⇄ 4 ⇄ 5`   |
+| `1 ⇄ 2 ⇄ 3 ⇄ 4 ⇄ 5`, x = 5 | Delete tail node        | `1 ⇄ 2 ⇄ 3 ⇄ 4`   |
 
 ---
 
 ## 🛠️ Approach
 
-1. **Handle Empty List**: If the list is empty, return `None`.
-2. **Delete Head Nodes**: If the head node contains the value to be deleted, update the head.
-3. **Traverse and Delete**: 
-   - Traverse the list to find nodes with the target value.
-   - For each matching node, update the `next` pointer of the previous node and the `prev` pointer of the next node.
-4. **Return Head**: Return the head of the modified list.
+Traverse the doubly linked list. Whenever you find a node with `data == x`, delete that node:
 
-### Key Insight
-- The doubly linked list allows for efficient deletion by updating both `next` and `prev` pointers.
-- The solution handles all edge cases including empty list, single node list, and multiple occurrences of the target value.
+- If it's the head node: update head to `head.next`.
+- If node has a `.next`, set `node.next.prev = node.prev`.
+- If node has a `.prev`, set `node.prev.next = node.next`.
+- Properly adjust `head` if head was deleted.
 
----
-
-## ⏱️ Complexity
-
-- **Time:** `O(n)` - In the worst case, we may need to traverse the entire list.
-- **Space:** `O(1)` - We only use a constant amount of extra space.
-
----
-
-## 📝 Note
-- The solution maintains the sorted order of the list after deletion.
-- All node pointers (`next` and `prev`) are properly updated to maintain the doubly linked list structure.
-- The solution handles edge cases including empty list and single-node list.
+Repeat until end of list — thus removing **all** occurrences. Use constant auxiliary space. :contentReference[oaicite:1]{index=1}

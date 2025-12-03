@@ -1,17 +1,11 @@
 {
   "title": "sorted-insert-for-circular-linked-list",
-  "languages": [
-    "py"
-  ],
   "difficulty": "medium",
-  "tags": [
-    "circular-linked-list",
-    "insertion",
-    "sorting",
-    "data-structure"
-  ],
+  "tags": ["circular‑linked‑list", "insertion", "sorting", "data‑structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/sorted-insert-for-circular-linked-list/",
+  "languages": ["py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-13"
 }

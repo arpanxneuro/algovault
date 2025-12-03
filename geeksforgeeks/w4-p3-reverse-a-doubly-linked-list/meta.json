@@ -1,18 +1,11 @@
 {
   "title": "reverse-a-doubly-linked-list",
-  "languages": [
-    "c",
-    "py",
-    "java"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "doubly-linked-list",
-    "reversal",
-    "data-structure"
-  ],
+  "tags": ["doubly‑linked‑list", "reversal", "data‑structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/reverse-a-doubly-linked-list/",
+  "languages": ["c", "py", "java"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-13"
 }

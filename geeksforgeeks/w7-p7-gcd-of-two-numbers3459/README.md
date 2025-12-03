@@ -1,78 +1,44 @@
 # GCD of Two Numbers (Recursive)
 
 > **Difficulty**: Easy  
-> **Companies**: Amazon, Microsoft, Adobe, Goldman Sachs
+> **Source**: GeeksforGeeks  
+> **Tags**: mathematical, algorithms
 
 ---
 
 ## 📝 Problem Statement
 
-Write a recursive function to find the Greatest Common Divisor (GCD) of two non-negative integers. The GCD of two numbers is the largest positive integer that divides both numbers without leaving a remainder.
+Write a recursive function to find the greatest common divisor (GCD) of two non‑negative integers A and B. The GCD is the largest positive integer that divides both numbers without leaving a remainder. ([GeeksforGeeks – GCD of Two Numbers](https://www.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1))
 
 ---
 
-## 📥 Input
+## 📥 Input Format
 
-- `A`: First non-negative integer (0 ≤ A ≤ 10^9)
-- `B`: Second non-negative integer (0 ≤ B ≤ 10^9)
+- `A`: non‑negative integer (0 ≤ A ≤ 10⁹)
+- `B`: non‑negative integer (0 ≤ B ≤ 10⁹)
 
----
-
-## 📤 Output
-
-Return the GCD of A and B.
-
-## ✔️ Constraints
-
-- At least one of A or B must be non-zero
-- The solution must use recursion
-- The function should handle large inputs efficiently
+At least one of `A` or `B` is non-zero.
 
 ---
 
-## ✅ Example
+## 📤 Output Format
 
-**Input**: A = 24, B = 36  
-**Output**: 12  
-**Explanation**: The divisors of 24 are 1,2,3,4,6,8,12,24 and of 36 are 1,2,3,4,6,9,12,18,36. The greatest common divisor is 12.
-
-**Input**: A = 35, B = 10  
-**Output**: 5
+- Return a non‑negative integer — the GCD of `A` and `B`.
 
 ---
 
-## 🧪 Test Cases
+## 🧪 Example Cases
 
-| # | Input (A, B) | Output | Explanation |
-|---|--------------|--------|-------------|
-| 1 | 0, 5 | 5 | GCD(0,5) = 5 |
-| 2 | 13, 13 | 13 | GCD of same numbers |
-| 3 | 24, 36 | 12 | GCD using Euclidean algorithm |
-| 4 | 1000000000, 1 | 1 | Large number with 1 |
-| 5 | 0, 0 | 0 | Special case (mathematically undefined, but return 0) |
+| Input            | Output | Explanation                                             |
+| ---------------- | ------ | ------------------------------------------------------- |
+| `A = 24, B = 36` | `12`   | Divisors of 24 and 36, largest common divisor is 12.    |
+| `A = 35, B = 10` | `5`    | 5 is the largest integer dividing both 35 and 10.       |
+| `A = 0, B = 5`   | `5`    | GCD(0, b) = b (when b ≠ 0)                              |
+| `A = 13, B = 13` | `13`   | Same numbers → GCD is the number itself                 |
+| `A = 0, B = 0`   | `0`    | As per implementation (though mathematically undefined) |
 
 ---
 
 ## 🛠️ Approach
 
-### Euclidean Algorithm (Recursive)
-1. **Base Case**: If B = 0, return A
-2. **Recursive Case**: Return GCD(B, A mod B)
-
-### Key Insight
-- The Euclidean algorithm is based on the principle that the GCD of two numbers also divides their difference
-- The algorithm reduces the problem size in each recursive call
-- The time complexity is O(log(min(A,B))) which is very efficient
-
-### Time and Space Complexity
-- **Time Complexity**: O(log(min(A,B))) - The number of recursive calls is proportional to the number of digits in the smaller number
-- **Space Complexity**: O(log(min(A,B))) - Due to the recursion stack
-
----
-
-## 📝 Note
-- The solution handles the case where one of the numbers is 0
-- For A = B = 0, the result is 0 (though mathematically undefined)
-- The iterative implementation would be more space-efficient (O(1) space)
-- This is an example of tail recursion, which some compilers can optimize
-- The algorithm works for negative numbers by taking absolute values
+Use the recursive version of the Euclidean Algorithm to compute GCD in O(log (min(A,B))) time:

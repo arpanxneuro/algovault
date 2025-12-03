@@ -1,10 +1,11 @@
 {
   "title": "sum-of-diagonals",
-  "languages": ["c", "py"],
   "difficulty": "easy",
   "tags": ["matrix", "diagonal", "math"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-12"
 }

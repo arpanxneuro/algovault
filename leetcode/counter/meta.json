@@ -1,16 +1,11 @@
 {
   "title": "Counter",
-  "languages": [
-    "js"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "closure",
-    "functions",
-    "counter"
-  ],
+  "tags": ["closure", "functions", "counter"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/counter/",
+  "languages": ["js"],
   "timeComplexity": "O(1) per operation",
   "spaceComplexity": "O(1)",
-  "platform": "LeetCode",
   "solvedOn": "2025-11-14"
 }

@@ -1,87 +1,44 @@
 # Insert in Sorted Way in a Sorted Doubly Linked List
 
-> **Difficulty**: Medium  
-> **Companies**: Amazon, Microsoft, Google, Adobe
+> **Difficulty**: medium  
+> **Source**: GeeksforGeeks  
+> **Tags**: doubly‑linked‑list, insertion, sorting, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Given the head of a sorted doubly linked list in ascending order, insert a new node with a given value into the list while maintaining the sorted order. The list may contain duplicate values.
+Given the head of a sorted doubly linked list (ascending / non‑decreasing order) and an integer value `x`, insert a new node with value `x` into the correct position in the list so that the list remains sorted. The list may contain duplicate values. ([GfG – Insert value in sorted way in a sorted doubly linked list](https://www.geeksforgeeks.org/insert-value-sorted-way-sorted-doubly-linked-list/)) :contentReference[oaicite:2]{index=2}
 
 ---
 
-## 📥 Input
+## 📥 Input Format
 
-- `head`: The head node of a sorted doubly linked list (can be `None` for empty list).
-- `data`: An integer value to be inserted into the list.
-
----
-
-## 📤 Output
-
-Return the head of the modified doubly linked list after the insertion.
+- `head`: reference to the head node of the sorted doubly linked list (can be `null` / `None` if the list is empty)
+- `x`: integer value to insert
 
 ---
 
-## ✔️ Constraints
+## 📤 Output Format
 
-- `0 ≤ number of nodes ≤ 10^4`
-- `-10^5 ≤ Node.val ≤ 10^5`
-- The list is guaranteed to be sorted in ascending order.
+- Return the head of the modified doubly linked list after insertion
 
 ---
 
-## ✅ Example
+## 🧪 Example Cases
 
-**Input**
-1 ⇄ 3 ⇄ 4 data = 2
-
-**Output**
-1 ⇄ 2 ⇄ 3 ⇄ 4
-
-**Explanation**
-The node with value 2 is inserted between 1 and 3, maintaining the sorted order.
-
----
-
-## 🧪 Test Cases
-
-| # | Input List | n | Output |
-|---|------------|---|--------|
-| 1 | `[1,2,3,4]` | 2 | `3` |
-| 2 | `[1,2,3,4,5]` | 3 | `3` |
-| 3 | `[1]` | 1 | `1` |
-| 4 | `[1,2,3,4,5]` | 1 | `5` |
-| 5 | `[1,2,3,4,5]` | 5 | `-1` |
+- **Input:** `head = 3 ⇄ 5 ⇄ 8 ⇄ 10 ⇄ 12`, `x = 9` → **Output:** `3 ⇄ 5 ⇄ 8 ⇄ 9 ⇄ 10 ⇄ 12` :contentReference[oaicite:3]{index=3}
+- **Input:** `head = 1 ⇄ 4 ⇄ 10 ⇄ 11`, `x = 15` → **Output:** `1 ⇄ 4 ⇄ 10 ⇄ 11 ⇄ 15` :contentReference[oaicite:4]{index=4}
+- **Input:** empty list (`head = None`), `x = 5` → **Output:** single-node list `5`
 
 ---
 
 ## 🛠️ Approach
 
-1. **Handle Edge Cases**: If the list is empty, create a new node and return it as the head.
-2. **Traverse List**: Use a pointer to traverse the list until finding the correct position to insert the new node.
-3. **Insert Node**: Insert the new node at the correct position by updating the `prev` and `next` pointers of the relevant nodes.
-4. **Return Head**: Return the head of the modified list.
+1. Create a new node with value `x`.
+2. If the list is empty, make the new node the head and return it.
+3. Else if `x` is less than or equal to head’s data, insert the new node before head — set new node’s `next = head`, update head’s `prev`, and return new node as new head.
+4. Otherwise traverse the list until either you reach the end or find a node `curr` such that `curr.data ≤ x ≤ curr.next.data`. Insert the new node after `curr` by adjusting `prev` and `next` pointers accordingly.
+5. If you reach end without finding such spot (i.e. `x` greater than all existing values), insert at end.
 
-### Key Insights
-- The approach handles all edge cases including empty list and duplicate values.
-- The insertion is performed in O(n) time complexity where n is the number of nodes in the list.
-- The approach is efficient and maintains the sorted order of the list.
-
----
-
-## ⏱️ Complexity
-
-- **Time:** `O(n)` - We traverse the list at most once.
-- **Space:** `O(1)` - We only use a constant amount of extra space.
-
----
-
-## 📝 Note
-- The solution handles all edge cases including:
-  - Empty list
-  - Single node list
-  - Duplicate values
-  - Insertion at head and tail
-- The approach is efficient with O(n) time complexity and O(1) space complexity.
+This preserves sorted order and runs in O(n) time with O(1) extra space. :contentReference[oaicite:5]{index=5}

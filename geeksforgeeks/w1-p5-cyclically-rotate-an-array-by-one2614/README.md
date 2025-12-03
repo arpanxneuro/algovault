@@ -1,54 +1,29 @@
-# Cyclically Rotate an Array by One
 
-> **Difficulty**: Basic  
-> **Accuracy**:   
-> **Submissions**:   
-> **Points**: 
+**Output:**  
+[5, 1, 2, 3, 4]
 
----
+**Input:**  
+arr = [2, 3, 4, 5, 1]
 
-## 📝 Problem Statement
-
-Given an array `arr[]`, your task is to rotate it **by one position in the clockwise direction**. That is, the last element of the array becomes the first, and all other elements are shifted one index forward.
+**Output:**  
+[1, 2, 3, 4, 5]
 
 ---
 
----
+## 🛠️ Approach
 
-## 📥 Input
+One efficient in-place approach (O(n) time, O(1) space):  
+- Store the last element (`last = arr[n-1]`) in a temporary variable. :contentReference[oaicite:4]{index=4}  
+- Shift every element from index `n-2` down to `0` one step to the right (`arr[i+1] = arr[i]`). :contentReference[oaicite:5]{index=5}  
+- Assign `arr[0] = last`. :contentReference[oaicite:6]{index=6}  
 
-- An integer array `arr[]` of size `n`.
-
----
-
-## 📤 Output
-
-- Return or print the updated array after rotating by one position in the clockwise direction.
-
----
+This achieves the clockwise rotation by one, with:  
+- **Time Complexity**: O(n) :contentReference[oaicite:7]{index=7}  
+- **Space Complexity**: O(1) :contentReference[oaicite:8]{index=8}
 
 ---
 
-## ✅ Examples
+## 📌 Notes
 
-Input:
-3 3
-1 2 3
-4 5 6
-7 8 9
-Output (spiral): 1 2 3 6 9 8 7 4 5
-
----
-
-## 🧪 Test Cases
-
-| Input | Output |
-|---|---|
-| `3 3
-1 2 3
-4 5 6
-7 8 9` | `1 2 3 6 9 8 7 4 5` |
-
-**Time Complexity:** O(n)
-
-**Space Complexity:** O(1)
+- Works for any integer array, including negative, positive, or zero values.  
+- Supports arrays of arbitrary size `n ≥ 1`.  

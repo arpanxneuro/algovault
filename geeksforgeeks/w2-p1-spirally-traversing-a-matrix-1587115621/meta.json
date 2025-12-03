@@ -1,12 +1,11 @@
 {
   "title": "spirally-traversing-a-matrix-1587115621",
-  "languages": ["py"],
   "difficulty": "easy",
-  "tags": [
-    ""
-  ],
-  "timeComplexity": "O(n)",
+  "tags": ["array", "matrix", "implementation"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1",
+  "languages": ["py"],
+  "timeComplexity": "O(n*m)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-25"
 }

@@ -1,13 +1,11 @@
 {
-  "title": "Special Array I",
-  "languages": ["js"],
+  "title": "special-array-i",
   "difficulty": "easy",
-  "tags": [
-    "array",
-    "simulation"
-  ],
+  "tags": ["array", "simulation"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/special-array-i/",
+  "languages": ["js"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "LeetCode",
   "solvedOn": "2025-11-14"
 }

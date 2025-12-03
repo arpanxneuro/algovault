@@ -1,114 +1,76 @@
 # Function Composition
 
-**Platform:** [LeetCode](https://leetcode.com/problems/function-composition/)  
-**Category:** Functional Programming / Higher-Order Functions  
-**Difficulty:** Easy  
-**Problem Statement:** Create a function that composes an array of functions into a single function, where each function consumes the return value of the function that follows. The composition should work right-to-left, and an empty list of functions should return the identity function.
+> **Difficulty**: easy  
+> **Platform**: LeetCode  
+> **Tags**: functional‑programming, higher‑order‑functions, function‑composition
 
 ---
 
-## 📘 Problem Overview
-Given an array of functions `[f1, f2, f3, ..., fn]`, return a new function `fn(x)` that computes the composition of the array of functions. The composition of `[f1, f2, f3, ..., fn]` is the function `f(x) = f1(f2(f3(...(fn(x)))))`.
+## 📝 Problem Statement
 
-### Key Points:
-- Function composition is the process of combining two or more functions to produce a new function
-- The composition is done from right to left
-- An empty list of functions should return the identity function `f(x) = x`
-- All functions are guaranteed to be unary (accept exactly one argument)
+Given an array of unary functions `functions = [f1, f2, f3, ..., fn]`, return a single function that represents their composition. The composed function, when called with input `x`, should compute:
+f1(f2(f3(...(fn(x))...)))
+
+In other words, functions are applied from right to left. If the array is empty, the result should be the identity function — i.e., `f(x) = x`. ([LeetCode #2629 Function Composition](https://leetcode.com/problems/function-composition/))
 
 ---
 
 ## 📥 Input Format
-- `functions`: An array of functions to be composed (0 ≤ functions.length ≤ 1000)
-- `x`: The input value to the composed function (-1000 ≤ x ≤ 1000)
+
+- `functions`: array of functions, each accepts one integer and returns one integer. (`0 ≤ functions.length ≤ 1000`) :contentReference[oaicite:2]{index=2}
+- When the composed function is invoked, it accepts an integer `x`, where `-1000 ≤ x ≤ 1000`. :contentReference[oaicite:3]{index=3}
+
+---
 
 ## 📤 Output Format
-- Returns a function that takes one argument `x` and returns the result of the function composition
-- The return value will be in the range `[-1000, 1000]`
 
-## 🔍 Constraints
-- `-1000 <= x <= 1000`
-- `0 <= functions.length <= 1000`
-- All functions in the array are unary (accept exactly one argument)
-- `x` and all return values are guaranteed to be in the range `[-1000, 1000]`
+- Returns a function `fn`. When `fn(x)` is called, it returns an integer — the result of applying all provided functions in composition on `x`.
+
+## ✔️ Constraints
+
+- `-1000 ≤ x ≤ 1000` :contentReference[oaicite:4]{index=4}
+- `0 ≤ functions.length ≤ 1000` :contentReference[oaicite:5]{index=5}
+- Each function accepts exactly one integer argument and returns one integer. :contentReference[oaicite:6]{index=6}
 
 ---
 
 ## 🧪 Sample Cases
 
 ### Example 1
+
 **Input:**  
-`functions = [x => x + 1, x => x * x, x => 2 * x]`  
-`x = 4`  
+functions = [x => x + 1, x => x * x, x => 2 * x]
+x = 4
 **Output:** `65`  
-**Explanation:**  
-Evaluating from right to left:  
-- Start with x = 4  
-- 2 * 4 = 8  
-- 8 * 8 = 64  
-- 64 + 1 = 65  
+**Explanation:**
+
+- Start with x = 4
+- Apply the rightmost function: 2 \* 4 = 8
+- Next: square → 8 \* 8 = 64
+- Next: +1 → 64 + 1 = 65 :contentReference[oaicite:7]{index=7}
 
 ### Example 2
+
 **Input:**  
-`functions = [x => 10 * x, x => 10 * x, x => 10 * x]`  
-`x = 1`  
+functions = [x => 10 * x, x => 10 * x, x => 10 * x]
+x = 1
 **Output:** `1000`  
 **Explanation:**  
-- 10 * 1 = 10  
-- 10 * 10 = 100  
-- 10 * 100 = 1000  
+10 × (10 × (10 × 1)) = 1000 :contentReference[oaicite:8]{index=8}
 
 ### Example 3
+
 **Input:**  
-`functions = []`  
-`x = 42`  
+functions = []
+x = 42
 **Output:** `42`  
 **Explanation:**  
-The composition of zero functions is the identity function `f(x) = x`.
+Empty function array → identity function, returns input as is. :contentReference[oaicite:9]{index=9}
 
 ---
 
-## 🧠 Approach
-1. **Right-to-Left Execution**: Process functions in reverse order (right-to-left)
-2. **Reduce Pattern**: Use `reduceRight` to apply each function to the accumulated result
-3. **Identity Function**: Return the input directly if no functions are provided
-4. **Function Composition**: Chain the functions such that the output of one becomes the input of the next
+## 🛠️ Approach
 
-### Solution Code
-```javascript
-/**
- * @param {Function[]} functions
- * @return {Function}
- */
-var compose = function(functions) {
-    return function(x) {
-        return functions.reduceRight((acc, fn) => fn(acc), x);
-    }
-};
-```
-
----
-
-## 📊 Complexity Analysis
-- **Time Complexity**: `O(n)`  
-  Where n is the number of functions. Each function is called exactly once.
-  
-- **Space Complexity**: `O(1)`  
-  The space used is constant as we only store the intermediate result.
-
----
-
-## 📝 Notes
-- The solution uses JavaScript's `reduceRight` for clean right-to-left function application
-- The identity function case (empty array) is handled naturally by the implementation
-- All functions are assumed to be pure (no side effects) and unary (single argument)
-- The solution is concise yet readable, making good use of functional programming principles
-
-## 🔗 Related Problems
-- [Compose](https://leetcode.com/problems/compose/)
-- [Function Composition](https://leetcode.com/problems/function-composition/)
-- [Memoize](https://leetcode.com/problems/memoize/)
-
-## 📚 Additional Resources
-- [MDN: Function Composition](https://developer.mozilla.org/en-US/docs/Glossary/Function_composition)
-- [JavaScript.info: Function Composition](https://javascript.info/currying-partials#going-partial-without-context)
+- Use a higher‑order function `compose(functions)` that returns a new function `fn`.
+- When `fn(x)` is invoked, apply all functions in the array from right to left.
+- In JavaScript, you can implement this cleanly using `reduceRight`: start with initial value `x`, then apply each function in reverse order:

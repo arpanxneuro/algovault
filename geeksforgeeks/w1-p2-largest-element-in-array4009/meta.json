@@ -1,18 +1,11 @@
 {
   "title": "largest-element-in-array4009",
-  "languages": [
-    "py",
-    "c"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array",
-    "loop",
-    "comparison",
-    "condition"
-  ],
+  "tags": ["array", "loop", "comparison", "condition"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://practice.geeksforgeeks.org/problems/largest-element-in-array4009/1",
+  "languages": ["py", "c"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-07-28"
 }

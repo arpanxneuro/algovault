@@ -1,69 +1,45 @@
 # Josephus Problem
 
 > **Difficulty**: Medium  
-> **Companies**: Amazon, Microsoft, Google, Adobe
+> **Source**: GeeksforGeeks  
+> **Tags**: recursion, mathematics, data‑structure, simulation
 
 ---
 
 ## 📝 Problem Statement
 
-Given the total number of people `n` and a number `k` which indicates that `k-1` persons are skipped and the `k-th` person is eliminated in a circle. The task is to find the position of the last remaining person.
+There are `n` people standing in a circle, numbered from 1 to `n`. Starting from person 1, every `k`‑th person is eliminated (i.e. skip `k‑1` persons, then eliminate the `k`th), and the process continues from the next person after the eliminated one. This continues until only one person remains. Find the position (1‑based index) of the last remaining person (the survivor). ([Josephus Problem — GeeksforGeeks](https://www.geeksforgeeks.org/josephus-problem/))
 
 ---
 
-## 📥 Input
+## 📥 Input Format
 
-- `n`: An integer representing the total number of people in the circle (1 ≤ n ≤ 10^5).
-- `k`: An integer representing the step size for elimination (1 ≤ k ≤ 10^5).
-
----
-
-## 📤 Output
-
-Return the position (1-based index) of the last remaining person.
+- `n`: integer, total number of people (1 ≤ n)
+- `k`: integer, elimination step (1 ≤ k)
 
 ---
 
-## ✔️ Constraints
+## 📤 Output Format
 
-- 1 ≤ n ≤ 10^5
-- 1 ≤ k ≤ 10^5
-
----
-
-## ✅ Example
-
-**Input**
-n = 7, k = 3
-
-**Output**
-4
-
-
-**Explanation**:
-1. People are in a circle: 1, 2, 3, 4, 5
-2. First, the person at position 3 is eliminated: 1, 2, 4, 5
-3. Next, the person at position 1 is eliminated: 2, 4, 5
-4. Next, the person at position 5 is eliminated: 2, 4
-5. Next, the person at position 2 is eliminated: 4
-6. The last remaining person is at position 4.
+- Return an integer: the 1‑based position of the survivor (the last remaining person).
 
 ---
 
-## 🧪 Test Cases
+## 🧪 Example Cases
 
-| # | n | k | Output |
-|---|---|---|--------|
-| 1 | 5 | 3 | 4 |
-| 2 | 7 | 3 | 4 |
-| 3 | 4 | 2 | 1 |
-| 4 | 1 | 1 | 1 |
-| 5 | 40 | 7 | 28 |
+- **Input:** `n = 7, k = 3` → **Output:** `4`  
+  **Explanation:** People eliminated in order — 3, 6, 2, 7, 5, 1; survivor is at position 4. :contentReference[oaicite:2]{index=2}
+- **Input:** `n = 5, k = 2` → **Output:** `3` :contentReference[oaicite:3]{index=3}
+
+### Additional Sample Cases
+
+| n   | k   | Survivor |
+| --- | --- | -------- |
+| 1   | any | 1        |
+| 4   | 2   | 1        |
 
 ---
 
 ## 🛠️ Approach
 
-### Recursive Approach
-1. **Base Case**: If there's only one person, return 0 (0-based index).
-2. **Recursive Case**: The position of the last remaining person in a circle of size `n` can be derived from the position in a circle of size `n-1` using the formula:
+A classical way is via recursion or iterative dynamic programming using the recurrence:

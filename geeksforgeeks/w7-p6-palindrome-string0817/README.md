@@ -1,82 +1,57 @@
-# Check if String is Palindrome (Recursive)
+# Check if String is Palindrome
 
-> **Difficulty**: Easy  
-> **Companies**: Amazon, Microsoft, Adobe, Bloomberg
+> **Difficulty**: easy  
+> **Source**: GeeksforGeeks  
+> **Tags**: string, data‑structures, two‑pointer‑algorithms
 
 ---
 
 ## 📝 Problem Statement
 
-Given a string S, write a recursive function to determine if it is a palindrome. A string is a palindrome if it reads the same backward as forward, ignoring cases and non-alphanumeric characters.
+Given a string `S`, write a function to determine if it is a palindrome. A string is a palindrome if it reads the same forward and backward. The comparison should be **case‑sensitive** and should consider **all characters** (i.e., do **not** ignore non‑alphanumeric characters, spaces or punctuation). ([GfG – Palindrome String Problem](https://www.geeksforgeeks.org/problems/palindrome-string0817/1))
 
 ---
 
-## 📥 Input
+## 📥 Input Format
 
-- `S`: A string (1 ≤ |S| ≤ 10^4), where |S| is the length of the string
-
----
-
-## 📤 Output
-
-Return `1` if the string is a palindrome, `0` otherwise.
-
-## ✔️ Constraints
-
-- The string may contain any ASCII characters
-- The solution must be case-insensitive
-- The solution must ignore non-alphanumeric characters
-- You must use recursion to solve this problem
+- `S`: a string (1 ≤ |S| ≤ typically within practical string limits)
 
 ---
 
-## ✅ Example
+## 📤 Output Format
 
-**Input**: "A man, a plan, a canal: Panama"  
-**Output**: 1  
-**Explanation**: "amanaplanacanalpanama" is a palindrome
-
-**Input**: "race a car"  
-**Output**: 0  
-**Explanation**: "raceacar" is not a palindrome
+- Return `1` if the string `S` is a palindrome; otherwise return `0`.
 
 ---
 
-## 🧪 Test Cases
+## 🧪 Example Cases
 
-| # | Input | Output | Explanation |
-|---|-------|--------|-------------|
-| 1 | "radar" | 1 | "radar" is a palindrome |
-| 2 | "hello" | 0 | "hello" is not a palindrome |
-| 3 | "A man, a plan, a canal: Panama" | 1 | Ignore non-alphanumeric and case |
-| 4 | "a" | 1 | Single character is palindrome |
-| 5 | "Able was I ere I saw Elba" | 1 | Case-insensitive palindrome |
+| Input        | Output | Explanation                                |
+| ------------ | ------ | ------------------------------------------ |
+| `"radar"`    | `1`    | "radar" reads the same forwards/backwards. |
+| `"hello"`    | `0`    | "hello" reversed is "olleh" — not same.    |
+| `"abba"`     | `1`    | Symmetric string.                          |
+| `""` (empty) | `1`    | Empty string is trivially palindrome.      |
 
 ---
 
 ## 🛠️ Approach
 
-### Recursive Approach
-1. **Base Cases**:
-   - If the string has 0 or 1 character, it's a palindrome (return 1)
-   - If the first and last characters don't match (case-insensitive), it's not a palindrome (return 0)
-2. **Recursive Case**:
-   - If the first and last characters match, recursively check the substring that excludes these characters
+Use two-pointer (or recursion) technique:
 
-### Key Insight
-- The problem reduces to checking if the first and last characters are the same, then moving inward
-- Non-alphanumeric characters should be skipped during comparison
-- The solution must be case-insensitive
+- Initialize two indices: `left = 0`, `right = len(S) − 1`.
+- While `left < right`:
+  - Compare `S[left]` and `S[right]`; if they differ → return `0`.
+  - Move `left++`, `right--`.
+- If loop completes without mismatch → return `1`.
 
-### Time and Space Complexity
-- **Time Complexity**: O(n) - Each character is processed exactly once
-- **Space Complexity**: O(n) - Due to the recursion stack (worst case for a palindrome)
+Recursively, one could check: if `S[0] != S[-1]` then not palindrome; else recurse on the substring `S[1:-1]`.
+
+This method runs in **O(n)** time and uses **O(1)** extra space (or O(n) if recursion uses call stack).
 
 ---
 
-## 📝 Note
-- The solution handles edge cases like empty strings and single-character strings
-- Non-alphanumeric characters are ignored during the check
-- The comparison is case-insensitive
-- The iterative approach would be more space-efficient (O(1) space) but the problem requires recursion
-- This is an example of two-pointer technique implemented recursively
+## 📚 Notes & References
+
+- Official problem (GfG “Palindrome String”) content. :contentReference[oaicite:1]{index=1}
+- Two‑pointer method explanation from GfG editorial. :contentReference[oaicite:2]{index=2}

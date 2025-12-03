@@ -1,14 +1,11 @@
 {
   "title": "array-reduce-transformation",
-  "languages": [
-    "js"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array"
-  ],
+  "tags": ["array"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/array-reduce-transformation/",
+  "languages": ["js"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "LeetCode",
   "solvedOn": "2025-11-14"
 }

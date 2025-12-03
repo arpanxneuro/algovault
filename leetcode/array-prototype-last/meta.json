@@ -1,14 +1,11 @@
 {
   "title": "array-prototype-last",
-  "languages": [
-    "js"
-  ],
-  "difficulty": "easy",
-  "tags": [
-    "array"
-  ],
-  "timeComplexity": "O(n)",
-  "spaceComplexity": "O(1)",
   "platform": "LeetCode",
+  "difficulty": "easy",
+  "languages": ["js"],
+  "tags": ["array", "functional‑programming", "higher‑order‑function"],
+  "problemSrc": "https://leetcode.com/problems/array-prototype-last/",
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(1)",
   "solvedOn": "2025-11-14"
 }

@@ -1,19 +1,11 @@
 {
   "title": "remove-loop-in-linked-list",
-  "languages": [
-    "c",
-    "py",
-    "java"
-  ],
   "difficulty": "medium",
-  "tags": [
-    "linked-list",
-    "two-pointers",
-    "cycle-detection",
-    "data-structure"
-  ],
+  "tags": ["linked-list", "two-pointers", "cycle-detection", "data-structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/",
+  "languages": ["c", "py", "java"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-02"
 }

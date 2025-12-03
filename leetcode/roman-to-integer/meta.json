@@ -1,15 +1,11 @@
 {
   "title": "Roman to Integer",
-  "languages": ["py", "ts"],
   "difficulty": "easy",
-  "tags": [
-    "hash-table",
-    "math",
-    "string",
-    "parsing"
-  ],
+  "tags": ["hash-table", "math", "string", "parsing"],
+  "platform": "LeetCode",
+  "problemSrc": "",
+  "languages": ["py", "ts"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "LeetCode",
   "solvedOn": "2025-11-14"
 }

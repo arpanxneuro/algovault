@@ -1,17 +1,11 @@
 {
   "title": "fibonacci-series-up-to-nth-term",
-  "languages": [
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "recursion",
-    "fibonacci",
-    "algorithms",
-    "dynamic programming"
-  ],
+  "tags": ["recursion", "fibonacci", "algorithms", "dynamic programming"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/problems/fibonacci-series-up-to-nth-term/1",
+  "languages": ["py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(n)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-24"
 }

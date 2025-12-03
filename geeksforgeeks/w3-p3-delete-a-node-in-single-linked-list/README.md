@@ -1,89 +1,74 @@
 # Delete a Node in Single Linked List
 
-> **Difficulty**: Basic  
-> **Companies**: Samsung, Adobe, Amazon
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: linked‑list, deletion, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Delete the node at a given position in a singly linked list and return the modified list. If the position is out of bounds, the list remains unchanged.
+Given the head of a singly linked list (which may be empty), and a 0‑based position `pos`, delete the node at that position. If the position is invalid (out of bounds), the list remains unchanged. Return the head of the modified linked list.
 
 ---
 
 ## 📥 Input
 
-- `head`: The head node of the linked list (can be `None` for empty list).
-- `pos`: An integer (0 ≤ pos < n) indicating the 0-based position of the node to delete.
+- `head` — the head node of the singly linked list (may be `null` / `None` if list is empty)
+- `pos` — integer indicating the 0‑based position of the node to delete
 
 ---
 
 ## 📤 Output
 
-Return the head of the modified linked list after deletion.
+- Return the head of the updated list after deletion (or unchanged head if position invalid)
 
 ---
 
 ## ✔️ Constraints
 
-- `0 ≤ n ≤ 10^4` where n is the number of nodes in the list
-- `-10^4 ≤ Node.val ≤ 10^4`
-- `0 ≤ pos < n`
-- List can be empty
+- Let the list have `n` nodes initially, then `0 ≤ pos < n` for valid deletion.
+- For empty list (`n = 0`) or invalid `pos`, simply return the original `head`.
+- Node values can be any integer (positive, negative, zero) depending on problem specification.
 
 ---
 
-## ✅ Example
+## ✅ Examples
 
-**Input**
-```
-head = [1, 2, 3, 4]
-pos = 2
-```
-
-**Output**
-```
-[1, 2, 4]
-```
-
-**Explanation**: The node at position 2 (0-based) with value 3 is deleted from the list.
-
----
-
-## 🧪 Test Cases
-
-| # | Linked List | Position | Output |
-|---|-------------|----------|--------|
-| 1 | `[1,2,3,4]` | 2 | `[1,2,4]` |
-| 2 | `[10,20,30,40,50]` | 0 | `[20,30,40,50]` |
-| 3 | `[7]` | 0 | `[]` |
-| 4 | `[1,2,3,4,5]` | 4 | `[1,2,3,4]` |
-| 5 | `[5,10,15,20]` | 2 | `[5,10,20]` |
+**Example 1**  
+Input: head = [1, 2, 3, 4], pos = 2
+Output: [1, 2, 4]
+Explanation: Node at index 2 (0‑based) — value 3 — is removed.
+**Example 2**  
+Input: head = [10, 20, 30, 40], pos = 0
+Output: [20, 30, 40]
+Explanation: Delete the head node.
+**Example 3**  
+Input: head = [7], pos = 0
+Output: []
+Explanation: Single‑node list becomes empty.
+**Example 4**  
+Input: head = [5,10,15,20], pos = 4
+Output: [5,10,15,20]
+Explanation: Position out‑of‑bounds — no deletion.
 
 ---
 
 ## 🛠️ Approach
 
-1. **Edge Cases**: Handle empty list and deletion at head (pos = 0) separately.
-2. **Traversal**: Move to the node before the target position (pos-1).
-3. **Deletion**: Update the next pointer to skip the target node.
-4. **Out of Bounds**: If position exceeds list length, return original list.
+Standard iterative deletion in a singly linked list — O(n) time, O(1) space. :contentReference[oaicite:2]{index=2}
 
-### Key Insight
-- For position 0, simply return `head.next`
-- For other positions, find the node before the target and update its next pointer
-- If position is invalid (≥ list length), return the original list
+1. If `head` is `null`, return `null`.
+2. If `pos == 0`, adjust head to `head.next`, delete old head (if manual memory management), and return new head.
+3. Else, traverse list to reach node just **before** the target — i.e. iterate `pos - 1` steps (while tracking current node).
+4. If `next` of that node exists, update its `next` pointer to skip the node to delete: `prev.next = prev.next.next`.
+5. Return head.
+
+Edge cases: empty list, deletion at head, last‑node deletion, invalid position (≥ length).
 
 ---
 
 ## ⏱️ Complexity
 
-- **Time:** `O(n)` - In worst case, we may need to traverse the entire list.
-- **Space:** `O(1)` - Constant extra space is used.
-
----
-
-## 📝 Note
-- The position is 0-based, with 0 being the head of the list.
-- If the position is equal to or greater than the length of the list, the list remains unchanged.
-- The solution handles all edge cases including empty list and single-node list.
+- **Time Complexity:** O(n) — traversal up to `pos` (worst-case full list).
+- **Space Complexity:** O(1) — only a few pointer variables used.

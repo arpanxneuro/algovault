@@ -1,81 +1,60 @@
 # Sum of Digits Using Recursion
 
-> **Difficulty**: Easy  
-> **Companies**: Amazon, Microsoft, Adobe, TCS
+> **Difficulty**: easy  
+> **Source**: GeeksforGeeks  
+> **Tags**: number‑theory
 
 ---
 
 ## 📝 Problem Statement
 
-Given a non-negative integer N, write a recursive function to calculate the sum of its digits. The function should return the sum of all digits in the number.
+Given a non‑negative integer `N`, write a recursive function to compute the sum of all its digits. For example, for `N = 1234`, the result is `1 + 2 + 3 + 4 = 10`. ([GfG – Sum of digits of a number using recursion](https://www.geeksforgeeks.org/sum-digit-number-using-recursion/))
 
 ---
 
-## 📥 Input
+## 📥 Input Format
 
-- `N`: A non-negative integer (0 ≤ N ≤ 10^9)
-
----
-
-## 📤 Output
-
-Return the sum of all digits in N.
-
-## ✔️ Constraints
-
-- 0 ≤ N ≤ 1,000,000,000
-- You must use recursion to solve this problem
-- The function should return an integer
+- `N`: non‑negative integer (e.g., `0 ≤ N ≤ 10^9`)
 
 ---
 
-## ✅ Example
+## 📤 Output Format
 
-**Input**: 1234  
-**Output**: 10  
-**Explanation**: 1 + 2 + 3 + 4 = 10
-
-**Input**: 999  
-**Output**: 27  
-**Explanation**: 9 + 9 + 9 = 27
+- Integer: the sum of all digits in `N`.
 
 ---
 
-## 🧪 Test Cases
+## 🧪 Example Cases
 
-| # | Input (N) | Output |
-|---|-----------|--------|
-| 1 | 0 | 0 |
-| 2 | 9 | 9 |
-| 3 | 123 | 6 |
-| 4 | 1000000000 | 1 |
-| 5 | 99999 | 45 |
+**Input:** `1234` → **Output:** `10` (1 + 2 + 3 + 4)  
+**Input:** `999` → **Output:** `27` (9 + 9 + 9)  
+**Input:** `0` → **Output:** `0`
 
 ---
 
 ## 🛠️ Approach
 
-### Recursive Approach
-1. **Base Case**: If N is a single-digit number, return N itself.
-2. **Recursive Case**:
-   - Get the last digit using modulo 10: `N % 10`
-   - Make a recursive call with the remaining number: `N // 10`
-   - Add the last digit to the result of the recursive call
+Use recursion with digit‑extraction:
+sumDigits(n):
+if n == 0:
+return 0
+return (n % 10) + sumDigits(n // 10)
 
-### Key Insight
-- The problem can be broken down into smaller subproblems:
-  - Sum of digits of N = (last digit of N) + (sum of digits of N without the last digit)
-- The recursion continues until we reach a single-digit number (base case)
-- The space complexity is O(log n) due to the recursion stack, where n is the number of digits
+- Extract the last digit using `n % 10`.
+- Recurse on the truncated number `n // 10`.
+- Base case: when `n == 0`, return 0.
 
-### Time and Space Complexity
-- **Time Complexity**: O(log n) - We process each digit exactly once
-- **Space Complexity**: O(log n) - Due to the recursion call stack
+This ensures each digit is processed exactly once.
 
 ---
 
-## 📝 Note
-- The solution handles the edge case where N = 0
-- For very large numbers (up to 10^9), the recursive approach is efficient
-- The number of recursive calls equals the number of digits in N, which is log₁₀N
-- This is a classic example of tail recursion, where the recursive call is the last operation
+## 📊 Complexity Analysis
+
+- **Time Complexity**: O(log₁₀ N) — roughly the number of digits in `N`. :contentReference[oaicite:0]{index=0}
+- **Space Complexity**: O(log₁₀ N) — due to recursion stack depth. :contentReference[oaicite:1]{index=1}
+
+---
+
+## 📚 Notes & References
+
+- Official GeeksforGeeks article covering recursion‑based digit‑sum computation. :contentReference[oaicite:2]{index=2}

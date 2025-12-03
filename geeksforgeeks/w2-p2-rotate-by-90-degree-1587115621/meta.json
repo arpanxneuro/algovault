@@ -1,10 +1,11 @@
 {
   "title": "rotate-by-90-degree",
-  "languages": ["py"],
   "difficulty": "easy",
   "tags": ["matrix", "rotation", "in-place"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/inplace-rotate-square-matrix-by-90-degrees/",
+  "languages": ["py"],
   "timeComplexity": "O(n^2)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-12"
 }

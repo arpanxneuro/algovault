@@ -1,66 +1,63 @@
 # Rotate a Matrix by 90 Degrees
 
-Rotate a square matrix `mat` of size `n × n` by **90° in the anti-clockwise direction** without using extra space.
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: matrix, rotation, in‑place
 
 ---
 
 ## 📝 Problem Statement
 
-Given a matrix `mat`, modify it in-place so that the elements are rotated 90 degrees anti-clockwise. The operation should be done without allocating another matrix of the same size.
+Given a square matrix `mat` of size `n × n`, rotate the matrix by **90° in the anti‑clockwise direction**, modifying the matrix **in-place** (without using extra space for another matrix). ([geeksforgeeks.org](https://www.geeksforgeeks.org/dsa/inplace-rotate-square-matrix-by-90-degrees/))
 
 ---
 
 ## 📥 Input
 
-- First line: integer `n` denoting the size of the matrix.
-- Next `n` lines: each contains `n` integers describing a row of `mat`.
+- An integer `n` denoting the size of the square matrix.
+- A matrix `mat` of size `n × n`, where each of the next `n` lines contains `n` space-separated integers.
 
 ---
 
 ## 📤 Output
 
-- Print the rotated matrix in row-major order or return it from the helper function, depending on the execution environment. For textual explanations, the rows are usually flattened into a single line separated by spaces.
-
----
-
-## ✔️ Constraints
-
-- `1 ≤ n ≤ 500`
-- `-10^3 ≤ mat[i][j] ≤ 10^3`
+- The same matrix `mat`, now rotated 90° anti‑clockwise.
+- If printing — output the rotated matrix row by row in row-major order; if returning — return the rotated matrix.
 
 ---
 
 ## ✅ Example
 
-**Input**
+**Input**  
+n = 3
+mat = [
+[1, 2, 3],
+[4, 5, 6],
+[7, 8, 9]
+]
 
-```
-3
-1 2 3
-4 5 6
-7 8 9
-```
-
-**Output**
-
-```
+**Output**  
 3 6 9
 2 5 8
 1 4 7
-```
 
 ---
 
-## 🧪 Test Cases
+## 🛠️ Approach
 
-| # | Input | Output |
-|---|---|---|
-| 1 | `3\n1 2 3\n4 5 6\n7 8 9` | `3 6 9\n2 5 8\n1 4 7` |
-| 2 | `2\n1 2\n3 4` | `2 4\n1 3` |
+One efficient in-place solution (O(n²) time, O(1) extra space) uses two main steps:
+
+1. **Transpose the matrix** (swap `mat[i][j]` with `mat[j][i]` for all i < j).
+2. **Reverse each column** (or equivalently **reverse rows then transpose**, depending on convention) — for an anti‑clockwise rotation, the usual method is: transpose, then reverse individual columns. :contentReference[oaicite:2]{index=2}
+
+This transforms rows into columns and reorders elements appropriately to achieve the 90° anti‑clockwise rotation.
 
 ---
 
-## ⏱️ Complexity
+## 📌 Notes & Constraints
 
-- **Time:** `O(n^2)` – every cell is visited once.
-- **Space:** `O(1)` – rotation is done in-place.
+- Works for any integer matrix (positive, negative, zero).
+- In-place algorithm — no auxiliary matrix needed.
+- **Time Complexity:** O(n²) — each element is visited and swapped a constant number of times.
+- **Space Complexity:** O(1) (excluding input storage) — only a few indices / temp variables used.
+- Valid for any square matrix size `n ≥ 1`.

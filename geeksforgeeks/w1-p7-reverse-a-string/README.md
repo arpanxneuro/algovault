@@ -1,17 +1,14 @@
 # Reverse a String
 
-> **Difficulty**: Basic  
-> **Accuracy**:   
-> **Submissions**:   
-> **Points**: 
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: string, loop
 
 ---
 
 ## 📝 Problem Statement
 
-You are given a string `s`. Your task is to **reverse the string** and return the result.
-
----
+Given a string `s`, your task is to **reverse the string** — i.e., rearrange the characters such that the first character becomes last, the second becomes second-last, and so on. ([geeksforgeeks.org](https://www.geeksforgeeks.org/reverse-a-string/))
 
 ---
 
@@ -23,30 +20,35 @@ You are given a string `s`. Your task is to **reverse the string** and return th
 
 ## 📤 Output
 
-- A string that represents the **reverse** of the input.
-
----
+- A string that represents the **reverse** of the input string.
 
 ---
 
 ## ✅ Examples
 
-Input:
-5
-1 2 3 4 5
-90
-Output:
-1 2 3 4 5 90
+**Example 1**  
+**Input**: s = "GeeksforGeeks"
+**Output**: "skeeGrofskeeG"
+
+**Example 2**  
+**Input**: s = "abdcfe"
+**Output**: "efcdba"
 
 ---
 
-## 🧪 Test Cases
+## 🛠️ Approach
 
-| Input | Value | Output |
-|---|---|---|
-| `5
-1 2 3 4 5` | `90` | `1 2 3 4 5 90` |
+A simple in-place approach (two-pointer) — or building a new string in reverse — works in O(n) time:
 
-**Time Complexity:** O(n)
+- Set two indices: `left = 0`, `right = n − 1`.
+- While `left < right`, swap `s[left]` and `s[right]`, then `left++`, `right--`.
+- Return the modified string.
 
-**Space Complexity:** O(1)
+This approach runs in **O(n)** time and uses **O(1)** extra space (ignoring language-specific string immutability). 
+
+---
+
+## 📌 Notes
+
+- Works for strings containing any characters — alphabets, digits, symbols.
+- Efficient even for very long strings, linear runtime.

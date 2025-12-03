@@ -1,94 +1,49 @@
 # Sorted Insert for Circular Linked List
 
-> **Difficulty**: Medium  
-> **Companies**: Amazon, Microsoft, Google, Adobe
+> **Difficulty**: medium  
+> **Source**: GeeksforGeeks  
+> **Tags**: circular‑linked‑list, insertion, sorting, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Given a node from a Circular Linked List which is sorted in ascending order, write a function to insert a value `x` into the list such that it remains a sorted circular list. The function should return the newly inserted node.
+Given a node from a circular singly linked list sorted in ascending (non‑decreasing) order, and an integer value `x`, insert a new node with value `x` into the list so that it remains a sorted circular linked list. Return a reference to any node in the modified list (often the inserted node or head). ([GfG – Sorted insert for circular linked list](https://www.geeksforgeeks.org/sorted-insert-for-circular-linked-list/))
 
 ---
 
-## 📥 Input
+## 📥 Input Format
 
-- `head`: A reference to any node in a sorted circular linked list (can be `None` for empty list).
-- `x`: The integer value to be inserted.
-
----
-
-## 📤 Output
-
-Return a reference to any node in the modified circular linked list (typically the new node).
+- `head`: reference to any node in the sorted circular linked list (or `null`/`None` if list is empty).
+- `x`: integer value to insert.
+- The list may have zero or more nodes; node values can be in any integer range; duplicates allowed.
 
 ---
 
-## ✔️ Constraints
+## 📤 Output Format
 
-- `0 ≤ number of nodes ≤ 10^4`
-- `-10^6 ≤ Node.val ≤ 10^6`
-- The list is guaranteed to be sorted in ascending order.
-- The list may contain duplicate values.
+- A reference to a node in the updated circular linked list, after inserting the new value and maintaining sorted order and circular linkage.
 
 ---
 
-## ✅ Example
+## 🧪 Example Cases
 
-**Input**
-3 → 5 → 7 → 9 
-x = 6
-
-**Output**
-3 → 5 → 6 → 7 → 9
-
-
-**Explanation**: The value 6 is inserted between 5 and 7 to maintain the sorted order.
-
----
-
-## 🧪 Test Cases
-
-| # | Input List | x | Output List |
-|---|------------|---|-------------|
-| 1 | `[1,3,4]` | 2 | `[1,2,3,4]` |
-| 2 | `[]` | 1 | `[1]` |
-| 3 | `[1,1,1]` | 1 | `[1,1,1,1]` |
-| 4 | `[1,3,5]` | 0 | `[0,1,3,5]` |
-| 5 | `[1,3,5]` | 7 | `[1,3,5,7]` |
+| Initial list               | x   | Resulting list (one possible rotation)                    |
+| -------------------------- | --- | --------------------------------------------------------- |
+| `1 → 2 → 4` (circular)     | 2   | `1 → 2 → 2 → 4` :contentReference[oaicite:2]{index=2}     |
+| `1 → 4 → 7 → 9` (circular) | 5   | `1 → 4 → 5 → 7 → 9` :contentReference[oaicite:3]{index=3} |
+| empty list                 | 10  | `10` (single node circular list)                          |
 
 ---
 
 ## 🛠️ Approach
 
-1. **Create New Node**: Initialize a new node with the given value.
-2. **Handle Empty List**: If the list is empty, make the new node point to itself and return it.
-3. **Find Insertion Point**:
-   - Traverse the list to find the correct position where the new node should be inserted.
-   - Handle the case where the new node needs to be inserted at the end (wrapping around to the head).
-4. **Insert Node**:
-   - Update the `next` pointer of the previous node to point to the new node.
-   - Set the new node's `next` pointer to the next node.
-5. **Return**: Return the new node or any node in the modified list.
+1. Create a new node with value `x`.
+2. If the list is empty (`head == None`), make the new node point to itself and return it.
+3. Otherwise, traverse the circular list to find the correct insertion point as follows:
+   - If `x` should come before or equal to the current head’s data, locate the tail (node whose next points to head), insert the new node before head, and return the new node as (possible) new head.
+   - Else, traverse until you find a node `curr` such that `curr.data ≤ x ≤ curr.next.data`, then insert the new node between `curr` and `curr.next`.
+   - If traversal completes (i.e. `x` is larger than all existing nodes), insert the new node after the current last node and before head — preserving circular order.
+4. Return the reference.
 
-### Key Insight
-- The circular nature of the list requires special handling for the wrap-around case.
-- The insertion must maintain the sorted order of the list.
-
----
-
-## ⏱️ Complexity
-
-- **Time:** `O(n)` - In the worst case, we may need to traverse the entire list.
-- **Space:** `O(1)` - We only use a constant amount of extra space.
-
----
-
-## 📝 Note
-- The solution handles all edge cases including:
-  - Empty list
-  - Single node list
-  - Insertion at the beginning
-  - Insertion at the end (wrap-around)
-  - Duplicate values
-- The insertion is done in-place without using any additional data structures.
+This ensures sorted order and circular linkage are preserved. :contentReference[oaicite:4]{index=4}

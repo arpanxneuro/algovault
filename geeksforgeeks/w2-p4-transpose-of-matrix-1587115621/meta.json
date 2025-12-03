@@ -1,17 +1,11 @@
 {
   "title": "transpose-of-matrix-1587115621",
-  "languages": [
-    "c",
-    "py",
-    "js"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "matix",
-    "data structure"
-  ],
+  "tags": ["matrix", "data structure", "transpose"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/problems/transpose-of-matrix-1587115621/1",
+  "languages": ["c", "py", "js"],
   "timeComplexity": "O(n^2)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-08-27"
 }

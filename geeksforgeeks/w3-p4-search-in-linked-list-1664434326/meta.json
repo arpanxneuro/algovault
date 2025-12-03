@@ -1,10 +1,11 @@
 {
   "title": "search-in-linked-list",
-  "languages": ["py"],
   "difficulty": "easy",
-  "tags": ["linked-list", "search", "data-structure"],
+  "tags": ["linked-list", "search", "data‑structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/search-an-element-in-a-linked-list-iterative-and-recursive/",
+  "languages": ["py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-02"
 }

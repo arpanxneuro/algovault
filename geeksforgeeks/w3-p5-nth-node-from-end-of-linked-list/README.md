@@ -1,86 +1,69 @@
 # Nth Node from End of Linked List
 
-> **Difficulty**: Basic  
-> **Companies**: Amazon, Microsoft, Google, Adobe
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: linked‑list, two‑pointers, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-Given the head of a singly linked list and an integer `n`, return the value of the nth node from the end of the list.
+Given the head of a singly linked list and an integer `n`, return the value of the **nth node from the end** of the list. If `n` is greater than the number of nodes in the list, return `-1`. :contentReference[oaicite:2]{index=2}
 
 ---
 
 ## 📥 Input
 
-- `head`: The head node of a linked list (can be `None` for empty list).
-- `n`: A positive integer (1-based index from the end).
+- `head`: the head node of the linked list (may be `null` / `None` if the list is empty).
+- `n`: 1‑based integer: the position from the end (i.e. `n = 1` → last node).
 
 ---
 
 ## 📤 Output
 
-Return the integer value of the nth node from the end of the list. If `n` is greater than the length of the list, return `-1`.
+- Return an integer: the data value of the nth node from the end if it exists; otherwise `-1`.
 
 ---
 
-## ✔️ Constraints
+## ✅ Examples
 
-- `1 ≤ n ≤ 10^4`
-- `0 ≤ Node.val ≤ 10^5`
-- `1 ≤ number of nodes ≤ 10^4`
-
----
-
-## ✅ Example
-
-**Input**
-1 → 2 → 3 → 4 → 5
-
-**Output**
-4
-
-**Explanation**
-The 4th node from the end is 4.
-
----
-
-## 🧪 Test Cases
-
-| # | Input List | n | Output |
-|---|------------|---|--------|
-| 1 | `[1,2,3,4]` | 2 | `3` |
-| 2 | `[1,2,3,4,5]` | 3 | `3` |
-| 3 | `[1]` | 1 | `1` |
-| 4 | `[1,2,3,4,5]` | 1 | `5` |
-| 5 | `[1,2,3,4,5]` | 5 | `-1` |
+**Example 1**  
+Input: head = [1 → 2 → 3 → 4 → 5], n = 2
+Output: 4
+Explanation: The 2nd node from the end is 4.
+**Example 2**  
+Input: head = [1 → 2 → 3 → 4], n = 4
+Output: 1
+Explanation: 4th node from end is the head (value 1).
+**Example 3**  
+Input: head = [7], n = 1
+Output: 7
+**Example 4**  
+Input: head = [1 → 2 → 3], n = 5
+Output: -1
+Explanation: n is greater than list length.
 
 ---
 
-## 🛠️ Approach
+## 🛠️ Approach (Two‑Pointer / Tortoise‑Hare)
 
-1. **Two Pointers**: Use two pointers, `fast` and `slow`, to traverse the list.
-2. **Advance Fast Pointer**: Move the `fast` pointer `n` steps ahead.
-3. **Move Both Pointers**: If the `fast` pointer reaches the end, return `-1` (n is too large). Otherwise, move both pointers until the `fast` pointer reaches the end.
-4. **Return Value**: The `slow` pointer will be at the nth node from the end.
+Use a two-pointer technique (fast & slow) to find the nth node from end in one pass. :contentReference[oaicite:3]{index=3}
 
-### Key Insight
-- The distance between the two pointers is `n` when the `fast` pointer starts `n` steps ahead.
-- When the `fast` pointer reaches the end, the `slow` pointer will be at the nth node from the end.
+- Initialize `fast = head`, `slow = head`.
+- Advance `fast` by `n` steps. If during this phase `fast == null`, return `-1` (list has fewer than `n` nodes).
+- Then, advance both `slow` and `fast` together until `fast` reaches the last node.
+- At that moment, `slow` will point to the nth node from the end. Return `slow.data`.
 
----
+**Time Complexity:** O(L) where L = list length  
+**Space Complexity:** O(1) — just pointers
 
-## ⏱️ Complexity
-
-- **Time:** `O(n)` - We traverse the list at most twice.
-- **Space:** `O(1)` - We only use a constant amount of extra space.
+This satisfies the expected one‑pass O(n) solution. :contentReference[oaicite:4]{index=4}
 
 ---
 
-## 📝 Note
-- The solution handles all edge cases including:
-  - Empty list
-  - Single node list
-  - n > number of nodes
-  - n = 1 (returns the last node)
-- The approach is efficient with O(n) time complexity and O(1) space complexity.
+## 📌 Edge Cases & Notes
+
+- If the list is empty (`head = null`) → return `-1`.
+- If `n` equals the list length → returns the head's value.
+- If `n >` list length → return `-1`.
+- Works for both small and large lists.

@@ -1,16 +1,11 @@
 {
   "title": "Filter Elements from Array",
-  "languages": [
-    "js"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array",
-    "higher-order-functions",
-    "functional-programming"
-  ],
+  "tags": ["array", "higher‑order‑functions", "functional‑programming"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/filter-elements-from-array/",
+  "languages": ["js"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(n)",
-  "platform": "LeetCode",
   "solvedOn": "2025-11-14"
 }

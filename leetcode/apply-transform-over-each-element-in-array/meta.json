@@ -1,15 +1,10 @@
 {
-  "title": "Apply Transform Over Each Element in Array",
+  "title": "apply-transform-over-each-element-in-array",
   "platform": "LeetCode",
   "difficulty": "easy",
-  "languages": [
-    "ts"
-  ],
-  "tags": [
-    "array",
-    "functional-programming",
-    "higher-order-function"
-  ],
+  "languages": ["ts"],
+  "tags": ["array", "functional-programming", "higher-order-function"],
+  "problemSrc": "https://leetcode.com/problems/apply-transform-over-each-element-in-array/",
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(n)",
   "solvedOn": "2025-11-14"

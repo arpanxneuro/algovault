@@ -1,95 +1,74 @@
 # Add Two Numbers Represented by Linked Lists
 
-> **Difficulty**: Medium  
-> **Companies**: Amazon, Microsoft, Google, Facebook
+> **Difficulty**: medium  
+> **Platform**: GeeksforGeeks  
+> **Tags**: linked-list, math, two‑pointers, data‑structure
 
 ---
 
 ## 📝 Problem Statement
 
-You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list in the same reversed order.
+You are given two non-empty singly linked lists representing two non-negative integers.  
+Each node of the linked list contains a single digit. The digits are stored in **reverse order**, meaning the 1’s digit is at the head of the list.
 
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+Add the two numbers and return the sum as a linked list — also in reverse order.  
+You may assume the two numbers do not contain any leading zeros, except the number 0 itself. :contentReference[oaicite:2]{index=2}
 
 ---
 
 ## 📥 Input
 
-- `l1`: The head node of the first linked list (non-empty, represents a non-negative integer in reverse order).
-- `l2`: The head node of the second linked list (non-empty, represents a non-negative integer in reverse order).
+- `l1`: head of the first linked list (represents a non-negative integer in reverse order)
+- `l2`: head of the second linked list (same representation)
 
 ---
 
 ## 📤 Output
 
-Return the head of the resulting linked list representing the sum of the two numbers in reverse order.
-
----
-
-## ✔️ Constraints
-
-- The number of nodes in each linked list is in the range `[1, 100]`
-- `0 ≤ Node.val ≤ 9`
-- It is guaranteed that the list represents a number that does not have leading zeros.
+- Return the head of a new linked list representing the sum of the two numbers, with digits stored in reverse order.
 
 ---
 
 ## ✅ Example
 
-**Input**
-```
-l1 = [2,4,3]
-l2 = [5,6,4]
-```
-
-**Output**
-```
-[7,0,8]
-```
+**Input**  
+l1 = [2,4,3] # represents 342
+l2 = [5,6,4] # represents 465
+**Output**  
+[7,0,8] # represents 807 (since 342 + 465 = 807)
 
 **Explanation**
-```
-243 + 564 = 807
-```
 
----
-
-## 🧪 Test Cases
-
-| # | Input | Output |
-|---|-------|--------|
-| 1 | `[2,4,3]` | `[5,6,4]` |
-| 2 | `[1,2,3]` | `[4,5,6]` |
-| 3 | `[7,8,9]` | `[1,2,3]` |
-| 4 | `[4,5,6]` | `[7,8,9]` |
-| 5 | `[7,8,9]` | `[4,5,6]` |
+- 342 + 465 = 807
+- The result list in reverse order of digits is 7 → 0 → 8 :contentReference[oaicite:3]{index=3}
 
 ---
 
 ## 🛠️ Approach
 
-1. Initialize a dummy node to build the result list.
-2. Use a carry variable to handle the sum of digits.
-3. Traverse both lists simultaneously:
-   - Add corresponding digits and the carry.
-   - Update the carry for the next iteration.
-   - Create a new node with the current digit and append it to the result list.
-4. Return the result list starting from the dummy node's next node.
+A straightforward and standard solution:
 
-### Key Insights
-- The solution handles edge cases like empty lists and ensures the result is in the correct order.
-- The dummy node is used to simplify edge cases and return the correct head of the list.
+1. Reverse both linked lists so that their heads represent the least significant digit (i.e. ones place). :contentReference[oaicite:4]{index=4}
+2. Traverse both reversed lists simultaneously, adding corresponding digits along with any carry from the previous addition.
+3. For each sum, create a new node whose value is `sum % 10`, update carry to `sum // 10`. Append node to result list.
+4. If one list is longer — continue adding remaining digits plus carry.
+5. If after processing both lists there is a leftover carry — create a new node for it.
+6. Reverse the result list and return its head — now digits are back in reverse order representation. :contentReference[oaicite:5]{index=5}
+
+This yields a correct sum representation, handles carry properly, and works for different-length inputs.
 
 ---
 
 ## ⏱️ Complexity
 
-- **Time:** `O(max(n, m))` - We traverse both lists once.
-- **Space:** `O(max(n, m))` - Space for the result list.
+- **Time Complexity:** O(n + m), where n, m are lengths of the two lists (you traverse each at most once, plus reversals).
+- **Space Complexity:** O(n + m) for the result list (plus O(1) auxiliary space if ignoring output storage).
 
 ---
 
-## 📝 Note
-- The solution returns the result list in the correct order, with the least significant digit at the head.
-- The dummy node is used to handle edge cases and simplify the code.
-- The solution handles all edge cases including empty lists and single-node lists.
+## 📌 Notes & Edge Cases
+
+- Works even when one list is longer than the other.
+- Handles carry propagation properly (e.g. 9 + 9 → carry).
+- Handles final carry by appending extra node.
+- Works when inputs have leading zeros — but you may trim if needed (GfG mentions trimming leading zeros in some variants). :contentReference[oaicite:6]{index=6}

@@ -1,120 +1,64 @@
 # Dynamic Array
 
-> **Difficulty**: Easy  
+> **Difficulty**: easy  
 > **Platform**: HackerRank  
-> **Tags**: Array, Data Structure, Dynamic Programming
+> **Tags**: array, data‑structure, dynamic‑array
 
 ---
 
 ## 📝 Problem Statement
 
-Implement a dynamic array with the following operations:
-1. **Query Type 1 (1 x y)**:
-   - Find the sequence at index `(x ^ lastAnswer) % N`
-   - Append `y` to this sequence
-
-2. **Query Type 2 (2 x y)**:
-   - Find the sequence at index `(x ^ lastAnswer) % N`
-   - Find the value at index `y % size` in this sequence
-   - Update `lastAnswer` to this value
-   - Print the new `lastAnswer`
-
-Initialize `lastAnswer` to 0.
+Implement a dynamic array of sequences and process a series of queries: initialize `N` empty sequences, and maintain an integer `lastAnswer = 0`. Depending on the query type, either append to a sequence or read from a sequence to update `lastAnswer`. Return / print `lastAnswer` after each relevant query. :contentReference[oaicite:3]{index=3}
 
 ---
 
 ## 📥 Input
 
-- The first line contains two space-separated integers:
-  - `N`: Number of sequences (1 ≤ N ≤ 10^5)
-  - `Q`: Number of queries (1 ≤ Q ≤ 10^5)
-- The next `Q` lines each contain a query in one of the following formats:
-  - `1 x y` (Type 1 query)
-  - `2 x y` (Type 2 query)
-  - Where 0 ≤ x, y ≤ 10^9
+- First line: two space‑separated integers `N` (number of sequences) and `Q` (number of queries). :contentReference[oaicite:4]{index=4}
+- Next `Q` lines: each contains a query of one of two types:
+  - `1 x y` — append operation
+  - `2 x y` — value‑fetch operation :contentReference[oaicite:5]{index=5}
+
+All indices and values satisfy problem constraints; queries are guaranteed valid per the platform. :contentReference[oaicite:6]{index=6}
 
 ---
 
 ## 📤 Output
 
-For each Type 2 query, print the value of `lastAnswer` on a new line.
-
-## ✔️ Constraints
-
-- 1 ≤ N, Q ≤ 10^5
-- 0 ≤ x, y ≤ 10^9
-- It is guaranteed that Type 2 queries reference valid indices
+For each query of type `2`, output the updated `lastAnswer` on a new line — in the order the queries are processed. :contentReference[oaicite:7]{index=7}
 
 ---
 
-## ✅ Example
+## 🛠️ Operations & Logic
 
-**Input**:
-2 5
-1 0 5
-1 1 7
-1 0 3
-2 1 0
-2 1 1
+Maintain a list `seqList` of `N` initially‑empty sequences (0‑indexed). Maintain integer `lastAnswer = 0`.
 
-**Output**:
-7
-3
+For each query:
 
+- If it is `1 x y`:
 
-**Explanation**:
-1. Initial: `lastAnswer = 0`, `arr = [[], []]`
-2. Query 1 0 5: `seq = (0 ^ 0) % 2 = 0` → `arr = [[5], []]`
-3. Query 1 1 7: `seq = (1 ^ 0) % 2 = 1` → `arr = [[5], [7]]`
-4. Query 1 0 3: `seq = (0 ^ 0) % 2 = 0` → `arr = [[5, 3], [7]]`
-5. Query 2 1 0: `seq = (1 ^ 0) % 2 = 1` → `lastAnswer = arr[1][0 % 1] = 7`
-6. Query 2 1 1: `seq = (1 ^ 7) % 2 = 0` → `lastAnswer = arr[0][1 % 2] = 3`
+  - Compute `idx = (x ^ lastAnswer) % N`
+  - Append `y` to `seqList[idx]` :contentReference[oaicite:8]{index=8}
+
+- If it is `2 x y`:
+  - Compute `idx = (x ^ lastAnswer) % N`
+  - Let `size = length of seqList[idx]`
+  - Update `lastAnswer = seqList[idx][ y % size ]`
+  - Output / store `lastAnswer` :contentReference[oaicite:9]{index=9}
+
+This solves the problem in a straightforward way. :contentReference[oaicite:10]{index=10}
 
 ---
 
-## 🧪 Test Cases
+## ⏱️ Complexity
 
-| # | Input | Output |
-|---|-------|--------|
-| 1 | `2 5`<br>`1 0 5`<br>`1 1 7`<br>`1 0 3`<br>`2 1 0`<br>`2 1 1` | `7`<br>`3` |
-| 2 | `3 4`<br>`1 0 1`<br>`1 1 2`<br>`2 1 0`<br>`2 1 1` | `1`<br>`2` |
-| 3 | `1 3`<br>`1 0 1`<br>`1 0 2`<br>`2 0 1` | `2` |
+- **Time Complexity:** O(Q) — each query (append or fetch) is processed in constant amortized time using dynamic arrays.
+- **Space Complexity:** O(N + total_appended_values) — storing `N` sequences and all appended elements.
 
 ---
 
-## 🛠️ Approach
+## 📌 Constraints & Considerations
 
-### Dynamic Array with XOR Hashing
-1. **Initialization**:
-   - Create an array of N empty sequences
-   - Initialize `lastAnswer` to 0
-
-2. **Processing Queries**:
-   - For Type 1 (1 x y):
-     - Calculate sequence index: `(x ^ lastAnswer) % N`
-     - Append `y` to this sequence
-   - For Type 2 (2 x y):
-     - Calculate sequence index: `(x ^ lastAnswer) % N`
-     - Find value at `y % sequence_size`
-     - Update `lastAnswer` to this value
-     - Print `lastAnswer`
-
-### Time and Space Complexity
-- **Time Complexity**: O(Q) - Each query is processed in constant time
-- **Space Complexity**: O(N + Q) - To store up to Q elements across N sequences
-
----
-
-## 📝 Note
-- The XOR operation ensures uniform distribution of queries across sequences
-- The modulo operation with sequence size ensures safe array access
-- For large inputs, use efficient I/O operations
-- The solution handles all edge cases, including:
-  - Single sequence (N = 1)
-  - Large number of queries
-  - Maximum constraint values
-
-## 🔗 Related Problems
-- [Sparse Arrays](https://www.hackerrank.com/challenges/sparse-arrays)
-- [Dynamic Array in C](https://www.hackerrank.com/challenges/crush)
-- [Array Manipulation](https://www.hackerrank.com/challenges/crush)
+- `1 ≤ N, Q ≤ 10^5` — large limits, so solution must be efficient. :contentReference[oaicite:11]{index=11}
+- `x, y` up to large integers (e.g. 10⁹), but modulo operations and indexing logic ensure valid accesses. :contentReference[oaicite:12]{index=12}
+- Ensure efficient I/O and memory‑efficient sequence storage (e.g. dynamic/resizable arrays), especially under C or low‑level languages.

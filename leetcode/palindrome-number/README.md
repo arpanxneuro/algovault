@@ -1,185 +1,82 @@
 # Palindrome Number
 
-**Platform:** [LeetCode](https://leetcode.com/problems/palindrome-number/)  
-**Category:** Math / Two Pointers  
-**Difficulty:** Easy  
-**Problem Statement:** Given an integer `x`, return `true` if `x` is a palindrome integer. An integer is a palindrome when it reads the same backward as forward.
+> **Difficulty**: easy  
+> **Platform**: LeetCode  
+> **Tags**: math, two-pointers, number-theory
 
 ---
 
-## 📘 Problem Overview
-A palindrome number is a number that remains the same when its digits are reversed. For example, 121 is a palindrome while 123 is not.
+## 📝 Problem Statement
 
-### Key Points:
-- Negative numbers cannot be palindromes (e.g., -121 is not a palindrome)
-- Numbers ending with 0 (except 0 itself) cannot be palindromes
-- The solution should be optimized to not use extra space (O(1) space complexity)
-- The solution should be efficient with time complexity O(log n)
+Given an integer `x`, return `true` if `x` is a palindrome integer. A palindrome integer reads the same backward and forward. :contentReference[oaicite:1]{index=1}
+
+Examples:
+
+- `121` is a palindrome — reads the same backward. :contentReference[oaicite:2]{index=2}
+- `-121` is not a palindrome — the negative sign breaks the symmetry. :contentReference[oaicite:3]{index=3}
+- `10` is not a palindrome — reversed digits produce `01`, which differs from `10`. :contentReference[oaicite:4]{index=4}
 
 ---
 
 ## 📥 Input Format
-- `x`: An integer (-2³¹ ≤ x ≤ 2³¹ - 1)
+
+- `x`: integer, where `-2³¹ ≤ x ≤ 2³¹ - 1`. :contentReference[oaicite:5]{index=5}
+
+---
 
 ## 📤 Output Format
-- Returns `true` if `x` is a palindrome, `false` otherwise.
 
-## 🔍 Constraints
-- `-2³¹ <= x <= 2³¹ - 1`
+- Boolean (`true` / `false`) — whether `x` is a palindrome integer or not.
 
----
+## ✔️ Constraints
 
-## 🧪 Sample Cases
-
-### Example 1
-**Input:**  
-`x = 121`  
-**Output:** `true`  
-**Explanation:**  
-121 reads the same from left to right and right to left.
-
-### Example 2
-**Input:**  
-`x = -121`  
-**Output:** `false`  
-**Explanation:**  
-From left to right, it reads -121. From right to left, it becomes 121-.
-
-### Example 3
-**Input:**  
-`x = 10`  
-**Output:** `false`  
-**Explanation:**  
-Reads 01 from right to left, which is not equal to 10.
-
-### Example 4
-**Input:**  
-`x = 0`  
-**Output:** `true`  
-**Explanation:**  
-0 reads the same from left to right and right to left.
-
-### Example 5
-**Input:**  
-`x = 12321`  
-**Output:** `true`  
-**Explanation:**  
-12321 reads the same from left to right and right to left.
+- The input integer `x` lies within the signed 32-bit integer range: `-2^{31} ≤ x ≤ 2^{31} - 1`. :contentReference[oaicite:6]{index=6}
 
 ---
 
-## 🧠 Approach
-1. **Handle Edge Cases**:
-   - If `x` is negative, return `false`
-   - If `x` is 0, return `true`
-   - If `x` is a positive number ending with 0 (except 0), return `false`
+## ✅ Example
 
-2. **Reverse Half of the Number**:
-   - Initialize `reversed_num` to 0
-   - While `x` is greater than `reversed_num`:
-     - Append the last digit of `x` to `reversed_num`
-     - Remove the last digit from `x`
+**Input:**  
+x = 121
+**Output:**  
+true
+**Explanation:**  
+121 reads the same forward and backward.
 
-3. **Check for Palindrome**:
-   - If `x` equals `reversed_num` (even length) or `x` equals `reversed_num // 10` (odd length), return `true`
-   - Otherwise, return `false`
+**Input:**  
+x = -121
+**Output:**  
+false
+**Explanation:**  
+Negative numbers are not considered palindrome numbers due to the minus sign.
 
-### Solution Code (Python)
-```python
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        # Edge cases:
-        # 1. Negative numbers are not palindromes
-        # 2. If last digit is 0, first digit must also be 0 (only 0 satisfies this)
-        if x < 0 or (x % 10 == 0 and x != 0):
-            return False
-            
-        reversed_num = 0
-        # Only reverse half of the number to avoid overflow
-        while x > reversed_num:
-            reversed_num = reversed_num * 10 + x % 10
-            x //= 10
-            
-        # When the length is odd, we can get rid of the middle digit
-        return x == reversed_num or x == reversed_num // 10
-```
-
-### Solution Code (TypeScript)
-```typescript
-function isPalindrome(x: number): boolean {
-    if (x < 0 || (x % 10 === 0 && x !== 0)) {
-        return false;
-    }
-    
-    let reversed = 0;
-    let original = x;
-    
-    while (original > reversed) {
-        reversed = reversed * 10 + original % 10;
-        original = Math.floor(original / 10);
-    }
-    
-    return original === reversed || original === Math.floor(reversed / 10);
-}
-```
-
-### Solution Code (C)
-```c
-#include <stdbool.h>
-
-bool isPalindrome(int x) {
-    // Edge cases:
-    // 1. Negative numbers are not palindromes
-    // 2. If last digit is 0, first digit must also be 0 (only 0 satisfies this)
-    if (x < 0 || (x % 10 == 0 && x != 0)) {
-        return false;
-    }
-    
-    int reversed = 0;
-    // Only reverse half of the number to avoid overflow
-    while (x > reversed) {
-        reversed = reversed * 10 + x % 10;
-        x /= 10;
-    }
-    
-    // When the length is odd, we can get rid of the middle digit
-    return x == reversed || x == reversed / 10;
-}
-```
+**Input:**  
+x = 10
+**Output:**  
+false
+**Explanation:**  
+10 reversed is 01 — not equal to original number.
 
 ---
 
-## 📊 Complexity Analysis
-- **Time Complexity**: `O(log n)`  
-  - We divide the input by 10 for every iteration, so the time complexity is O(log₁₀n)
-  
-- **Space Complexity**: `O(1)`  
-  - We only use a constant amount of extra space
+## 🛠️ Approach
 
----
+1. **Handle Edge Cases First**
 
-## 📝 Notes
-- The solution efficiently checks for palindromes without converting the number to a string
-- By only reversing half of the number, we optimize both time and space complexity
-- The solution handles all edge cases including negative numbers and numbers ending with 0
-- The algorithm is efficient with O(log n) time complexity and O(1) space complexity
+   - If `x` is negative: cannot be palindrome → return `false`. :contentReference[oaicite:7]{index=7}
+   - If `x` ends with digit `0` and `x != 0`: cannot be palindrome (because reversed would start with `0`, which is invalid) → return `false`. :contentReference[oaicite:8]{index=8}
 
-## 🔗 Related Problems
-- [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
-- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
-- [Palindrome Number II](https://leetcode.com/problems/palindromic-substrings/)
+2. **Reverse Half the Number (without converting to string)**
 
-## 📚 Additional Resources
-- [LeetCode Article: Palindrome Number](https://leetcode.com/articles/palindrome-number/)
-- [GeeksforGeeks: Check if a number is a palindrome](https://www.geeksforgeeks.org/check-if-a-number-is-palindrome/)
-- [Tech Interview Handbook: Palindrome Number](https://www.techinterviewhandbook.org/algorithms/number/#palindrome-number)
+   - Maintain a variable `reversedHalf = 0`.
+   - While the original number (`x`) > `reversedHalf`:
+     - Extract last digit of `x` → `digit = x % 10`,
+     - Update `reversedHalf = reversedHalf * 10 + digit`,
+     - Reduce `x = x // 10`. :contentReference[oaicite:9]{index=9}
 
----
+3. **Compare Halves**
 
-## 🧪 Test Cases
+   - For even-length numbers: `x == reversedHalf` → palindrome.
+   - For odd-length numbers: `x == reversedHalf // 10` → palindrome (ignoring the middle digit). :contentReference[oaicite:10]{index=10}
 
-| No test cases | - | - |
-
-**Time Complexity:** O(n)
-
-**Space Complexity:** O(1)
+4. **Return Result**

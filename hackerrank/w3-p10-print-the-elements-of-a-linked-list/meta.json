@@ -1,16 +1,11 @@
 {
   "title": "print-the-elements-of-a-linked-list",
-  "languages": [
-    "c",
-    "py",
-    "ts"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "linked-list"
-  ],
+  "tags": ["linked-list"],
+  "platform": "HackerRank",
+  "problemSrc": "https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list/problem",
+  "languages": ["c", "py", "js"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "hackerrank",
   "solvedOn": "2025-10-02"
 }

@@ -1,15 +1,11 @@
 {
   "title": "move-all-zeroes-to-end-of-array0751",
-  "languages": [
-    "c",
-    "py"
-  ],
   "difficulty": "easy",
-  "tags": [
-    "array", "list", "loop", "condition"
-  ],
+  "tags": ["array", "list", "loop", "condition"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/move-zeroes-end-array/",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-07-31"
 }

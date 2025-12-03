@@ -1,0 +1,16 @@
+{
+  "title": "test-problem-title",
+  "difficulty": "medium",
+  "tags": [
+    "dsa",
+    "test"
+  ],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "",
+  "languages": [
+    "ts"
+  ],
+  "timeComplexity": "",
+  "spaceComplexity": "",
+  "solvedOn": "2025-12-03"
+}

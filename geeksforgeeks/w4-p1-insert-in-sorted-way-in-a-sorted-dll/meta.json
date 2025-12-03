@@ -1,18 +1,11 @@
 {
   "title": "insert-in-sorted-way-in-a-sorted-dll",
-  "languages": [
-    "c",
-    "py"
-  ],
   "difficulty": "medium",
-  "tags": [
-    "doubly-linked-list",
-    "insertion",
-    "sorting",
-    "data-structure"
-  ],
+  "tags": ["doubly‑linked‑list", "insertion", "sorting", "data‑structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/insert-value-sorted-way-sorted-doubly-linked-list/",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-10-03"
 }

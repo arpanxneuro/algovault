@@ -1,69 +1,53 @@
 # Sum of Diagonals
 
-Compute the sum of the **principal diagonal** elements of a square matrix `M` of size `N × N`.
+> **Difficulty**: easy  
+> **Platform**: GeeksforGeeks  
+> **Tags**: matrix, diagonal, math
 
 ---
 
 ## 📝 Problem Statement
 
-Given `N` and an `N × N` matrix `M`, calculate the sum of all elements `M[i][i]` where the row and column indices are equal. You only need to consider the main diagonal (top-left to bottom-right).
+Given a square matrix `M` of size `N × N`, compute the sum of all elements on its **principal (main) diagonal** (i.e. elements where row index = column index). Optionally, one can also consider the secondary diagonal — elements where row index + column index = N − 1. For this version, we focus on the **principal diagonal** sum.
 
 ---
 
 ## 📥 Input
 
-- First line: integer `T` representing the number of test cases (optional based on platform wrapper).
-- For each test case:
-  - Integer `N` – the dimension of the matrix.
-  - `N` lines follow, each containing `N` integers describing the matrix row.
+- An integer `N` denoting the size of the square matrix.
+- Followed by `N` lines each containing `N` space‑separated integers — the rows of the matrix.
+
+If multiple test cases: first line may contain `T`, number of test cases (depends on problem wrapper).
 
 ---
 
 ## 📤 Output
 
-- For each test case, output the sum of the principal diagonal elements.
-
----
-
-## ✔️ Constraints
-
-- `1 ≤ N ≤ 500`
-- `-10^3 ≤ M[i][j] ≤ 10^3`
+- For each test case: output the sum of the principal diagonal elements of the matrix.
 
 ---
 
 ## ✅ Example
 
 **Input**
-
-```
-1
-3
+1 # number of test cases (optional)
+3 # N
 1 2 3
 4 5 6
 7 8 9
-```
 
-**Output**
-
-```
+**Output**  
 15
-```
 
-**Explanation:** The diagonal elements are `1, 5, 9`. Their sum is `15`.
-
----
-
-## 🧪 Test Cases
-
-| # | Input | Output |
-|---|---|---|
-| 1 | `3\n1 2 3\n4 5 6\n7 8 9` | `15` |
-| 2 | `2\n5 7\n3 4` | `9` |
+**Explanation**: Principal diagonal elements are `1, 5, 9`. Their sum = `15`.
 
 ---
 
-## ⏱️ Complexity
+## 🛠️ Approach
 
-- **Time:** `O(N)` – only `N` diagonal entries are summed.
-- **Space:** `O(1)` – constant auxiliary space.
+Traverse the matrix row by row. Maintain a running sum `diagSum`. For each row `i` (0‑based or 1‑based as per implementation), add `M[i][i]` to `diagSum`. After processing all rows, output `diagSum`.
+
+**Time Complexity:** O(N) — only one pass over diagonal entries.  
+**Space Complexity:** O(1) — constant extra space.
+
+This is the standard method to compute the “trace” of a square matrix. :contentReference[oaicite:2]{index=2}

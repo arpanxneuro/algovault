@@ -1,114 +1,69 @@
 # Counter II
 
-**Platform:** [LeetCode](https://leetcode.com/problems/counter-ii/)  
-**Category:** Closures / Objects  
-**Difficulty:** Easy  
-**Problem Statement:** Create a counter object with methods to increment, decrement, and reset an internal counter. The counter should maintain its state between method calls using closures.
+> **Difficulty**: easy  
+> **Platform**: LeetCode  
+> **Tags**: closure, object, design
 
 ---
 
-## 📘 Problem Overview
-Implement a function `createCounter(init)` that returns an object with three methods that modify an internal counter value starting from `init`:
-- `increment()`: Increases the counter by 1 and returns the new value
-- `decrement()`: Decreases the counter by 1 and returns the new value
-- `reset()`: Resets the counter to `init` and returns it
+## 📝 Problem Statement
+
+Write a function `createCounter(init)` which accepts an integer `init`. It should return an object with three methods:
+
+- `increment()`: increases the internal counter value by 1, and returns the new value.
+- `decrement()`: decreases the internal counter value by 1, and returns the new value.
+- `reset()`: resets the internal counter value to the original `init`, and returns it. :contentReference[oaicite:2]{index=2}
 
 ---
 
 ## 📥 Input Format
-- `init`: Initial integer value (-1000 ≤ init ≤ 1000)
-- `calls`: Array of method names ("increment", "decrement", or "reset") to be called in sequence
+
+- `init`: initial integer value (constraints: `-1000 <= init <= 1000`) :contentReference[oaicite:3]{index=3}
+- `calls`: array of method names (`"increment"`, `"decrement"`, or `"reset"`) to be invoked sequentially. :contentReference[oaicite:4]{index=4}
+
+---
 
 ## 📤 Output Format
-- Returns an array of values returned by each method call in sequence
 
-## 🔍 Constraints
-- `-1000 <= init <= 1000`
-- `0 <= calls.length <= 1000`
-- `calls[i]` is one of `["increment", "decrement", "reset"]`
-- Must use closure to maintain state (no global variables)
+- Returns an array of values — each corresponding to the return value of the respective method call in `calls`.
+
+## ✔️ Constraints
+
+- `-1000 <= init <= 1000` :contentReference[oaicite:5]{index=5}
+- At most 1000 method calls. :contentReference[oaicite:6]{index=6}
+- Methods invoked are strictly among `"increment"`, `"decrement"`, or `"reset"`. :contentReference[oaicite:7]{index=7}
 
 ---
 
-## 🧪 Sample Cases
+## ✅ Example
 
-### Example 1
+**Example 1**  
 **Input:**  
-`init = 5`  
-`calls = ["increment", "reset", "decrement"]`  
-**Output:** `[6, 5, 4]`  
-**Explanation:**  
-- counter.increment() → 5 + 1 = 6
-- counter.reset() → resets to 5
-- counter.decrement() → 5 - 1 = 4
+init = 5
+calls = ["increment", "reset", "decrement"]
+**Output:**  
+[6, 5, 4]
+**Explanation:**
 
-### Example 2
+- `increment()` → 6
+- `reset()` → 5
+- `decrement()` → 4 :contentReference[oaicite:8]{index=8}
+
+**Example 2**  
 **Input:**  
-`init = 0`  
-`calls = ["increment", "increment", "decrement", "reset", "reset"]`  
-**Output:** `[1, 2, 1, 0, 0]`  
-**Explanation:**  
-- counter.increment() → 0 + 1 = 1
-- counter.increment() → 1 + 1 = 2
-- counter.decrement() → 2 - 1 = 1
-- counter.reset() → resets to 0
-- counter.reset() → already at 0, returns 0
-
-### Example 3
-**Input:**  
-`init = -1`  
-`calls = ["increment", "decrement", "reset"]`  
-**Output:** `[0, -1, -1]`  
-**Explanation:**  
-- counter.increment() → -1 + 1 = 0
-- counter.decrement() → 0 - 1 = -1
-- counter.reset() → resets to -1
+init = 0
+calls = ["increment", "increment", "decrement", "reset", "reset"]
+**Output:**  
+[1, 2, 1, 0, 0]
+**Explanation:** Follows increment/decrement/reset operations as defined. :contentReference[oaicite:9]{index=9}
 
 ---
 
-## 🧠 Approach
-1. **Closure Implementation**: Capture the initial value `init` in a closure
-2. **State Management**: Maintain the current value in the closure scope
-3. **Method Definitions**: Return an object with three methods that modify the captured value
-   - `increment()`: Increments and returns the current value
-   - `decrement()`: Decrements and returns the current value
-   - `reset()`: Resets to the initial value and returns it
+## 🛠️ Approach
 
-### Solution Code
-```javascript
-/**
- * @param {integer} init
- * @return { increment: Function, decrement: Function, reset: Function }
- */
-var createCounter = function(init) {
-    let current = init;
-    
-    return {
-        increment: () => ++current,
-        decrement: () => --current,
-        reset: () => (current = init, current)
-    };
-};
-```
-
----
-
-## 📊 Complexity Analysis
-- **Time Complexity**: `O(1)` per operation  
-  Each method call performs a constant-time operation (increment, decrement, or reset).
-  
-- **Space Complexity**: `O(1)`  
-  Only a single number is stored in the closure, regardless of the number of operations.
-
----
-
-## 📝 Notes
-- The counter maintains its state between method calls using closure
-- The reset operation returns the counter to its original initial value
-- All operations are performed in constant time
-- The solution is memory efficient, using only O(1) extra space
-
-## 🔗 Related Problems
-- [Counter](https://leetcode.com/problems/counter/)
-- [Create Hello World Function](https://leetcode.com/problems/create-hello-world-function/)
-- [Memoize](https://leetcode.com/problems/memoize/)
+- Use closure to capture `init` and maintain an internal mutable variable (say `current`). :contentReference[oaicite:10]{index=10}
+- Return an object with three methods referencing that internal state:
+  - `increment()` → increment `current` by 1 and return it.
+  - `decrement()` → decrement `current` by 1 and return it.
+  - `reset()` → set `current = init`, return `current`.
+- All operations are constant-time and constant-space.

@@ -1,10 +1,11 @@
 {
   "title": "insert-in-middle-of-linked-list",
-  "languages": ["c", "py"],
   "difficulty": "easy",
   "tags": ["linked-list", "insertion", "two-pointers", "data-structure"],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/dsa/insert-node-middle-linked-list/",
+  "languages": ["c", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
-  "platform": "geeksforgeeks",
   "solvedOn": "2025-09-21"
 }

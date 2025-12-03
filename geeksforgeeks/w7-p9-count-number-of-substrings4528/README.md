@@ -1,90 +1,54 @@
 # Count Number of Substrings with Exactly K Distinct Characters
 
 > **Difficulty**: Medium  
-> **Companies**: Amazon, Google, Microsoft, Adobe
+> **Source**: GeeksforGeeks  
+> **Tags**: sliding-window, two-pointers-algorithm, strings, dynamic programming, algorithms
 
 ---
 
 ## 📝 Problem Statement
 
-Given a string `S` of lowercase alphabets and an integer `K`, find the count of all possible substrings (not necessarily distinct) that have exactly `K` distinct characters.
+Given a string `S` of lowercase letters and an integer `K`, count all substrings (not necessarily distinct) of `S` that contain exactly `K` distinct characters. Substrings with identical content but different positions are counted separately. ([GeeksforGeeks – Count substrings with k distinct characters](https://www.geeksforgeeks.org/count-number-of-substrings-with-exactly-k-distinct-characters/))
 
 ---
 
-## 📥 Input
+## 📥 Input Format
 
-- `S`: A string consisting of lowercase English letters (1 ≤ |S| ≤ 10^4)
-- `K`: An integer representing the exact number of distinct characters required (1 ≤ K ≤ 26)
-
----
-
-## 📤 Output
-
-Return an integer representing the count of all substrings with exactly `K` distinct characters.
-
-## ✔️ Constraints
-
-- The string contains only lowercase English letters
-- 1 ≤ |S| ≤ 10^4
-- 1 ≤ K ≤ 26
+- `S`: a lowercase English‑letter string, `1 ≤ |S| ≤ 10^4`. :contentReference[oaicite:0]{index=0}
+- `K`: an integer, `1 ≤ K ≤ 26`. :contentReference[oaicite:1]{index=1}
 
 ---
 
-## ✅ Example
+## 📤 Output Format
 
-**Input**: S = "aba", K = 2  
-**Output**: 3  
-**Explanation**: 
-Substrings with exactly 2 distinct characters:
-1. "ab" (indices 0-1)
-2. "ba" (indices 1-2)
-3. "aba" (indices 0-2)
-
-**Input**: S = "aabab", K = 3  
-**Output**: 0
+- Return an integer — the number of substrings of `S` that have exactly `K` distinct characters.
 
 ---
 
-## 🧪 Test Cases
+## 🧪 Examples
 
-| # | Input (S, K) | Output | Explanation |
-|---|--------------|--------|-------------|
-| 1 | "abc", 2 | 2 | "ab", "bc" |
-| 2 | "aa", 1 | 3 | "a", "a", "aa" |
-| 3 | "aab", 3 | 0 | No substring with 3 distinct chars |
-| 4 | "aabbcc", 2 | 8 | Multiple valid substrings |
-| 5 | "abcabcabc", 3 | 19 | Multiple overlapping substrings |
+**Example 1**  
+Input: S = "aba", K = 2
+Output: 3
+Explanation: substrings are "ab", "ba", "aba"
+
+**Example 2**  
+Input: S = "abc", K = 2
+Output: 2
+Explanation: substrings are "ab", "bc"
+
+**Example 3**  
+Input: S = "aa", K = 1
+Output: 3
+Explanation: substrings are "a", "a", "aa"
 
 ---
 
 ## 🛠️ Approach
 
-### Sliding Window with Hash Map
-1. **Problem Breakdown**:
-   - We need to find substrings with exactly K distinct characters
-   - This can be transformed into finding substrings with at most K distinct characters minus substrings with at most K-1 distinct characters
+Use a sliding‑window + “at most K distinct” trick:
 
-2. **Algorithm**:
-   - Implement a helper function `atMostKDistinct(S, K)` that counts substrings with at most K distinct characters
-   - The result is `atMostKDistinct(S, K) - atMostKDistinct(S, K-1)`
-   - Use sliding window technique with a hash map to track character frequencies
-
-3. **Optimization**:
-   - Use a frequency array instead of hash map for better performance
-   - Maintain a count of distinct characters in the current window
-
-### Time and Space Complexity
-- **Time Complexity**: O(N) - Each character is processed at most twice (once for each sliding window pass)
-- **Space Complexity**: O(1) - Fixed size frequency array (size 26)
-
----
-
-## 📝 Note
-- The problem can be extended to handle case-sensitive characters or larger character sets
-- The solution can be modified to return the actual substrings instead of just the count
-- For very large strings, the solution remains efficient due to O(N) time complexity
-- Edge cases to consider:
-  - Empty string (though constraints say |S| ≥ 1)
-  - K = 1 (single character substrings)
-  - K = 26 (all possible distinct characters)
-  - String with all identical characters
+1. Define a helper function `atMostKDistinct(s, k)` that counts the number of substrings with _at most_ `k` distinct characters — using two‑pointer / sliding window + a fixed-size frequency array (size 26). :contentReference[oaicite:5]{index=5}
+2. The answer is:  
+   countExactlyK = atMostKDistinct(S, K) – atMostKDistinct(S, K − 1)
+3. In `atMostKDistinct`, maintain a window `[i..j]`, expand `j`, update freq & distinct count; when distinct > k, move `i` forward until valid; accumulate valid substrings ending at `j`. :contentReference[oaicite:6]{index=6}

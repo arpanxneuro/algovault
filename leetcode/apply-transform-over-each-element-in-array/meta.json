@@ -2,7 +2,7 @@
   "title": "apply-transform-over-each-element-in-array",
   "platform": "LeetCode",
   "difficulty": "easy",
-  "languages": ["ts"],
+  "languages": ["ts", "js"],
   "tags": ["array", "functional-programming", "higher-order-function"],
   "problemSrc": "https://leetcode.com/problems/apply-transform-over-each-element-in-array/",
   "timeComplexity": "O(n)",

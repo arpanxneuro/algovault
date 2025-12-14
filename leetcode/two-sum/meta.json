@@ -4,7 +4,7 @@
   "tags": ["array", "hash-table", "two-pointers"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/two-sum/",
-  "languages": ["py", "ts"],
+  "languages": ["py", "ts", "cpp"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(n)",
   "solvedOn": "2025-07-07"

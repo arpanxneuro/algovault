@@ -3,7 +3,7 @@
   "difficulty": "easy",
   "tags": ["hash-table", "math", "string", "parsing"],
   "platform": "LeetCode",
-  "problemSrc": "",
+  "problemSrc": "https://leetcode.com/problems/roman-to-integer",
   "languages": ["py", "ts"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",

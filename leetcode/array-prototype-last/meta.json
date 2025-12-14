@@ -2,7 +2,7 @@
   "title": "array-prototype-last",
   "platform": "LeetCode",
   "difficulty": "easy",
-  "languages": ["js"],
+  "languages": ["js", "ts"],
   "tags": ["array", "functional‑programming", "higher‑order‑function"],
   "problemSrc": "https://leetcode.com/problems/array-prototype-last/",
   "timeComplexity": "O(1)",

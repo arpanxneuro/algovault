@@ -4,7 +4,7 @@
   "tags": ["array", "higher‑order‑functions", "functional‑programming"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/filter-elements-from-array/",
-  "languages": ["js"],
+  "languages": ["js", "ts"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(n)",
   "solvedOn": "2025-11-14"

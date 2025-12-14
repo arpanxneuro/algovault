@@ -8,7 +8,7 @@
   ],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/function-composition/",
-  "languages": ["js"],
+  "languages": ["js", "ts"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
   "solvedOn": "2025-11-14"

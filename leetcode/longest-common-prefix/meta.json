@@ -4,7 +4,7 @@
   "tags": ["string", "array", "trie"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/longest-common-prefix/",
-  "languages": ["py"],
+  "languages": ["py", "ts"],
   "timeComplexity": "O(S)",
   "spaceComplexity": "O(1)",
   "solvedOn": "2025-11-14"

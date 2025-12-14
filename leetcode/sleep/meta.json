@@ -4,7 +4,7 @@
   "tags": ["promise", "async-programming", "concurrency"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/sleep/",
-  "languages": ["js"],
+  "languages": ["js", "ts"],
   "timeComplexity": "O(1)",
   "spaceComplexity": "O(1)",
   "solvedOn": "2025-11-14"

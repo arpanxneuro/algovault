@@ -4,7 +4,7 @@
   "tags": ["array", "simulation"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/special-array-i/",
-  "languages": ["js"],
+  "languages": ["js", "ts", "cpp", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
   "solvedOn": "2025-11-14"

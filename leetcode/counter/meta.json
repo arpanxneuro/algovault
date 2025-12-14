@@ -4,7 +4,7 @@
   "tags": ["closure", "functions", "counter"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/counter/",
-  "languages": ["js"],
+  "languages": ["js", "ts"],
   "timeComplexity": "O(1) per operation",
   "spaceComplexity": "O(1)",
   "solvedOn": "2025-11-14"

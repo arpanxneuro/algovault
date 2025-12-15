@@ -1,0 +1,11 @@
+{
+  "title": "rotate array",
+  "difficulty": "medium",
+  "tags": ["array", "in-place", "rotation"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/rotate-array",
+  "languages": ["ts", "cpp", "py"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2025-12-14"
+}

@@ -4,7 +4,7 @@
   "tags": ["string", "simulation"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/",
-  "languages": ["js", "ts", "cpp"],
+  "languages": ["js", "ts", "cpp", "py"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
   "solvedOn": "2025-11-14"

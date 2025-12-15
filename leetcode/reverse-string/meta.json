@@ -1,0 +1,11 @@
+{
+  "title": "reverse string",
+  "difficulty": "easy",
+  "tags": ["two pointers", "string"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/reverse-string",
+  "languages": ["ts", "cpp", "py"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2025-12-14"
+}

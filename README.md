@@ -12,20 +12,6 @@ AlgoVault is a centralized platform that aggregates algorithm and data-structure
 | HackerRank    | 3                     | 2025-09-10   | 🟡 Occasional | [View](./hackerrank/)    |
 | LeetCode      | 14                    | 2025-11-14   | 🟡 Occasional | [View](./leetcode/)      |
 
-## 📈 Progress Overview
-
-### Weekly Progress
-
-| Status | Week      | Topics                 | Problems Solved |
-| ------ | --------- | ---------------------- | --------------- |
-| ✅     | Week 1    | Arrays & Strings       | 10              |
-| ✅     | Week 2    | Matrices & Polynomials | 8               |
-| ✅     | Week 3    | Linked Lists           | 9               |
-| 🔄     | Week 4    | Advanced Linked Lists  | 8               |
-| ✅     | Week 7    | Recursion              | 9               |
-| ⏳     | Week 5-6  | Stacks & Queues        | 0               |
-| ⏳     | Week 8-10 | Advanced Topics        | 0               |
-
 ## 🏗️ Project Structure
 
 ```
@@ -68,9 +54,8 @@ Each problem directory adheres to a consistent, scalable structure designed for 
 
 ## 📊 Statistics
 
-- **Total Problems Solved:** 57
-- **Last Updated:** 2025-11-14
-- **Current Streak:** 2 weeks
+- **Total Problems Solved:** 59
+- **Last Updated:** 2025-12-14
 
 ## � Problem Index
 

@@ -1,0 +1,11 @@
+{
+  "title": "valid parentheses",
+  "difficulty": "easy",
+  "tags": ["string", "stack"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/valid-parentheses",
+  "languages": ["cpp", "ts", "py"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "solvedOn": "2025-12-16"
+}

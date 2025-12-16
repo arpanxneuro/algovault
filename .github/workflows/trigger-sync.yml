@@ -1,4 +1,4 @@
-name: Trigger pnpm sync in codevault
+name: Trigger pnpm sync in algovaultx
 
 on: [push]
 
@@ -6,7 +6,7 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
-    - name: Dispatch to codevault
+    - name: Dispatch to algovaultx
       run: |
         curl -L \
           -X POST \

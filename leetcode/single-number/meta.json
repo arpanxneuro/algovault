@@ -1,0 +1,11 @@
+{
+  "title": "single number",
+  "difficulty": "easy",
+  "tags": ["array", "bit manipulation"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/single-number",
+  "languages": ["cpp", "ts", "py"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2025-12-16"
+}

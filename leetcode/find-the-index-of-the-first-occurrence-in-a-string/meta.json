@@ -1,0 +1,19 @@
+{
+  "title": "find the index of the first occurrence in a string",
+  "difficulty": "easy",
+  "tags": [
+    "two pointers",
+    "string",
+    "string matching",
+    "substring"
+  ],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string",
+  "languages": [
+    "cpp",
+    "py"
+  ],
+  "timeComplexity": "O(nxm)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-08"
+}

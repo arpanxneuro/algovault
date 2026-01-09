@@ -1,0 +1,17 @@
+{
+  "title": "maximum subarray",
+  "difficulty": "medium",
+  "tags": [
+    "array",
+    "divide and conquer",
+    "dynamic programming"
+  ],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/maximum-subarray",
+  "languages": [
+    "cpp"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2025-12-31"
+}

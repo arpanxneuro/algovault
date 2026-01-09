@@ -1,0 +1,18 @@
+{
+  "title": "product of array except self",
+  "difficulty": "medium",
+  "tags": [
+    "array",
+    "prefix sum"
+  ],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/product-of-array-except-self",
+  "languages": [
+    "cpp",
+    "ts",
+    "py"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-09"
+}

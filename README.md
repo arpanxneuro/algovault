@@ -6,10 +6,10 @@ A centralized repository for **competitive programming** problems from major pla
 
 | Platform      | Problems | Link                     |
 | :------------ | :------: | :----------------------- |
-| GeeksforGeeks |    40    | [View](./geeksforgeeks/) |
-| LeetCode      |    19    | [View](./leetcode/)      |
+| GeeksforGeeks |    42    | [View](./geeksforgeeks/) |
+| LeetCode      |    24    | [View](./leetcode/)      |
 | HackerRank    |    3     | [View](./hackerrank/)    |
-| **Total**     |  **62**  |                          |
+| **Total**     |  **69**  |                          |
 
 ## 📝 Problem Documentation
 
@@ -30,7 +30,16 @@ Each problem folder contains:
 
 ## 📚 Problem Index
 
-### 🏗️ GeeksforGeeks (40 Problems)
+### 🏗️ GeeksforGeeks (42 Problems)
+
+<details>
+<summary><strong>🏆 Special (1 problem)</strong></summary>
+
+| Problem           | Link                                                                                    | Difficulty |
+| :---------------- | :-------------------------------------------------------------------------------------- | :--------: |
+| Kadane's Algorithm | [kadanes-algorithm](./geeksforgeeks/kadanes-algorithm/)                                  |    ⭐⭐    |
+
+</details>
 
 <details>
 <summary><strong>📌 Arrays (7 problems)</strong></summary>
@@ -140,7 +149,7 @@ Each problem folder contains:
 
 ---
 
-### ⭐ LeetCode (19 Problems)
+### ⭐ LeetCode (24 Problems)
 
 | Problem                           | Link                                                                                                 | Difficulty |
 | :-------------------------------- | :--------------------------------------------------------------------------------------------------- | :--------: |
@@ -163,6 +172,11 @@ Each problem folder contains:
 | Function Composition              | [function-composition](./leetcode/function-composition/)                                             |     ⭐     |
 | Sleep                             | [sleep](./leetcode/sleep/)                                                                           |     ⭐     |
 | Special Array I                   | [special-array-i](./leetcode/special-array-i/)                                                       |     ⭐     |
+| Find Index of First Occurrence    | [find-the-index-of-the-first-occurrence-in-a-string](./leetcode/find-the-index-of-the-first-occurrence-in-a-string/) |    ⭐⭐    |
+| Majority Element                  | [majority-element](./leetcode/majority-element/)                                                     |    ⭐⭐    |
+| Maximum Subarray                  | [maximum-subarray](./leetcode/maximum-subarray/)                                                     |    ⭐⭐    |
+| Product of Array Except Self      | [product-of-array-except-self](./leetcode/product-of-array-except-self/)                             |    ⭐⭐    |
+| Remove Element                    | [remove-element](./leetcode/remove-element/)                                                         |     ⭐     |
 
 ---
 
@@ -176,10 +190,10 @@ Each problem folder contains:
 
 ## 📈 Statistics
 
-- **Total Problems Solved**: 62
+- **Total Problems Solved**: 69
 - **Active Platforms**: 3
-- **GeeksforGeeks**: 40 problems
-- **LeetCode**: 19 problems
+- **GeeksforGeeks**: 42 problems
+- **LeetCode**: 24 problems
 - **HackerRank**: 3 problems
 
 ## 📝 Notes

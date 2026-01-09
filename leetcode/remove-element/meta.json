@@ -1,0 +1,19 @@
+{
+  "title": "remove element",
+  "difficulty": "easy",
+  "tags": [
+    "array",
+    "two pointers",
+    "in place"
+  ],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/remove-element",
+  "languages": [
+    "cpp",
+    "ts",
+    "py"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-08"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "majority element",
+  "difficulty": "easy",
+  "tags": [
+    "array",
+    "hash table",
+    "divide and conquer",
+    "sorting",
+    "counting",
+    "two pointers",
+    "boyer-moore"
+  ],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/majority-element",
+  "languages": [
+    "cpp",
+    "ts",
+    "py"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-07"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "peak index in a mountain array",
+  "difficulty": "medium",
+  "tags": ["array", "binary search", "mountain"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/peak-index-in-a-mountain-array",
+  "languages": ["cpp"],
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-12"
+}

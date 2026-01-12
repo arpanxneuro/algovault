@@ -1,0 +1,11 @@
+{
+  "title": "search insert position",
+  "difficulty": "easy",
+  "tags": ["array", "bibary search"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/search-insert-position",
+  "languages": ["cpp", "ts", "py"],
+  "timeComplexity": "O(logn)",
+  "spaceComplexity": "",
+  "solvedOn": "2026-01-09"
+}

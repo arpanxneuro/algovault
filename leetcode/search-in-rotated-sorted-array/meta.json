@@ -1,0 +1,11 @@
+{
+  "title": "search in rotated sorted array",
+  "difficulty": "medium",
+  "tags": ["array", "binary-search", "rotated"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/search-in-rotated-sorted-array",
+  "languages": ["cpp"],
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2025-12-14"
+}

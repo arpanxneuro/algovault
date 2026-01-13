@@ -4,7 +4,7 @@
   "tags": ["array", "binary search", "mountain"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/peak-index-in-a-mountain-array",
-  "languages": ["cpp"],
+  "languages": ["cpp", "py"],
   "timeComplexity": "O(log n)",
   "spaceComplexity": "O(1)",
   "solvedOn": "2026-01-12"

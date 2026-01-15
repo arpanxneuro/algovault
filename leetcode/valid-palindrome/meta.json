@@ -1,17 +1,10 @@
 {
   "title": "valid palindrome",
   "difficulty": "easy",
-  "tags": [
-    "string",
-    "two pointers",
-    "palindrome"
-  ],
+  "tags": ["string", "two pointers", "palindrome"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/valid-palindrome",
-  "languages": [
-    "cpp",
-    "py"
-  ],
+  "languages": ["cpp"],
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
   "solvedOn": "2026-01-14"

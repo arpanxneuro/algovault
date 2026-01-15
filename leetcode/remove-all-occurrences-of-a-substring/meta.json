@@ -1,0 +1,11 @@
+{
+  "title": "remove all occurrences of a substring",
+  "difficulty": "medium",
+  "tags": ["string", "stack", "simulation"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/remove-all-occurrences-of-a-substring",
+  "languages": ["cpp"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "solvedOn": "2026-01-15"
+}

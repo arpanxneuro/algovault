@@ -1,0 +1,11 @@
+{
+  "title": "permutation in string",
+  "difficulty": "medium",
+  "tags": ["hash table", "two pointers", "string", "sliding window"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/permutation-in-string",
+  "languages": ["cpp"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-15"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "python lists",
+  "difficulty": "easy",
+  "tags": ["list", "simulation", "command processing"],
+  "platform": "HackerRank",
+  "problemSrc": "https://www.hackerrank.com/challenges/python-lists/problem",
+  "languages": ["py"],
+  "timeComplexity": "O(n log n)",
+  "spaceComplexity": "O(n)",
+  "solvedOn": "2026-01-17"
+}

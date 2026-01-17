@@ -1,4 +1,4 @@
-# Dynamic Array
+﻿# Dynamic Array
 
 > **Difficulty**: easy  
 > **Platform**: HackerRank  
@@ -8,24 +8,24 @@
 
 ## 📝 Problem Statement
 
-Implement a dynamic array of sequences and process a series of queries: initialize `N` empty sequences, and maintain an integer `lastAnswer = 0`. Depending on the query type, either append to a sequence or read from a sequence to update `lastAnswer`. Return / print `lastAnswer` after each relevant query. :contentReference[oaicite:3]{index=3}
+Implement a dynamic array of sequences and process a series of queries: initialize `N` empty sequences, and maintain an integer `lastAnswer = 0`. Depending on the query type, either append to a sequence or read from a sequence to update `lastAnswer`. Return / print `lastAnswer` after each relevant query.
 
 ---
 
 ## 📥 Input
 
-- First line: two space‑separated integers `N` (number of sequences) and `Q` (number of queries). :contentReference[oaicite:4]{index=4}
+- First line: two space‑separated integers `N` (number of sequences) and `Q` (number of queries).
 - Next `Q` lines: each contains a query of one of two types:
   - `1 x y` — append operation
-  - `2 x y` — value‑fetch operation :contentReference[oaicite:5]{index=5}
+  - `2 x y` — value‑fetch operation
 
-All indices and values satisfy problem constraints; queries are guaranteed valid per the platform. :contentReference[oaicite:6]{index=6}
+All indices and values satisfy problem constraints; queries are guaranteed valid per the platform.
 
 ---
 
 ## 📤 Output
 
-For each query of type `2`, output the updated `lastAnswer` on a new line — in the order the queries are processed. :contentReference[oaicite:7]{index=7}
+For each query of type `2`, output the updated `lastAnswer` on a new line — in the order the queries are processed.
 
 ---
 
@@ -38,15 +38,15 @@ For each query:
 - If it is `1 x y`:
 
   - Compute `idx = (x ^ lastAnswer) % N`
-  - Append `y` to `seqList[idx]` :contentReference[oaicite:8]{index=8}
+  - Append `y` to `seqList[idx]`
 
 - If it is `2 x y`:
   - Compute `idx = (x ^ lastAnswer) % N`
   - Let `size = length of seqList[idx]`
   - Update `lastAnswer = seqList[idx][ y % size ]`
-  - Output / store `lastAnswer` :contentReference[oaicite:9]{index=9}
+  - Output / store `lastAnswer`
 
-This solves the problem in a straightforward way. :contentReference[oaicite:10]{index=10}
+This solves the problem in a straightforward way.
 
 ---
 
@@ -59,6 +59,6 @@ This solves the problem in a straightforward way. :contentReference[oaicite:10]{
 
 ## 📌 Constraints & Considerations
 
-- `1 ≤ N, Q ≤ 10^5` — large limits, so solution must be efficient. :contentReference[oaicite:11]{index=11}
-- `x, y` up to large integers (e.g. 10⁹), but modulo operations and indexing logic ensure valid accesses. :contentReference[oaicite:12]{index=12}
+- `1 ≤ N, Q ≤ 10^5` — large limits, so solution must be efficient.
+- `x, y` up to large integers (e.g. 10⁹), but modulo operations and indexing logic ensure valid accesses.
 - Ensure efficient I/O and memory‑efficient sequence storage (e.g. dynamic/resizable arrays), especially under C or low‑level languages.

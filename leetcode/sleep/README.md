@@ -35,13 +35,13 @@ Given a positive integer `millis`, write an async function that sleeps for `mill
 ## ✅ Example
 
 **Input:**  
-100
+`100`
 **Output:**  
-Promise resolved after ~100ms
+`Promise resolved after ~100ms`
 **Input:**  
-200
+`200`
 **Output:**  
-Promise resolved after ~200ms
+`Promise resolved after ~200ms`
 
 ---
 

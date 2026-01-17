@@ -1,4 +1,4 @@
-# Count Number of Substrings with Exactly K Distinct Characters
+﻿# Count Number of Substrings with Exactly K Distinct Characters
 
 > **Difficulty**: Medium  
 > **Source**: GeeksforGeeks  
@@ -12,14 +12,14 @@ Given a string `S` of lowercase letters and an integer `K`, count all substrings
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
-- `S`: a lowercase English‑letter string, `1 ≤ |S| ≤ 10^4`. :contentReference[oaicite:0]{index=0}
-- `K`: an integer, `1 ≤ K ≤ 26`. :contentReference[oaicite:1]{index=1}
+- `S`: a lowercase English‑letter string, `1 ≤ |S| ≤ 10^4`.
+- `K`: an integer, `1 ≤ K ≤ 26`.
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return an integer — the number of substrings of `S` that have exactly `K` distinct characters.
 
@@ -48,7 +48,7 @@ Explanation: substrings are "a", "a", "aa"
 
 Use a sliding‑window + “at most K distinct” trick:
 
-1. Define a helper function `atMostKDistinct(s, k)` that counts the number of substrings with _at most_ `k` distinct characters — using two‑pointer / sliding window + a fixed-size frequency array (size 26). :contentReference[oaicite:5]{index=5}
+1. Define a helper function `atMostKDistinct(s, k)` that counts the number of substrings with _at most_ `k` distinct characters — using two‑pointer / sliding window + a fixed-size frequency array (size 26).
 2. The answer is:  
    countExactlyK = atMostKDistinct(S, K) – atMostKDistinct(S, K − 1)
-3. In `atMostKDistinct`, maintain a window `[i..j]`, expand `j`, update freq & distinct count; when distinct > k, move `i` forward until valid; accumulate valid substrings ending at `j`. :contentReference[oaicite:6]{index=6}
+3. In `atMostKDistinct`, maintain a window `[i..j]`, expand `j`, update freq & distinct count; when distinct > k, move `i` forward until valid; accumulate valid substrings ending at `j`.

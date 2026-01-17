@@ -11,14 +11,14 @@ Implement a function that calculates `power(N, P)`, which computes `N^P % (10^9 
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `N`: integer, `1 ≤ N ≤ 10^6`
 - `P`: non-negative integer, `0 ≤ P ≤ 10^6`
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return `(N^P) mod (10^9 + 7)`
 

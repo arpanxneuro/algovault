@@ -1,4 +1,4 @@
-# Josephus Problem
+﻿# Josephus Problem
 
 > **Difficulty**: Medium  
 > **Source**: GeeksforGeeks  
@@ -12,14 +12,14 @@ There are `n` people standing in a circle, numbered from 1 to `n`. Starting from
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `n`: integer, total number of people (1 ≤ n)
 - `k`: integer, elimination step (1 ≤ k)
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return an integer: the 1‑based position of the survivor (the last remaining person).
 
@@ -28,8 +28,8 @@ There are `n` people standing in a circle, numbered from 1 to `n`. Starting from
 ## 🧪 Example Cases
 
 - **Input:** `n = 7, k = 3` → **Output:** `4`  
-  **Explanation:** People eliminated in order — 3, 6, 2, 7, 5, 1; survivor is at position 4. :contentReference[oaicite:2]{index=2}
-- **Input:** `n = 5, k = 2` → **Output:** `3` :contentReference[oaicite:3]{index=3}
+  **Explanation:** People eliminated in order — 3, 6, 2, 7, 5, 1; survivor is at position 4.
+- **Input:** `n = 5, k = 2` → **Output:** `3`
 
 ### Additional Sample Cases
 

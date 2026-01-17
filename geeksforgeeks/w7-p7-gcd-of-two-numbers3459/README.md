@@ -12,7 +12,7 @@ Write a recursive function to find the greatest common divisor (GCD) of two non�
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `A`: non‑negative integer (0 ≤ A ≤ 10⁹)
 - `B`: non‑negative integer (0 ≤ B ≤ 10⁹)
@@ -21,7 +21,7 @@ At least one of `A` or `B` is non-zero.
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return a non‑negative integer — the GCD of `A` and `B`.
 

@@ -1,4 +1,4 @@
-# rotate array
+﻿# rotate array
 
 > **Difficulty**: medium  
 > **Platform**: LeetCode  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-Given an integer array `nums`, rotate the array to the right by `k` steps, where `k` is non-negative. The rotation should be performed **in-place** with minimal extra space, and every element must end up in its correct rotated position such that the last `k` elements move to the front in order. :contentReference[oaicite:0]{index=0}
+Given an integer array `nums`, rotate the array to the right by `k` steps, where `k` is non-negative. The rotation should be performed **in-place** with minimal extra space, and every element must end up in its correct rotated position such that the last `k` elements move to the front in order.
 
 ---
 
@@ -18,7 +18,7 @@ An integer array `nums` and a non-negative integer `k`.
 
 - `1 <= nums.length <= 10^5`
 - `-2^31 <= nums[i] <= 2^31 - 1`
-- `0 <= k <= 10^5` :contentReference[oaicite:1]{index=1}
+- `0 <= k <= 10^5`
 
 ---
 
@@ -29,7 +29,7 @@ The same array `nums`, rotated to the right by `k` positions, modified **in plac
 ## ✔️ Constraints
 
 - The rotation must be performed in-place with O(1) extra space for the optimal solution.
-- Multiple valid solution approaches exist. :contentReference[oaicite:2]{index=2}
+- Multiple valid solution approaches exist.
 
 ---
 
@@ -42,7 +42,7 @@ nums = [1,2,3,4,5,6,7], k = 3
 [5,6,7,1,2,3,4]
 
 **Explanation**:
-After 3 right rotations, the last 3 elements (`5, 6, 7`) move to the front in order. :contentReference[oaicite:3]{index=3}
+After 3 right rotations, the last 3 elements (`5, 6, 7`) move to the front in order.
 
 ---
 
@@ -66,7 +66,7 @@ A highly optimized in-place solution uses a **three-step reversal technique**:
 3. Reverse the first `k` elements.
 4. Reverse the remaining `n − k` elements.
 
-Each reversal reorders portions of the array such that the final sequence is rotated correctly. :contentReference[oaicite:4]{index=4}
+Each reversal reorders portions of the array such that the final sequence is rotated correctly.
 
 ### Time and Space Complexity
 
@@ -78,4 +78,4 @@ Each reversal reorders portions of the array such that the final sequence is rot
 ## 📌 Notes
 
 - Rotating an array of length `n` by `k` steps is equivalent to rotating by `k % n` steps.
-- The solution preserves element order without using auxiliary arrays. :contentReference[oaicite:5]{index=5}
+- The solution preserves element order without using auxiliary arrays.

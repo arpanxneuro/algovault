@@ -12,7 +12,7 @@ Given a singly linked list, swap the data of its nodes in pairs: i.e. swap the 1
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `head`: reference to the head node of the singly linked list.  
 - The list may be empty (`head = None`) or contain up to \(10^5\) nodes.  
@@ -20,7 +20,7 @@ Given a singly linked list, swap the data of its nodes in pairs: i.e. swap the 1
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return the head of the modified linked list after performing the pairwise data swaps.  
 

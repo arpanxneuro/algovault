@@ -1,4 +1,4 @@
-# Check If an Array is Sorted
+﻿# Check If an Array is Sorted
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-Given an integer array `arr[]`, determine whether the array is sorted in non-decreasing (ascending) order. Return `true` if it is sorted (i.e. every element is ≤ the next), otherwise return `false`. :contentReference[oaicite:2]{index=2}
+Given an integer array `arr[]`, determine whether the array is sorted in non-decreasing (ascending) order. Return `true` if it is sorted (i.e. every element is ≤ the next), otherwise return `false`.
 
 ---
 

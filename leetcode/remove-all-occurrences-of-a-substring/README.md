@@ -37,15 +37,17 @@ A substring is defined as a contiguous sequence of characters within a string.
 ## ✅ Example
 
 **Input**:
-s = "daabcbaabcbc", part = "abc"
+`s = "daabcbaabcbc", part = "abc"`
 **Output**:
-dab
+`dab`
 **Explanation**:
 
+```
 - Remove `"abc"` starting at index 2 → `dabaabcbc`
 - Remove `"abc"` starting at index 4 → `dababc`
 - Remove `"abc"` starting at index 3 → `dab`
 - No further occurrences exist
+```
 
 ---
 

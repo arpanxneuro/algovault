@@ -1,4 +1,4 @@
-# Counter II
+﻿# Counter II
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -12,26 +12,26 @@ Write a function `createCounter(init)` which accepts an integer `init`. It shoul
 
 - `increment()`: increases the internal counter value by 1, and returns the new value.
 - `decrement()`: decreases the internal counter value by 1, and returns the new value.
-- `reset()`: resets the internal counter value to the original `init`, and returns it. :contentReference[oaicite:2]{index=2}
+- `reset()`: resets the internal counter value to the original `init`, and returns it.
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
-- `init`: initial integer value (constraints: `-1000 <= init <= 1000`) :contentReference[oaicite:3]{index=3}
-- `calls`: array of method names (`"increment"`, `"decrement"`, or `"reset"`) to be invoked sequentially. :contentReference[oaicite:4]{index=4}
+- `init`: initial integer value (constraints: `-1000 <= init <= 1000`)
+- `calls`: array of method names (`"increment"`, `"decrement"`, or `"reset"`) to be invoked sequentially.
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Returns an array of values — each corresponding to the return value of the respective method call in `calls`.
 
 ## ✔️ Constraints
 
-- `-1000 <= init <= 1000` :contentReference[oaicite:5]{index=5}
-- At most 1000 method calls. :contentReference[oaicite:6]{index=6}
-- Methods invoked are strictly among `"increment"`, `"decrement"`, or `"reset"`. :contentReference[oaicite:7]{index=7}
+- `-1000 <= init <= 1000`
+- At most 1000 method calls.
+- Methods invoked are strictly among `"increment"`, `"decrement"`, or `"reset"`.
 
 ---
 
@@ -47,7 +47,7 @@ calls = ["increment", "reset", "decrement"]
 
 - `increment()` → 6
 - `reset()` → 5
-- `decrement()` → 4 :contentReference[oaicite:8]{index=8}
+- `decrement()` → 4
 
 **Example 2**  
 **Input:**  
@@ -55,13 +55,13 @@ init = 0
 calls = ["increment", "increment", "decrement", "reset", "reset"]
 **Output:**  
 [1, 2, 1, 0, 0]
-**Explanation:** Follows increment/decrement/reset operations as defined. :contentReference[oaicite:9]{index=9}
+**Explanation:** Follows increment/decrement/reset operations as defined.
 
 ---
 
 ## 🛠️ Approach
 
-- Use closure to capture `init` and maintain an internal mutable variable (say `current`). :contentReference[oaicite:10]{index=10}
+- Use closure to capture `init` and maintain an internal mutable variable (say `current`).
 - Return an object with three methods referencing that internal state:
   - `increment()` → increment `current` by 1 and return it.
   - `decrement()` → decrement `current` by 1 and return it.

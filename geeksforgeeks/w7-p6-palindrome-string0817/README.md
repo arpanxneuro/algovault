@@ -1,4 +1,4 @@
-# Check if String is Palindrome
+﻿# Check if String is Palindrome
 
 > **Difficulty**: easy  
 > **Source**: GeeksforGeeks  
@@ -12,13 +12,13 @@ Given a string `S`, write a function to determine if it is a palindrome. A strin
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `S`: a string (1 ≤ |S| ≤ typically within practical string limits)
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return `1` if the string `S` is a palindrome; otherwise return `0`.
 
@@ -53,5 +53,5 @@ This method runs in **O(n)** time and uses **O(1)** extra space (or O(n) if recu
 
 ## 📚 Notes & References
 
-- Official problem (GfG “Palindrome String”) content. :contentReference[oaicite:1]{index=1}
-- Two‑pointer method explanation from GfG editorial. :contentReference[oaicite:2]{index=2}
+- Official problem (GfG “Palindrome String”) content.
+- Two‑pointer method explanation from GfG editorial.

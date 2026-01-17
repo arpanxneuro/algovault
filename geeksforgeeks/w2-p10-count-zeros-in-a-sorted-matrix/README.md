@@ -1,4 +1,4 @@
-# Count Zeros in a Sorted Matrix
+﻿# Count Zeros in a Sorted Matrix
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-Given an \(n × m\) binary matrix `mat`, where **each row and each column is sorted in non‑decreasing order** (i.e. all 0s come before 1s in any row/column), count the total number of zeros in the matrix. :contentReference[oaicite:2]{index=2}
+Given an \(n × m\) binary matrix `mat`, where **each row and each column is sorted in non‑decreasing order** (i.e. all 0s come before 1s in any row/column), count the total number of zeros in the matrix.
 
 ---
 
@@ -51,7 +51,7 @@ mat = [
 
 ## 🛠️ Approach (Staircase Traversal)
 
-Use the “staircase traversal” technique from bottom‑left (or top‑right/bottom-left depending on condition) to count zeros in **O(n + m)** time: :contentReference[oaicite:3]{index=3}
+Use the “staircase traversal” technique from bottom‑left (or top‑right/bottom-left depending on condition) to count zeros in **O(n + m)** time:
 
 - Start at bottom-left: `row = n - 1`, `col = 0`.
 - Maintain a counter `count = 0`.
@@ -72,6 +72,6 @@ Use the “staircase traversal” technique from bottom‑left (or top‑right/b
 
 ## 📌 Notes & Constraints
 
-- Works when **both rows and columns are sorted** (i.e. binary matrix sorted row‑wise and column‑wise). :contentReference[oaicite:4]{index=4}
+- Works when **both rows and columns are sorted** (i.e. binary matrix sorted row‑wise and column‑wise).
 - If only rows are sorted (not columns), correct zero‑count still needs row‑wise counting (O(n·m)).
 - Matrix can be rectangular (n ≠ m).

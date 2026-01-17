@@ -1,4 +1,4 @@
-# search insert position
+﻿# search insert position
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -8,27 +8,27 @@
 
 ## 📝 Problem Statement
 
-Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with **O(log n)** runtime complexity. :contentReference[oaicite:0]{index=0}
+Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with **O(log n)** runtime complexity.
 
 ---
 
 ## 📥 Input
 
 - A sorted array `nums` of distinct integers  
-- An integer `target` value :contentReference[oaicite:1]{index=1}
+- An integer `target` value
 
 ---
 
 ## 📤 Output
 
-Return the **index** of the first occurrence of `target` if found; otherwise, return the index where it would be inserted in order. :contentReference[oaicite:2]{index=2}
+Return the **index** of the first occurrence of `target` if found; otherwise, return the index where it would be inserted in order.
 
 ## ✔️ Constraints
 
 - `1 <= nums.length <= 10^4`  
 - `-10^4 <= nums[i] <= 10^4`  
 - `nums` contains distinct values sorted in ascending order  
-- `-10^4 <= target <= 10^4` :contentReference[oaicite:3]{index=3}
+- `-10^4 <= target <= 10^4`
 
 ---
 
@@ -67,7 +67,7 @@ nums = [1,3,5,6], target = 7
 
 ## 🛠️ Approach
 
-To achieve **O(log n)** runtime, use **binary search** on the sorted array. Maintain pointers `left` and `right` for the search range. Compute the midpoint; if the value at `mid` equals the target, return `mid`. If it’s less than the target, search the right half; if greater, search the left half. When the loop finishes without finding the target, the `left` pointer indicates the correct insertion position. :contentReference[oaicite:4]{index=4}
+To achieve **O(log n)** runtime, use **binary search** on the sorted array. Maintain pointers `left` and `right` for the search range. Compute the midpoint; if the value at `mid` equals the target, return `mid`. If it’s less than the target, search the right half; if greater, search the left half. When the loop finishes without finding the target, the `left` pointer indicates the correct insertion position.
 
 ### Time and Space Complexity
 - **Time Complexity**: O(log n)  

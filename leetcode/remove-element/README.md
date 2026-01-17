@@ -1,4 +1,4 @@
-# remove element
+﻿# remove element
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -14,7 +14,7 @@ Consider the number of elements in `nums` which are not equal to `val` be `k`. T
 
 - Change the array `nums` such that the first `k` elements of `nums` contain the elements which are not equal to `val`.
 - The remaining elements of `nums` are not important.
-- Return `k`. :contentReference[oaicite:1]{index=1}
+- Return `k`.
 
 ---
 
@@ -27,13 +27,13 @@ Consider the number of elements in `nums` which are not equal to `val` be `k`. T
 
 ## 📤 Output
 
-- An integer `k` representing the count of elements not equal to `val`, with the first `k` positions of `nums` holding those elements. :contentReference[oaicite:2]{index=2}
+- An integer `k` representing the count of elements not equal to `val`, with the first `k` positions of `nums` holding those elements.
 
 ## ✔️ Constraints
 
 - `0 <= nums.length <= 100`
 - `0 <= nums[i] <= 50`
-- `0 <= val <= 100` :contentReference[oaicite:3]{index=3}
+- `0 <= val <= 100`
 
 ---
 
@@ -46,7 +46,7 @@ nums = [3,2,2,3], val = 3
 2, nums = [2,2,_,_]
 
 **Explanation**:
-Your function should return `k = 2`, with the first two elements of `nums` being 2. It does not matter what you leave beyond the returned `k`. :contentReference[oaicite:4]{index=4}
+Your function should return `k = 2`, with the first two elements of `nums` being 2. It does not matter what you leave beyond the returned `k`.
 
 ---
 
@@ -63,7 +63,7 @@ Your function should return `k = 2`, with the first two elements of `nums` being
 
 ## 🛠️ Approach
 
-Use a **two-pointer technique**: maintain a pointer `k` for where the next non-`val` element should go. Iterate through `nums`, and when the current element is not equal to `val`, assign it to `nums[k]` and increment `k`. In the end, `k` represents the number of valid elements. :contentReference[oaicite:5]{index=5}
+Use a **two-pointer technique**: maintain a pointer `k` for where the next non-`val` element should go. Iterate through `nums`, and when the current element is not equal to `val`, assign it to `nums[k]` and increment `k`. In the end, `k` represents the number of valid elements.
 
 ### Time and Space Complexity
 

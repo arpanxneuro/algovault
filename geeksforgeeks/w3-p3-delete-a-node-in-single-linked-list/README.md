@@ -1,4 +1,4 @@
-# Delete a Node in Single Linked List
+﻿# Delete a Node in Single Linked List
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -56,7 +56,7 @@ Explanation: Position out‑of‑bounds — no deletion.
 
 ## 🛠️ Approach
 
-Standard iterative deletion in a singly linked list — O(n) time, O(1) space. :contentReference[oaicite:2]{index=2}
+Standard iterative deletion in a singly linked list — O(n) time, O(1) space.
 
 1. If `head` is `null`, return `null`.
 2. If `pos == 0`, adjust head to `head.next`, delete old head (if manual memory management), and return new head.

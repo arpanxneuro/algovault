@@ -1,4 +1,4 @@
-# Polynomial Addition
+﻿# Polynomial Addition
 
 > **Difficulty**: medium  
 > **Platform**: GeeksforGeeks  
@@ -57,9 +57,9 @@ B = [4, 5] // represents 4 + 5x
 
 ## 🛠️ Approach
 
-1. Determine `size = max(n, m)` — the degree (plus one) of resultant polynomial. :contentReference[oaicite:2]{index=2}
-2. Initialize result array `sum[]` of length `size`, initially copying coefficients from `A[]` (for indices < n). :contentReference[oaicite:3]{index=3}
-3. For each index `i < m`, add `B[i]` to `sum[i]`. :contentReference[oaicite:4]{index=4}
+1. Determine `size = max(n, m)` — the degree (plus one) of resultant polynomial.
+2. Initialize result array `sum[]` of length `size`, initially copying coefficients from `A[]` (for indices < n).
+3. For each index `i < m`, add `B[i]` to `sum[i]`.
 4. Return `sum[]`.
 
 This runs in **O(max(n, m))** time and uses **O(max(n, m))** space for output (or O(1) extra space if allowed to modify one input).

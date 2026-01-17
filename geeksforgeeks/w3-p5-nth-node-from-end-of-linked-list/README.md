@@ -1,4 +1,4 @@
-# Nth Node from End of Linked List
+﻿# Nth Node from End of Linked List
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-Given the head of a singly linked list and an integer `n`, return the value of the **nth node from the end** of the list. If `n` is greater than the number of nodes in the list, return `-1`. :contentReference[oaicite:2]{index=2}
+Given the head of a singly linked list and an integer `n`, return the value of the **nth node from the end** of the list. If `n` is greater than the number of nodes in the list, return `-1`.
 
 ---
 
@@ -47,7 +47,7 @@ Explanation: n is greater than list length.
 
 ## 🛠️ Approach (Two‑Pointer / Tortoise‑Hare)
 
-Use a two-pointer technique (fast & slow) to find the nth node from end in one pass. :contentReference[oaicite:3]{index=3}
+Use a two-pointer technique (fast & slow) to find the nth node from end in one pass.
 
 - Initialize `fast = head`, `slow = head`.
 - Advance `fast` by `n` steps. If during this phase `fast == null`, return `-1` (list has fewer than `n` nodes).
@@ -57,7 +57,7 @@ Use a two-pointer technique (fast & slow) to find the nth node from end in one p
 **Time Complexity:** O(L) where L = list length  
 **Space Complexity:** O(1) — just pointers
 
-This satisfies the expected one‑pass O(n) solution. :contentReference[oaicite:4]{index=4}
+This satisfies the expected one‑pass O(n) solution.
 
 ---
 

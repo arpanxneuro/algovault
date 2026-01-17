@@ -1,4 +1,4 @@
-# Sorted Insert for Circular Linked List
+﻿# Sorted Insert for Circular Linked List
 
 > **Difficulty**: medium  
 > **Source**: GeeksforGeeks  
@@ -12,7 +12,7 @@ Given a node from a circular singly linked list sorted in ascending (non‑decre
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `head`: reference to any node in the sorted circular linked list (or `null`/`None` if list is empty).
 - `x`: integer value to insert.
@@ -20,7 +20,7 @@ Given a node from a circular singly linked list sorted in ascending (non‑decre
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - A reference to a node in the updated circular linked list, after inserting the new value and maintaining sorted order and circular linkage.
 
@@ -30,8 +30,8 @@ Given a node from a circular singly linked list sorted in ascending (non‑decre
 
 | Initial list               | x   | Resulting list (one possible rotation)                    |
 | -------------------------- | --- | --------------------------------------------------------- |
-| `1 → 2 → 4` (circular)     | 2   | `1 → 2 → 2 → 4` :contentReference[oaicite:2]{index=2}     |
-| `1 → 4 → 7 → 9` (circular) | 5   | `1 → 4 → 5 → 7 → 9` :contentReference[oaicite:3]{index=3} |
+| `1 → 2 → 4` (circular)     | 2   | `1 → 2 → 2 → 4`     |
+| `1 → 4 → 7 → 9` (circular) | 5   | `1 → 4 → 5 → 7 → 9` |
 | empty list                 | 10  | `10` (single node circular list)                          |
 
 ---
@@ -46,4 +46,4 @@ Given a node from a circular singly linked list sorted in ascending (non‑decre
    - If traversal completes (i.e. `x` is larger than all existing nodes), insert the new node after the current last node and before head — preserving circular order.
 4. Return the reference.
 
-This ensures sorted order and circular linkage are preserved. :contentReference[oaicite:4]{index=4}
+This ensures sorted order and circular linkage are preserved.

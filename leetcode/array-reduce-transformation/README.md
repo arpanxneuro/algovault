@@ -35,29 +35,39 @@ Implement a custom reduce function that takes an array `nums`, a reducer `fn(acc
 
 ## ✅ Example
 
-**Input:**  
+**Input:**
+
+```
 nums = [1,2,3,4]
 fn = (accum, curr) => accum + curr
 init = 0
-**Output:**  
-10
-**Explanation:** Summing all elements yields 10.
+```
 
-**Input:**  
-nums = [1,2,3,4]
+**Output:**  
+`10`
+**Explanation:** `Summing all elements yields 10.`
+
+**Input:**
+
+```nums = [1,2,3,4]
 fn = (accum, curr) => accum + curr \* curr
 init = 100
-**Output:**  
-130
-**Explanation:** Adds squares of each element to the accumulator starting at 100.
+```
 
-**Input:**  
-nums = []
+**Output:**  
+`130`
+**Explanation:** `Adds squares of each element to the accumulator starting at 100.`
+
+**Input:**
+
+```nums = []
 fn = () => 0
 init = 25
+```
+
 **Output:**  
-25
-**Explanation:** Empty arrays always return `init` without calling `fn`.
+`25`
+**Explanation:** ``Empty arrays always return `init` without calling `fn`.``
 
 ---
 

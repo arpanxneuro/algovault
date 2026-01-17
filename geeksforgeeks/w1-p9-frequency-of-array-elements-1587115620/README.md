@@ -1,4 +1,4 @@
-# Frequency of Array Elements
+﻿# Frequency of Array Elements
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-Given an array `arr[]` of non‑negative integers (or integers), return the frequency of each distinct element present in the array — i.e., how many times each element appears. :contentReference[oaicite:2]{index=2}
+Given an array `arr[]` of non‑negative integers (or integers), return the frequency of each distinct element present in the array — i.e., how many times each element appears.
 
 ---
 
@@ -21,7 +21,7 @@ Given an array `arr[]` of non‑negative integers (or integers), return the freq
 
 ## 📤 Output
 
-- For each distinct element in `arr[]`, output (or return) a pair: **element → frequency**, representing how many times that element occurs in the array. :contentReference[oaicite:3]{index=3}
+- For each distinct element in `arr[]`, output (or return) a pair: **element → frequency**, representing how many times that element occurs in the array.
 
 ---
 
@@ -31,13 +31,13 @@ Given an array `arr[]` of non‑negative integers (or integers), return the freq
 **Input**: arr = [10, 20, 10, 5, 20]
 **Output**: [[5, 1], [10, 2], [20, 2]]
 
-Here 5 occurs once, 10 occurs 2 times, 20 occurs 2 times. :contentReference[oaicite:4]{index=4}
+Here 5 occurs once, 10 occurs 2 times, 20 occurs 2 times.
 
 **Example 2**  
 **Input**: arr = [4, 4, 4, 4]
 **Output**: [[4, 4]]
 
-All elements are the same — 4 occurs 4 times. :contentReference[oaicite:5]{index=5}
+All elements are the same — 4 occurs 4 times.
 
 ---
 
@@ -47,11 +47,11 @@ A recommended efficient approach uses a hash‑map / dictionary to count frequen
 
 - Initialize an empty map `freqMap`.
 - Iterate over each element `x` in `arr[]`: increment `freqMap[x]`.
-- After the pass, iterate over entries in `freqMap` to build the result pairs (element, count). :contentReference[oaicite:6]{index=6}
+- After the pass, iterate over entries in `freqMap` to build the result pairs (element, count).
 
-This gives **Time Complexity** = O(n), and **Space Complexity** = O(n) (for the map) in the general case. :contentReference[oaicite:7]{index=7}
+This gives **Time Complexity** = O(n), and **Space Complexity** = O(n) (for the map) in the general case.
 
-If the array elements are in a restricted range (e.g., 1 to n) — as per a variant of the problem — there exists an in‑place O(n)‑time, O(1)-extra‑space method using the array itself as a frequency map. :contentReference[oaicite:8]{index=8}
+If the array elements are in a restricted range (e.g., 1 to n) — as per a variant of the problem — there exists an in‑place O(n)‑time, O(1)-extra‑space method using the array itself as a frequency map.
 
 ---
 

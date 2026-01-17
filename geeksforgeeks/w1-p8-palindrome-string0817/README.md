@@ -1,4 +1,4 @@
-# Palindrome String
+﻿# Palindrome String
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-Given a string `str`, determine whether it is a **palindrome** — i.e., the string reads the same forward and backward. Return `true` (or `1` depending on implementation) if it is a palindrome; otherwise return `false` (`0`). :contentReference[oaicite:2]{index=2}
+Given a string `str`, determine whether it is a **palindrome** — i.e., the string reads the same forward and backward. Return `true` (or `1` depending on implementation) if it is a palindrome; otherwise return `false` (`0`).
 
 ---
 
@@ -36,7 +36,7 @@ Given a string `str`, determine whether it is a **palindrome** — i.e., the str
 **Input**: str = "abc"
 **Output**: false (or 0)
 
-([geeksforgeeks.org](https://www.geeksforgeeks.org/palindrome-string/)) :contentReference[oaicite:3]{index=3}
+([geeksforgeeks.org](https://www.geeksforgeeks.org/palindrome-string/))
 
 ---
 
@@ -49,10 +49,10 @@ Use the two‑pointer method (or compare reversed string) — O(n) time, O(1) ex
   - If they differ → not a palindrome → return `false` or `0`.
   - Else, increment `left`, decrement `right`.
 - If loop completes without mismatch → return `true` / `1`.  
-  :contentReference[oaicite:4]{index=4}
+ 
 
-**Time Complexity:** O(n) — single pass through half the string. :contentReference[oaicite:5]{index=5}  
-**Space Complexity:** O(1) — only a few pointers/indices used. :contentReference[oaicite:6]{index=6}
+**Time Complexity:** O(n) — single pass through half the string.  
+**Space Complexity:** O(1) — only a few pointers/indices used.
 
 ---
 

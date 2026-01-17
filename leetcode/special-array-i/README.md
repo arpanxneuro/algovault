@@ -33,17 +33,17 @@ An array is considered **special** if every pair of its adjacent elements has op
 ## ✅ Example
 
 **Input:**  
-[1]
+`[1]`
 **Output:**  
-true
+`true`
 **Input:**  
-[2, 1, 4]
+`[2, 1, 4]`
 **Output:**  
-true
+`true`
 **Input:**  
-[4, 3, 1, 6]
+`[4, 3, 1, 6]`
 **Output:**  
-false
+`false`
 
 ---
 

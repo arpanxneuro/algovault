@@ -1,4 +1,4 @@
-# Rotate a Matrix by 90 Degrees
+﻿# Rotate a Matrix by 90 Degrees
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -48,7 +48,7 @@ mat = [
 One efficient in-place solution (O(n²) time, O(1) extra space) uses two main steps:
 
 1. **Transpose the matrix** (swap `mat[i][j]` with `mat[j][i]` for all i < j).
-2. **Reverse each column** (or equivalently **reverse rows then transpose**, depending on convention) — for an anti‑clockwise rotation, the usual method is: transpose, then reverse individual columns. :contentReference[oaicite:2]{index=2}
+2. **Reverse each column** (or equivalently **reverse rows then transpose**, depending on convention) — for an anti‑clockwise rotation, the usual method is: transpose, then reverse individual columns.
 
 This transforms rows into columns and reorders elements appropriately to achieve the 90° anti‑clockwise rotation.
 

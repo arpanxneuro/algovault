@@ -1,4 +1,4 @@
-# Insert in Middle of Linked List
+﻿# Insert in Middle of Linked List
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -13,7 +13,7 @@ Given the head of a singly linked list (which may be empty) and an integer `val`
 - If the list has `n` nodes, and `n` is even — insert after the `n/2`‑th node.
 - If `n` is odd — insert after the `(n+1)/2`‑th node.
 
-Return the head of the modified linked list. :contentReference[oaicite:3]{index=3}
+Return the head of the modified linked list.
 
 ---
 
@@ -47,7 +47,7 @@ Output: [7]
 
 ## 🛠️ Approach
 
-Two standard methods — both O(n) time, O(1) space. :contentReference[oaicite:4]{index=4}
+Two standard methods — both O(n) time, O(1) space.
 
 ### Method 1: Two‑pass (length + insert)
 
@@ -60,7 +60,7 @@ Two standard methods — both O(n) time, O(1) space. :contentReference[oaicite:4
 - Use two pointers — `slow` and `fast`. Initialize `slow = head`, `fast = head->next`.
 - Move `slow` one step at a time; `fast` two steps at a time.
 - When `fast` reaches end (or `fast->next` is null), `slow` will point to the node **after** which insertion should happen.
-- Insert the new node after `slow`. :contentReference[oaicite:5]{index=5}
+- Insert the new node after `slow`.
 
 Both approaches give **Time Complexity:** O(n), **Space Complexity:** O(1).
 

@@ -1,4 +1,4 @@
-# Reverse a Linked List
+﻿# Reverse a Linked List
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -30,13 +30,13 @@ Given the head of a singly linked list, reverse the list — i.e., reverse the d
 [1, 2, 3, 4](represents 1 → 2 → 3 → 4 → null)
 
 **Output**  
-[4, 3, 2, 1]Which corresponds to 4 → 3 → 2 → 1 → null. :contentReference[oaicite:2]{index=2}
+[4, 3, 2, 1]Which corresponds to 4 → 3 → 2 → 1 → null.
 
 ---
 
 ## 🛠️ Approach
 
-One efficient in‑place method (iterative), with O(n) time and O(1) extra space: :contentReference[oaicite:3]{index=3}
+One efficient in‑place method (iterative), with O(n) time and O(1) extra space:
 
 - Maintain three pointers:
   - `prev = null`
@@ -47,15 +47,15 @@ One efficient in‑place method (iterative), with O(n) time and O(1) extra space
   2. `curr.next = prev` (reverse pointer)
   3. `prev = curr`
   4. `curr = next`
-- At end, `prev` is new head of reversed list — return `prev`. :contentReference[oaicite:4]{index=4}
+- At end, `prev` is new head of reversed list — return `prev`.
 
-Alternative approaches: recursion or using stack — but iterative is most efficient (constant extra space) as shown on GfG. :contentReference[oaicite:5]{index=5}
+Alternative approaches: recursion or using stack — but iterative is most efficient (constant extra space) as shown on GfG.
 
 ---
 
 ## ⏱️ Complexity
 
-- **Time Complexity:** O(n), where n is number of nodes — each node visited exactly once. :contentReference[oaicite:6]{index=6}
+- **Time Complexity:** O(n), where n is number of nodes — each node visited exactly once.
 - **Space Complexity:** O(1) (iterative approach) — uses only constant extra pointers.
 
 ---

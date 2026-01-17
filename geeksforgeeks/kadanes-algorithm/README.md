@@ -1,4 +1,4 @@
-# kadane's algorithm
+﻿# kadane's algorithm
 
 > **Difficulty**: medium  
 > **Platform**: N/A  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-You are given an integer array `arr[]`. You need to find the **maximum sum of a contiguous subarray** (containing at least one element) in the array. A subarray is defined as a **continuous part** of the array, and you must return the largest possible sum of such a subarray. This problem is commonly solved with **Kadane’s Algorithm** in linear time. :contentReference[oaicite:0]{index=0}
+You are given an integer array `arr[]`. You need to find the **maximum sum of a contiguous subarray** (containing at least one element) in the array. A subarray is defined as a **continuous part** of the array, and you must return the largest possible sum of such a subarray. This problem is commonly solved with **Kadane’s Algorithm** in linear time.
 
 ---
 
@@ -16,7 +16,7 @@ You are given an integer array `arr[]`. You need to find the **maximum sum of a 
 
 - An integer array `arr[]` of size `n`, where  
   `1 ≤ arr.size() ≤ 10^5`  
-  `-10^4 ≤ arr[i] ≤ 10^4` :contentReference[oaicite:1]{index=1}
+  `-10^4 ≤ arr[i] ≤ 10^4`
 
 ---
 
@@ -28,7 +28,7 @@ Return the **maximum sum** achievable from any **contiguous subarray** of `arr[]
 
 - Array length up to 100,000
 - Elements may be negative or positive
-- Must find the subarray sum efficiently (expected O(n) time) :contentReference[oaicite:2]{index=2}
+- Must find the subarray sum efficiently (expected O(n) time)
 
 ---
 
@@ -41,7 +41,7 @@ Return the **maximum sum** achievable from any **contiguous subarray** of `arr[]
 `11`
 
 **Explanation**:
-The subarray `[7, -1, 2, 3]` has the largest sum of `11`. :contentReference[oaicite:3]{index=3}
+The subarray `[7, -1, 2, 3]` has the largest sum of `11`.
 
 ---
 
@@ -52,7 +52,7 @@ The subarray `[7, -1, 2, 3]` has the largest sum of `11`. :contentReference[oaic
 `-2`
 
 **Explanation**:
-All values are negative, so the maximum subarray sum is the single element `-2`. :contentReference[oaicite:4]{index=4}
+All values are negative, so the maximum subarray sum is the single element `-2`.
 
 ---
 
@@ -63,7 +63,7 @@ All values are negative, so the maximum subarray sum is the single element `-2`.
 `25`
 
 **Explanation**:
-The entire array gives the largest sum `25`. :contentReference[oaicite:5]{index=5}
+The entire array gives the largest sum `25`.
 
 ---
 
@@ -88,7 +88,7 @@ Use **Kadane’s Algorithm** — an optimal linear-time solution:
 2. For each element `x` in the array:
    - Update `currentSum = max(x, currentSum + x)`
    - Update `maxSum = max(maxSum, currentSum)`
-3. Return `maxSum`, which holds the maximum contiguous subarray sum. :contentReference[oaicite:6]{index=6}
+3. Return `maxSum`, which holds the maximum contiguous subarray sum.
 
 ### Time and Space Complexity
 

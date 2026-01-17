@@ -1,4 +1,4 @@
-# Multiply Two Polynomials
+﻿# Multiply Two Polynomials
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -13,7 +13,7 @@ You are given two polynomials represented as arrays of coefficients:
 - `A[i]` denotes the coefficient of \(x^i\) in the first polynomial.
 - `B[i]` denotes the coefficient of \(x^i\) in the second polynomial.
 
-Compute the product polynomial — i.e., return an array `C` such that each `C[i]` represents the coefficient of \(x^i\) in the product \(A(x) \times B(x)\). The resulting array will have length \(n + m - 1\), where `n` and `m` are lengths of `A` and `B`. :contentReference[oaicite:2]{index=2}
+Compute the product polynomial — i.e., return an array `C` such that each `C[i]` represents the coefficient of \(x^i\) in the product \(A(x) \times B(x)\). The resulting array will have length \(n + m - 1\), where `n` and `m` are lengths of `A` and `B`.
 
 ---
 
@@ -53,14 +53,14 @@ B = [4, 5] // represents 4 + 5x
 
 ## 🛠️ Approach
 
-Use the classic nested‑loop (convolution) method: :contentReference[oaicite:3]{index=3}
+Use the classic nested‑loop (convolution) method:
 
 1. Initialize a result array `prod[]` of size `n + m - 1`, filled with zeros.
 2. Loop over each coefficient `A[i]`, and for each loop over every coefficient `B[j]`:
    - Update `prod[i + j] += A[i] * B[j]`.
 3. Return `prod[]`.
 
-This runs in **O(n \* m)** time and requires **O(n + m)** space for the result (plus O(1) extra). :contentReference[oaicite:4]{index=4}
+This runs in **O(n \* m)** time and requires **O(n + m)** space for the result (plus O(1) extra).
 
 ---
 
@@ -69,4 +69,4 @@ This runs in **O(n \* m)** time and requires **O(n + m)** space for the result (
 - Works even when polynomials have different degrees.
 - Handles negative coefficients (if allowed).
 - Output array length = `n + m - 1`.
-- For large degrees, naive O(n·m) may be slow; advanced methods (e.g. FFT-based) can optimize. :contentReference[oaicite:5]{index=5}
+- For large degrees, naive O(n·m) may be slow; advanced methods (e.g. FFT-based) can optimize.

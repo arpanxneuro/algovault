@@ -12,14 +12,14 @@ Given the head of a doubly linked list, reverse the list in‑place so that the 
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `head`: reference to the head node of a doubly linked list (or `null` / `None` if the list is empty).
 - Number of nodes can be 0 up to ~10⁴, node values are arbitrary integers.
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return the head of the reversed doubly linked list.
 

@@ -1,4 +1,4 @@
-# Spirally Traversing a Matrix
+﻿# Spirally Traversing a Matrix
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-Given a matrix `mat[][]` of size `n × m`, return a list of all matrix elements traversed in **clockwise spiral order** — starting from the top‑left corner, moving right across the top row, then downward along the rightmost column, then left across the bottom row, then upward along the leftmost column, and continue layer by layer until all elements are visited. :contentReference[oaicite:2]{index=2}
+Given a matrix `mat[][]` of size `n × m`, return a list of all matrix elements traversed in **clockwise spiral order** — starting from the top‑left corner, moving right across the top row, then downward along the rightmost column, then left across the bottom row, then upward along the leftmost column, and continue layer by layer until all elements are visited.
 
 ---
 
@@ -50,10 +50,10 @@ One efficient and standard in‑place approach uses boundary‑tracking variable
   2. Traverse from `mat[top][right]` to `mat[bottom][right]` (top → bottom) → decrement `right`.
   3. If `top ≤ bottom`, traverse from `mat[bottom][right]` to `mat[bottom][left]` (right → left) → decrement `bottom`.
   4. If `left ≤ right`, traverse from `mat[bottom][left]` to `mat[top][left]` (bottom → top) → increment `left`.
-- Continue until all elements are visited. :contentReference[oaicite:3]{index=3}
+- Continue until all elements are visited.
 
-**Time Complexity:** O(n × m) — each element visited exactly once. :contentReference[oaicite:4]{index=4}  
-**Space Complexity:** O(1) (ignoring output list) — only a few pointers/indices used. :contentReference[oaicite:5]{index=5}
+**Time Complexity:** O(n × m) — each element visited exactly once.  
+**Space Complexity:** O(1) (ignoring output list) — only a few pointers/indices used.
 
 ---
 

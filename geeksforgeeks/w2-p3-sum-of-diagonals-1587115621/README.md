@@ -1,4 +1,4 @@
-# Sum of Diagonals
+﻿# Sum of Diagonals
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -50,4 +50,4 @@ Traverse the matrix row by row. Maintain a running sum `diagSum`. For each row `
 **Time Complexity:** O(N) — only one pass over diagonal entries.  
 **Space Complexity:** O(1) — constant extra space.
 
-This is the standard method to compute the “trace” of a square matrix. :contentReference[oaicite:2]{index=2}
+This is the standard method to compute the “trace” of a square matrix.

@@ -1,4 +1,4 @@
-# Detect Loop in Linked List
+﻿# Detect Loop in Linked List
 
 > **Difficulty**: medium  
 > **Platform**: GeeksforGeeks  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-Given the head of a singly linked list, determine whether the list contains a **cycle / loop** — i.e., whether there exists a node such that by continuously following `next` pointers you eventually revisit that node (instead of reaching `null`). Return `true` if there is a cycle, otherwise return `false`. :contentReference[oaicite:2]{index=2}
+Given the head of a singly linked list, determine whether the list contains a **cycle / loop** — i.e., whether there exists a node such that by continuously following `next` pointers you eventually revisit that node (instead of reaching `null`). Return `true` if there is a cycle, otherwise return `false`.
 
 ---
 
@@ -39,7 +39,7 @@ Output: false
 
 ## 🛠️ Approach (Floyd’s Cycle‑Finding / Two‑Pointer)
 
-Use the two‑pointer (slow and fast) algorithm to detect a loop in O(n) time and O(1) extra space. :contentReference[oaicite:3]{index=3}
+Use the two‑pointer (slow and fast) algorithm to detect a loop in O(n) time and O(1) extra space.
 
 - Initialize both pointers — `slow = head`, `fast = head`.
 - While `fast` and `fast.next` are valid:
@@ -58,4 +58,4 @@ This runs in **O(n)** time, **O(1)** space.
 - Handles single-node list with no cycle.
 - Handles cases where the entire list loops back (cycle starting at head or elsewhere).
 - Does **not** require extra memory (no hash sets), making it space-efficient.
-- This algorithm is standard, commonly called Floyd’s Cycle‑Finding Algorithm (Hare & Tortoise). :contentReference[oaicite:4]{index=4}
+- This algorithm is standard, commonly called Floyd’s Cycle‑Finding Algorithm (Hare & Tortoise).

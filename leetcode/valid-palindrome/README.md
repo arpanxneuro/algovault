@@ -1,4 +1,4 @@
-# valid palindrome
+﻿# valid palindrome
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -10,24 +10,24 @@
 
 A phrase is a **palindrome** if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
-Given a string `s`, return `true` if it is a palindrome, or `false` otherwise. :contentReference[oaicite:0]{index=0}
+Given a string `s`, return `true` if it is a palindrome, or `false` otherwise.
 
 ---
 
 ## 📥 Input
 
-- A string `s` of printable ASCII characters, including letters, numbers, spaces, and punctuation. :contentReference[oaicite:1]{index=1}
+- A string `s` of printable ASCII characters, including letters, numbers, spaces, and punctuation.
 
 ---
 
 ## 📤 Output
 
-Return `true` if the cleaned and normalized string reads the same forward and backward; otherwise return `false`. :contentReference[oaicite:2]{index=2}
+Return `true` if the cleaned and normalized string reads the same forward and backward; otherwise return `false`.
 
 ## ✔️ Constraints
 
 - `1 <= s.length <= 2 * 10⁵`
-- `s` consists only of printable ASCII characters. :contentReference[oaicite:3]{index=3}
+- `s` consists only of printable ASCII characters.
 
 ---
 
@@ -38,7 +38,7 @@ s = "A man, a plan, a canal: Panama"
 **Output**:
 true
 **Explanation**:
-After removing non-alphanumeric characters and converting to lowercase, the string becomes `"amanaplanacanalpanama"` which is a palindrome. :contentReference[oaicite:4]{index=4}
+After removing non-alphanumeric characters and converting to lowercase, the string becomes `"amanaplanacanalpanama"` which is a palindrome.
 
 ---
 
@@ -63,7 +63,7 @@ Use the **two-pointer** technique to check palindrome validity in **O(n)** time 
    - Decrement `right` while `s[right]` is not alphanumeric.
    - Compare the lowercase of `s[left]` and `s[right]`. If they differ, return `false`.
    - Move both pointers inward.
-3. If all valid pairs match, return `true`. :contentReference[oaicite:5]{index=5}
+3. If all valid pairs match, return `true`.
 
 ### Time and Space Complexity
 

@@ -1,0 +1,11 @@
+{
+  "title": "string compression",
+  "difficulty": "medium",
+  "tags": ["string", "two pointers", "array", "in-place"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/string-compression",
+  "languages": ["cpp"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-17"
+}

@@ -12,13 +12,13 @@ Given an integer `N`, print all natural numbers from `N` down to `1` using recur
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `N`: a positive integer (1 ≤ N ≤ reasonable recursion‑depth limit)
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Print the numbers from `N` to `1`, each separated by a space (or newline), in descending order.
 

@@ -1,4 +1,4 @@
-# Sum of Digits Using Recursion
+﻿# Sum of Digits Using Recursion
 
 > **Difficulty**: easy  
 > **Source**: GeeksforGeeks  
@@ -12,13 +12,13 @@ Given a non‑negative integer `N`, write a recursive function to compute the su
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `N`: non‑negative integer (e.g., `0 ≤ N ≤ 10^9`)
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Integer: the sum of all digits in `N`.
 
@@ -50,11 +50,11 @@ This ensures each digit is processed exactly once.
 
 ## 📊 Complexity Analysis
 
-- **Time Complexity**: O(log₁₀ N) — roughly the number of digits in `N`. :contentReference[oaicite:0]{index=0}
-- **Space Complexity**: O(log₁₀ N) — due to recursion stack depth. :contentReference[oaicite:1]{index=1}
+- **Time Complexity**: O(log₁₀ N) — roughly the number of digits in `N`.
+- **Space Complexity**: O(log₁₀ N) — due to recursion stack depth.
 
 ---
 
 ## 📚 Notes & References
 
-- Official GeeksforGeeks article covering recursion‑based digit‑sum computation. :contentReference[oaicite:2]{index=2}
+- Official GeeksforGeeks article covering recursion‑based digit‑sum computation.

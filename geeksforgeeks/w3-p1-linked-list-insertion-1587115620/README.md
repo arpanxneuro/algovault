@@ -1,4 +1,4 @@
-# Linked List Insertion
+﻿# Linked List Insertion
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -8,7 +8,7 @@
 
 ## 📝 Problem Statement
 
-Given the head of a singly linked list (which may be empty), a position `pos` (0-based), and a value `val`, insert a new node with value `val` into the list at the given position. Position `0` refers to inserting at the head. Return the head of the modified list. :contentReference[oaicite:3]{index=3}
+Given the head of a singly linked list (which may be empty), a position `pos` (0-based), and a value `val`, insert a new node with value `val` into the list at the given position. Position `0` refers to inserting at the head. Return the head of the modified list.
 
 ---
 
@@ -72,7 +72,7 @@ Iterative insertion — O(n) time, O(1) extra space. Basic idea:
 - If `pos == 0`, create new node and link its `next` to current `head`; return new node as new head.
 - Else, traverse the list until reaching the node at index `pos - 1`.
 - Adjust pointers: let `newNode.next = current.next`, and `current.next = newNode`.  
-  Return the (possibly unchanged) head. :contentReference[oaicite:4]{index=4}
+  Return the (possibly unchanged) head.
 
 ---
 

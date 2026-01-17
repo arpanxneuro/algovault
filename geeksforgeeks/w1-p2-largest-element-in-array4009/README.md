@@ -1,4 +1,4 @@
-# Largest Element in Array
+﻿# Largest Element in Array
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -52,5 +52,5 @@ To solve this problem:
 
 ### Time and Space Complexity
 
-- **Time Complexity:** O(n) — traverse all elements once. :contentReference[oaicite:0]{index=0}  
+- **Time Complexity:** O(n) — traverse all elements once.  
 - **Space Complexity:** O(1) — only a constant extra variable is used.  

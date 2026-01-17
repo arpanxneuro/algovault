@@ -1,4 +1,4 @@
-# Insert into Sorted Circular Linked List
+﻿# Insert into Sorted Circular Linked List
 
 > **Difficulty**: easy  
 > **Source**: GeeksforGeeks  
@@ -12,7 +12,7 @@ Given a sorted circular singly linked list (ascending order), and a value `x`, i
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `head`: reference to any node in the circular linked list (or `None` / `NULL` if list is empty).
 - `x`: integer value to insert.
@@ -20,7 +20,7 @@ Given a sorted circular singly linked list (ascending order), and a value `x`, i
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return a reference to a node in the updated circular linked list (typically the inserted node or head). The list remains circular and sorted after insertion.
 
@@ -48,4 +48,4 @@ Given a sorted circular singly linked list (ascending order), and a value `x`, i
    - If `x` should be inserted before head (i.e. `x <= head.data`), find the last node (whose `next` points to head), insert new node before head, and return new node as new head.
    - Else, find the appropriate spot where `curr.data < x <= curr.next.data`. Insert new node there.
    - If reached end without insertion, insert at end before head (i.e. for x largest).
-4. Return reference to resulting list (head or new node). :contentReference[oaicite:2]{index=2}
+4. Return reference to resulting list (head or new node).

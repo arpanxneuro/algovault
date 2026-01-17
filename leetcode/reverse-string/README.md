@@ -1,4 +1,4 @@
-# reverse string
+﻿# reverse string
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -8,13 +8,13 @@
 
 ## 📝 Problem Statement
 
-Write a function that reverses a string. The input string is given as an array of characters `s`. You must do this by modifying the input array **in-place** with **O(1)** extra memory. :contentReference[oaicite:0]{index=0}
+Write a function that reverses a string. The input string is given as an array of characters `s`. You must do this by modifying the input array **in-place** with **O(1)** extra memory.
 
 ---
 
 ## 📥 Input
 
-An array of characters `s`, where `1 <= s.length <= 10^5` and each `s[i]` is a printable ASCII character. :contentReference[oaicite:1]{index=1}
+An array of characters `s`, where `1 <= s.length <= 10^5` and each `s[i]` is a printable ASCII character.
 
 ---
 
@@ -25,7 +25,7 @@ The same array `s` reversed in place.
 ## ✔️ Constraints
 
 - Reverse the array without allocating additional space beyond constant extra memory.
-- The solution must modify `s` directly. :contentReference[oaicite:2]{index=2}
+- The solution must modify `s` directly.
 
 ---
 
@@ -36,7 +36,7 @@ s = ["h","e","l","l","o"]
 **Output**:
 ["o","l","l","e","h"]
 **Explanation**:
-The characters are swapped from ends inward using a two-pointer approach. :contentReference[oaicite:3]{index=3}
+The characters are swapped from ends inward using a two-pointer approach.
 
 ---
 
@@ -60,7 +60,7 @@ Use a **two-pointer technique**:
 3. Move `left` forward and `right` backward.
 4. Repeat until `left >= right`.
 
-This ensures the array is reversed in place with constant extra memory. :contentReference[oaicite:4]{index=4}
+This ensures the array is reversed in place with constant extra memory.
 
 ### Time and Space Complexity
 

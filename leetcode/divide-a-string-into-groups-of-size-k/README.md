@@ -1,4 +1,4 @@
-# Divide a String Into Groups of Size k
+﻿# Divide a String Into Groups of Size k
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -19,24 +19,24 @@ Return an array of strings representing all groups after partitioning. ([LeetCod
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
-- `s`: a non‑empty string of lowercase English letters. :contentReference[oaicite:0]{index=0}
-- `k`: integer group size (1 ≤ k ≤ 100) :contentReference[oaicite:1]{index=1}
-- `fill`: a lowercase English letter used for padding the final group if needed :contentReference[oaicite:2]{index=2}
+- `s`: a non‑empty string of lowercase English letters.
+- `k`: integer group size (1 ≤ k ≤ 100)
+- `fill`: a lowercase English letter used for padding the final group if needed
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - An array of strings: each string is a group of length exactly `k`, in the order they were formed.
 
 ## ✔️ Constraints
 
-- `1 <= s.length <= 100` :contentReference[oaicite:3]{index=3}
-- `s` consists only of lowercase English letters. :contentReference[oaicite:4]{index=4}
-- `1 <= k <= 100` :contentReference[oaicite:5]{index=5}
-- `fill` is a lowercase English letter. :contentReference[oaicite:6]{index=6}
+- `1 <= s.length <= 100`
+- `s` consists only of lowercase English letters.
+- `1 <= k <= 100`
+- `fill` is a lowercase English letter.
 
 ---
 
@@ -49,7 +49,7 @@ s = "abcdefghi", k = 3, fill = "x"
 **Output:**  
 ["abc", "def", "ghi"]
 **Explanation:**  
-The string divides evenly into groups of size 3 — no padding required. :contentReference[oaicite:7]{index=7}
+The string divides evenly into groups of size 3 — no padding required.
 
 ### Example 2
 
@@ -58,7 +58,7 @@ s = "abcdefghij", k = 3, fill = "x"
 **Output:**  
 ["abc", "def", "ghi", "jxx"]
 **Explanation:**  
-Last group contains only “j”, so it is padded with two ‘x’ to reach size 3. :contentReference[oaicite:8]{index=8}
+Last group contains only “j”, so it is padded with two ‘x’ to reach size 3.
 
 ---
 
@@ -66,5 +66,5 @@ Last group contains only “j”, so it is padded with two ‘x’ to reach size
 
 - Traverse the string in steps of size `k`.
 - For each step, extract the substring of next `k` characters (or whatever remains).
-- If the last chunk is shorter than `k`, pad it with the `fill` character until its length becomes `k`. :contentReference[oaicite:9]{index=9}
+- If the last chunk is shorter than `k`, pad it with the `fill` character until its length becomes `k`.
 - Append each group (padded when necessary) to the result array.

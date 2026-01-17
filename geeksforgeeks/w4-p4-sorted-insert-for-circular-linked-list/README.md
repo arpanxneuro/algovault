@@ -1,4 +1,4 @@
-# Sorted Insert for Circular Linked List
+﻿# Sorted Insert for Circular Linked List
 
 > **Difficulty**: medium  
 > **Source**: GeeksforGeeks  
@@ -12,7 +12,7 @@ Given a node from a circular singly linked list sorted in ascending order and an
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `head`: reference to any node in the sorted circular linked list (or `null` / `None` if the list is empty).
 - `x`: integer value to insert into the list.
@@ -20,7 +20,7 @@ Given a node from a circular singly linked list sorted in ascending order and an
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return a reference to any node in the updated circular linked list (often the newly inserted node or the head).
 
@@ -29,11 +29,11 @@ Given a node from a circular singly linked list sorted in ascending order and an
 ## 🧪 Example Cases
 
 - **Input:** list: `1 → 2 → 4` (circular), `x = 2`  
-  **Output:** `1 → 2 → 2 → 4` (circular) :contentReference[oaicite:2]{index=2}
+  **Output:** `1 → 2 → 2 → 4` (circular)
 - **Input:** list: `1 → 4 → 7 → 9` (circular), `x = 5`  
-  **Output:** `1 → 4 → 5 → 7 → 9` (circular) :contentReference[oaicite:3]{index=3}
+  **Output:** `1 → 4 → 5 → 7 → 9` (circular)
 - **Input:** empty list, `x = 10`  
-  **Output:** single-node circular list: `10 → (back to itself)` :contentReference[oaicite:4]{index=4}
+  **Output:** single-node circular list: `10 → (back to itself)`
 
 ---
 
@@ -47,4 +47,4 @@ Given a node from a circular singly linked list sorted in ascending order and an
    - Else traverse until you find `curr` such that `curr.data ≤ x ≤ curr.next.data`, then insert between `curr` and `curr.next`.
    - If you traverse full circle without insertion (i.e. x > all existing values), insert after last node (before head).
 
-This preserves sorted order and circular structure. :contentReference[oaicite:5]{index=5}
+This preserves sorted order and circular structure.

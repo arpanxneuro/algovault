@@ -37,29 +37,41 @@ Given an array of integers `nums` and an integer `target`, return _indices_ of t
 
 ## ✅ Example
 
-**Input:**  
-nums = [2, 7, 11, 15]
+**Input:**
+
+```nums = [2, 7, 11, 15]
 target = 9
+```
+
 **Output:**  
-[0, 1]
+`[0, 1]`
 **Explanation:**  
 `nums[0] + nums[1] = 2 + 7 = 9`
 
-**Input:**  
-nums = [3, 2, 4]
+**Input:**
+
+```nums = [3, 2, 4]
 target = 6
+```
+
 **Output:**  
-[1, 2]
-**Input:**  
-nums = [3, 3]
+`[1, 2]`
+**Input:**
+
+```nums = [3, 3]
 target = 6
+```
+
 **Output:**  
-[0, 1]
-**Input:**  
-nums = [-1, -2, -3, -4, -5]
+`[0, 1]`
+**Input:**
+
+```nums = [-1, -2, -3, -4, -5]
 target = -8
+```
+
 **Output:**  
-[2, 4]
+`[2, 4]`
 
 ---
 

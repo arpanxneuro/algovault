@@ -1,4 +1,4 @@
-# Roman to Integer
+﻿# Roman to Integer
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -13,7 +13,7 @@ Given a Roman numeral string, convert it to its integer equivalent. Roman numera
 - X may precede L (50) or C (100) to make 40 or 90.  
 - C may precede D (500) or M (1000) to make 400 or 900.  
 
-Given a valid Roman numeral representing a value in the inclusive range [1, 3999], return its integer value. :contentReference[oaicite:0]{index=0}
+Given a valid Roman numeral representing a value in the inclusive range [1, 3999], return its integer value.
 
 ---
 
@@ -21,7 +21,7 @@ Given a valid Roman numeral representing a value in the inclusive range [1, 3999
 
 - `s`: string — a valid Roman numeral composed only of the characters `'I'`, `'V'`, `'X'`, `'L'`, `'C'`, `'D'`, `'M'`.  
 - `1 <= s.length <= 15`.  
-- It is guaranteed that `s` represents a number between 1 and 3999. :contentReference[oaicite:1]{index=1}
+- It is guaranteed that `s` represents a number between 1 and 3999.
 
 ---
 
@@ -31,8 +31,8 @@ Given a valid Roman numeral representing a value in the inclusive range [1, 3999
 
 ## ✔️ Constraints
 
-- `s.length` from 1 to 15. :contentReference[oaicite:2]{index=2}  
-- `s` contains only valid Roman numeral characters: I, V, X, L, C, D, M. :contentReference[oaicite:3]{index=3}  
+- `s.length` from 1 to 15.  
+- `s` contains only valid Roman numeral characters: I, V, X, L, C, D, M.  
 
 ---
 

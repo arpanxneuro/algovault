@@ -1,4 +1,4 @@
-# Apply Transform Over Each Element in Array
+﻿# Apply Transform Over Each Element in Array
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -10,18 +10,18 @@
 
 Given an integer array `arr` and a mapping function `fn`, return a **new** array such that  
 result[i] = fn(arr[i], i)
-for every valid index `i`. Do **not** use the built‑in `Array.prototype.map` method. :contentReference[oaicite:4]{index=4}
+for every valid index `i`. Do **not** use the built‑in `Array.prototype.map` method.
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
-- `arr`: integer array (its length `n` may be `0 ≤ n ≤ 1000`) :contentReference[oaicite:5]{index=5}
+- `arr`: integer array (its length `n` may be `0 ≤ n ≤ 1000`)
 - `fn(value, index)`: a function that takes an integer and its index and returns an integer (or number)
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - A new array of integers of the same length as `arr`, where each element is the result of applying the transform: `result[i] = fn(arr[i], i)`. The original array should remain unmodified.
 
@@ -54,7 +54,7 @@ Output: [42, 42, 42]
 4. After the loop, return `res`.
 
 **Time Complexity:** O(n), where n = `arr.length`.  
-**Space Complexity:** O(n) — for the new output array. :contentReference[oaicite:6]{index=6}
+**Space Complexity:** O(n) — for the new output array.
 
 ---
 

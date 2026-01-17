@@ -1,4 +1,4 @@
-# Search in Linked List
+﻿# Search in Linked List
 
 > **Difficulty**: easy  
 > **Platform**: GeeksforGeeks  
@@ -10,7 +10,7 @@
 
 Given the head of a singly linked list (which may be empty) and an integer `x`, determine whether `x` exists in the list. If it does, return the index (0‑based) of its first occurrence; otherwise return `-1`.
 
-This is a standard linear search over a linked list. :contentReference[oaicite:2]{index=2}
+This is a standard linear search over a linked list.
 
 ---
 
@@ -58,7 +58,7 @@ Explanation: First node matches → index 0.
 
 ## 🛠️ Approach
 
-Use a linear traversal (iterative): start at `head` with an index counter (initially 0). Traverse node by node: for each node, compare its value to `x`. If equal — return current index. If end of list is reached (`null` / `None`) — return `-1`. This requires **O(n)** time and **O(1)** extra space (just pointers and counter). :contentReference[oaicite:3]{index=3}
+Use a linear traversal (iterative): start at `head` with an index counter (initially 0). Traverse node by node: for each node, compare its value to `x`. If equal — return current index. If end of list is reached (`null` / `None`) — return `-1`. This requires **O(n)** time and **O(1)** extra space (just pointers and counter).
 
 ---
 

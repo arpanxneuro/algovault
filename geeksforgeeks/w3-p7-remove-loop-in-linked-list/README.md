@@ -1,4 +1,4 @@
-# Remove Loop in Linked List
+﻿# Remove Loop in Linked List
 
 > **Difficulty**: medium  
 > **Platform**: GeeksforGeeks  
@@ -43,12 +43,12 @@ Output: list remains unchanged
 
 ## 🛠️ Approach (Floyd’s Cycle Detection + Loop Removal)
 
-Efficient in‑place algorithm — O(n) time, O(1) extra space. :contentReference[oaicite:2]{index=2}
+Efficient in‑place algorithm — O(n) time, O(1) extra space.
 
 1. Use two pointers — `slow` and `fast`, both starting at `head`.
 2. Advance `slow` by one, `fast` by two steps at a time.
 3. If at any step `slow == fast`, a cycle is detected.
-4. To find the start of the loop: reset one pointer to head; then move both one step at a time until their `next` pointers are equal. That identifies the node before loop start. :contentReference[oaicite:3]{index=3}
+4. To find the start of the loop: reset one pointer to head; then move both one step at a time until their `next` pointers are equal. That identifies the node before loop start.
 5. Set that node’s `next` to `null`, breaking the loop.
 
 This preserves all nodes and retains the list order (except the loop is removed).

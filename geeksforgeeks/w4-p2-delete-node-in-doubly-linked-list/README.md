@@ -1,4 +1,4 @@
-# Delete Node in Doubly Linked List
+﻿# Delete Node in Doubly Linked List
 
 > **Difficulty**: easy  
 > **Source**: GeeksforGeeks  
@@ -12,7 +12,7 @@ Given the head of a doubly linked list and a key value `x`, delete **all occurre
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `head`: reference to the head node of the doubly linked list (or `null` / `None` if empty).
 - `x`: integer value to delete from the list.
@@ -20,7 +20,7 @@ Given the head of a doubly linked list and a key value `x`, delete **all occurre
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return the head of the updated doubly linked list after all deletions.
 
@@ -47,4 +47,4 @@ Traverse the doubly linked list. Whenever you find a node with `data == x`, dele
 - If node has a `.prev`, set `node.prev.next = node.next`.
 - Properly adjust `head` if head was deleted.
 
-Repeat until end of list — thus removing **all** occurrences. Use constant auxiliary space. :contentReference[oaicite:1]{index=1}
+Repeat until end of list — thus removing **all** occurrences. Use constant auxiliary space.

@@ -18,13 +18,13 @@ Return a list of the first `N` Fibonacci numbers. ([GfG – Fibonacci Series Up 
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `N`: Positive integer, number of terms to generate.
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - A list/array of integers representing the first `N` terms of the Fibonacci sequence (0‑indexed: starting from F(0) = 0).
 

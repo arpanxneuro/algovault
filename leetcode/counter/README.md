@@ -12,21 +12,21 @@ Given an integer `n`, create a counter function using closures. The returned cou
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
-- `n`: starting integer value (constraints: `-1000 <= n <= 1000`) :contentReference[oaicite:0]{index=0}
-- Calls: a sequence of `"call"` operations (at most 1000 calls). :contentReference[oaicite:1]{index=1}
+- `n`: starting integer value (constraints: `-1000 <= n <= 1000`)
+- Calls: a sequence of `"call"` operations (at most 1000 calls)
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Returns a function — each time this function is called, it returns the next number in the sequence starting from `n`.
 
 ## ✔️ Constraints
 
-- `-1000 <= n <= 1000` :contentReference[oaicite:2]{index=2}
-- At most 1000 calls to the returned counter function. :contentReference[oaicite:3]{index=3}
+- `-1000 <= n <= 1000`
+- At most 1000 calls to the returned counter function.
 
 ---
 
@@ -48,10 +48,24 @@ n = -2
 calls = ["call", "call", "call", "call", "call"]
 **Output:**  
 [-2, -1, 0, 1, 2]
-**Explanation:** The counter starts from –2 and increments by 1 on each call. :contentReference[oaicite:4]{index=4}
+**Explanation:** The counter starts from –2 and increments by 1 on each call.
+
+---
+
+## 🧪 Test Cases
+
+| #   | Input              | Output      |
+| --- | ------------------ | ----------- |
+| 1   | n = 10             | [10, 11, 12]|
+| 2   | n = -2 (5 calls)   | [-2, -1, 0, 1, 2] |
 
 ---
 
 ## 🛠️ Approach
 
-Use a closure to capture the initial value `n`. Return an inner function which, when invoked, returns the current value and increments it. This way, the internal state persists across calls without using global variables. :contentReference[oaicite:5]{index=5}
+Use a closure to capture the initial value `n`. Return an inner function which, when invoked, returns the current value and increments it. This way, the internal state persists across calls without using global variables.
+
+### Time and Space Complexity
+
+- **Time Complexity**: O(1)
+- **Space Complexity**: O(1)

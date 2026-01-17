@@ -1,4 +1,4 @@
-# Array Prototype Last
+﻿# Array Prototype Last
 
 > **Platform:** LeetCode  
 > **Difficulty:** easy  
@@ -13,7 +13,7 @@ Extend the built-in JavaScript array type so that any array instance has a metho
 - If the array has one or more elements, `arr.last()` returns the final element of the array.
 - If the array is empty, `arr.last()` returns `-1`.
 
-You may assume arrays originate from a valid JSON parse, i.e. standard JavaScript arrays. :contentReference[oaicite:5]{index=5}
+You may assume arrays originate from a valid JSON parse, i.e. standard JavaScript arrays.
 
 ---
 
@@ -36,12 +36,12 @@ You may assume arrays originate from a valid JSON parse, i.e. standard JavaScrip
 **Example 1**  
 Input: nums = [1, 2, 3]
 Output: 3
-Explanation: `nums.last()` returns the last element, 3. :contentReference[oaicite:6]{index=6}
+Explanation: `nums.last()` returns the last element, 3.
 
 **Example 2**
 Input: nums = []
-Output: -1Explanation: Array is empty → return `-1`. :contentReference[oaicite:7]{index=7}
+Output: -1Explanation: Array is empty → return `-1`.
 
 **Example 3**  
 Input: nums = [null, {}, 3]
-Output: 3Explanation: Mixed content is allowed; last element is 3. :contentReference[oaicite:8]{index=8}
+Output: 3Explanation: Mixed content is allowed; last element is 3.

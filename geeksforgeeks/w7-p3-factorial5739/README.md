@@ -14,13 +14,13 @@ By convention, `0! = 1`. You need to implement a recursive solution (or optional
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
 - `N`: a non‑negative integer (e.g. `0 ≤ N ≤ 20` for 64‑bit safe results)
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Return the factorial of `N` (as a 64‑bit integer or appropriate big-integer type if `N` is large).
 

@@ -1,4 +1,4 @@
-# valid parentheses
+﻿# valid parentheses
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -12,7 +12,7 @@ Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'
 An input string is valid if:
 - Open brackets must be closed by the same type of brackets.
 - Open brackets must be closed in the correct order.
-- Every close bracket has a corresponding open bracket of the same type. :contentReference[oaicite:0]{index=0}
+- Every close bracket has a corresponding open bracket of the same type.
 
 ---
 
@@ -20,7 +20,7 @@ An input string is valid if:
 
 A string `s` containing only the characters `'('`, `')'`, `'{'`, `'}'`, `'['`, and `']'`.  
 - `1 <= s.length <= 10^4`  
-- `s` consists only of parentheses characters. :contentReference[oaicite:1]{index=1}
+- `s` consists only of parentheses characters.
 
 ---
 
@@ -88,7 +88,7 @@ Use a **stack** to enforce matching and order:
 2. Traverse each character in `s`.  
 3. If it’s an opening bracket, push it onto the stack.  
 4. If it’s a closing bracket, check if the stack is non-empty and the top matches; otherwise return `false`.  
-5. At the end, if the stack is empty then every bracket matched correctly. :contentReference[oaicite:3]{index=3}
+5. At the end, if the stack is empty then every bracket matched correctly.
 
 ### Time and Space Complexity
 - **Time Complexity**: O(n) — traverse the string once  

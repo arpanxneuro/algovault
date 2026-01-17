@@ -1,4 +1,4 @@
-# Function Composition
+﻿# Function Composition
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -15,22 +15,22 @@ In other words, functions are applied from right to left. If the array is empty,
 
 ---
 
-## 📥 Input Format
+## 📥 Input
 
-- `functions`: array of functions, each accepts one integer and returns one integer. (`0 ≤ functions.length ≤ 1000`) :contentReference[oaicite:2]{index=2}
-- When the composed function is invoked, it accepts an integer `x`, where `-1000 ≤ x ≤ 1000`. :contentReference[oaicite:3]{index=3}
+- `functions`: array of functions, each accepts one integer and returns one integer. (`0 ≤ functions.length ≤ 1000`)
+- When the composed function is invoked, it accepts an integer `x`, where `-1000 ≤ x ≤ 1000`.
 
 ---
 
-## 📤 Output Format
+## 📤 Output
 
 - Returns a function `fn`. When `fn(x)` is called, it returns an integer — the result of applying all provided functions in composition on `x`.
 
 ## ✔️ Constraints
 
-- `-1000 ≤ x ≤ 1000` :contentReference[oaicite:4]{index=4}
-- `0 ≤ functions.length ≤ 1000` :contentReference[oaicite:5]{index=5}
-- Each function accepts exactly one integer argument and returns one integer. :contentReference[oaicite:6]{index=6}
+- `-1000 ≤ x ≤ 1000`
+- `0 ≤ functions.length ≤ 1000`
+- Each function accepts exactly one integer argument and returns one integer.
 
 ---
 
@@ -47,7 +47,7 @@ x = 4
 - Start with x = 4
 - Apply the rightmost function: 2 \* 4 = 8
 - Next: square → 8 \* 8 = 64
-- Next: +1 → 64 + 1 = 65 :contentReference[oaicite:7]{index=7}
+- Next: +1 → 64 + 1 = 65
 
 ### Example 2
 
@@ -56,7 +56,7 @@ functions = [x => 10 * x, x => 10 * x, x => 10 * x]
 x = 1
 **Output:** `1000`  
 **Explanation:**  
-10 × (10 × (10 × 1)) = 1000 :contentReference[oaicite:8]{index=8}
+10 × (10 × (10 × 1)) = 1000
 
 ### Example 3
 
@@ -65,7 +65,7 @@ functions = []
 x = 42
 **Output:** `42`  
 **Explanation:**  
-Empty function array → identity function, returns input as is. :contentReference[oaicite:9]{index=9}
+Empty function array → identity function, returns input as is.
 
 ---
 

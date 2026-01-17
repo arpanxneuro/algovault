@@ -1,4 +1,4 @@
-# majority element
+﻿# majority element
 
 > **Difficulty**: easy  
 > **Platform**: LeetCode  
@@ -8,35 +8,35 @@
 
 ## 📝 Problem Statement
 
-Given an array `nums` of size `n`, return the **majority element** — the element that appears more than ⌊ n / 2 ⌋ times. You may assume that a majority element always exists in the array. :contentReference[oaicite:0]{index=0}
+Given an array `nums` of size `n`, return the **majority element** — the element that appears more than ⌊ n / 2 ⌋ times. You may assume that a majority element always exists in the array.
 
 ---
 
 ## 📥 Input
 
-An integer array `nums` of size `n`, containing both positive and negative values. :contentReference[oaicite:1]{index=1}
+An integer array `nums` of size `n`, containing both positive and negative values.
 
 ---
 
 ## 📤 Output
 
-The **majority element** in the array — the element occurring more than half the time. :contentReference[oaicite:2]{index=2}
+The **majority element** in the array — the element occurring more than half the time.
 
 ## ✔️ Constraints
 
 - `n == nums.length`
 - `1 <= n <= 5 × 10⁴`
 - `-10⁹ <= nums[i] <= 10⁹`
-- The input guarantees that a majority element always exists. :contentReference[oaicite:3]{index=3}
+- The input guarantees that a majority element always exists.
 
 ---
 
 ## ✅ Example
 
 **Input**:
-nums = [3,2,3]
+`nums = [3,2,3]`
 **Output**:
-3
+`3`
 
 ---
 
@@ -61,14 +61,14 @@ The **Boyer-Moore Voting Algorithm** maintains a candidate and a count:
 2. Traverse the array:
    - If `count == 0`, set `candidate = nums[i]` and increment `count`.
    - If `nums[i] == candidate`, increment `count`; otherwise decrement `count`.
-3. The `candidate` at the end of this process represents the majority element. :contentReference[oaicite:4]{index=4}
+3. The `candidate` at the end of this process represents the majority element.
 
 This approach achieves **O(n)** time and **O(1)** extra space.
 
 ### Alternative Approaches (Less Optimal)
 
 - **Hash map frequency counting** (O(n) time, O(n) space).
-- **Sorting and returning `nums[n // 2]`** (O(n log n) time). :contentReference[oaicite:5]{index=5}
+- **Sorting and returning `nums[n // 2]`** (O(n log n) time).
 
 ### Time and Space Complexity
 

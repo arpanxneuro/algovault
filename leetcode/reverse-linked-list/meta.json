@@ -1,0 +1,11 @@
+{
+  "title": "reverse linked list",
+  "difficulty": "easy",
+  "tags": ["linked list", "recursion", "pointers"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/reverse-linked-list",
+  "languages": ["cpp", "py"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "solvedOn": "2026-01-18"
+}

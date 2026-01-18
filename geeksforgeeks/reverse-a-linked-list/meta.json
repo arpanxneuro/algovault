@@ -1,0 +1,17 @@
+{
+  "title": "reverse a linked list",
+  "difficulty": "easy",
+  "tags": [
+    "linked list",
+    "data structure",
+    "pointers",
+    "iterative",
+    "recursion"
+  ],
+  "platform": "GeeksforGeeks",
+  "problemSrc": "https://www.geeksforgeeks.org/problems/reverse-a-linked-list/1",
+  "languages": ["cpp", "py"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-18"
+}

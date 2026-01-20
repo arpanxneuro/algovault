@@ -1,0 +1,11 @@
+{
+  "title": "remove duplicates from sorted list",
+  "difficulty": "easy",
+  "tags": ["linked list", "pointer"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/",
+  "languages": ["cpp", "py"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-20"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "length of last word",
+  "difficulty": "easy",
+  "tags": ["string", "simulation"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/length-of-last-word",
+  "languages": ["cpp", "py"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-27"
+}

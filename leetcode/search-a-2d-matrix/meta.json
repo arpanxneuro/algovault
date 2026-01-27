@@ -1,10 +1,10 @@
 {
-  "title": "search a d matrix",
+  "title": "search a 2d matrix",
   "difficulty": "medium",
   "tags": ["array", "biary search", "matrix"],
   "platform": "LeetCode",
   "problemSrc": "https://leetcode.com/problems/search-a-2d-matrix",
-  "languages": ["cpp"],
+  "languages": ["cpp", "py"],
   "timeComplexity": "O(log(m * n))",
   "spaceComplexity": "O(1)",
   "solvedOn": "2026-01-21"

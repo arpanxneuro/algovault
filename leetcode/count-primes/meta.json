@@ -1,0 +1,20 @@
+{
+  "title": "count primes",
+  "difficulty": "medium",
+  "tags": [
+    "math",
+    "sieve",
+    "number theory",
+    "array",
+    "enumeration"
+  ],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/count-primes",
+  "languages": [
+    "cpp",
+    "py"
+  ],
+  "timeComplexity": "O(n log log n)",
+  "spaceComplexity": "O(n)",
+  "solvedOn": "2026-01-30"
+}

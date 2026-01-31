@@ -1,0 +1,11 @@
+{
+  "title": "spiral matrix",
+  "difficulty": "medium",
+  "tags": ["array", "matrix", "simulation", "traversal"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/spiral-matrix",
+  "languages": ["cpp", "py"],
+  "timeComplexity": "O(m * n)",
+  "spaceComplexity": "O(m * n)",
+  "solvedOn": "2026-01-31"
+}

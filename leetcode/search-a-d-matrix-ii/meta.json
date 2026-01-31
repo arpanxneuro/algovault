@@ -1,0 +1,17 @@
+{
+  "title": "search a d matrix ii",
+  "difficulty": "medium",
+  "tags": [
+    "array",
+    "matrix",
+    "binary search",
+    "two pointers",
+    "divide and conquer"
+  ],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/search-a-2d-matrix-ii",
+  "languages": ["cpp", "py"],
+  "timeComplexity": "O(m + n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-01-31"
+}

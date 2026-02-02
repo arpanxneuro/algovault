@@ -1,0 +1,19 @@
+{
+  "title": "plus one",
+  "difficulty": "easy",
+  "tags": [
+    "math",
+    "rotation",
+    "array"
+  ],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/plus-one",
+  "languages": [
+    "cpp",
+    "py",
+    "java"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-02-02"
+}

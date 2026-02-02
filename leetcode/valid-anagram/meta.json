@@ -1,0 +1,11 @@
+{
+  "title": "valid anagram",
+  "difficulty": "easy",
+  "tags": ["strings", "hash table", "sorting"],
+  "platform": "LeetCode",
+  "problemSrc": "https://leetcode.com/problems/valid-anagram",
+  "languages": ["cpp", "py", "java"],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "solvedOn": "2026-02-02"
+}
